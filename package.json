@@ -1,0 +1,32 @@
+{
+  "name": "self-evolving-agent",
+  "version": "1.0.0",
+  "description": "让 AI 助手具备自我进化能力的自动化改进系统",
+  "main": "scripts/self-improving-controller.sh",
+  "scripts": {
+    "start": "./scripts/self-improving-controller.sh",
+    "monitor": "./scripts/self-improving-controller.sh --monitor",
+    "optimize": "./scripts/self-improving-controller.sh --optimize",
+    "reflect": "./scripts/self-improving-controller.sh --reflect",
+    "report": "./scripts/self-improving-controller.sh --report"
+  },
+  "keywords": [
+    "openclaw",
+    "ai-agent",
+    "self-improvement",
+    "automation",
+    "openclaude"
+  ],
+  "author": "simer11-jing",
+  "license": "MIT",
+  "homepage": "https://github.com/simer11-jing/self-evolving-agent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simer11-jing/self-evolving-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simer11-jing/self-evolving-agent/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
