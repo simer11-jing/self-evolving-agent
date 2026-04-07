@@ -30,22 +30,15 @@ echo "系统CPU使用率: ${CPU_USAGE}%" | tee -a "$LOGFILE"
 echo "系统内存使用率: ${MEMORY_USAGE}%" | tee -a "$LOGFILE"
 echo "磁盘使用率: ${DISK_USAGE}%" | tee -a "$LOGFILE"
 
-# 2. 收集 OpenClaw 性能指标
+# 2. 收集 OpenClaw 性能指标（简化，避免卡住）
 SESSION_COUNT=0
 GATEWAY_STATUS="unknown"
 
-if command -v openclaw &> /dev/null; then
-    # 检查活跃会话
-    if openclaw sessions &> /dev/null; then
-        SESSION_COUNT=$(openclaw sessions 2>/dev/null | grep -c "direct" || echo "0")
-    fi
-    
-    # 检查网关状态
-    if curl -s -m 5 http://127.0.0.1:18789/ &> /dev/null; then
-        GATEWAY_STATUS="running"
-    else
-        GATEWAY_STATUS="stopped"
-    fi
+# 只做基本的状态检查，不调用 openclaw 命令
+if curl -s -m 3 http://127.0.0.1:18789/ &> /dev/null; then
+    GATEWAY_STATUS="running"
+else
+    GATEWAY_STATUS="stopped"
 fi
 
 echo "OpenClaw活跃会话: $SESSION_COUNT" | tee -a "$LOGFILE"
@@ -74,15 +67,17 @@ PERFORMANCE_DATA=$(cat <<EOF
 EOF
 )
 
-# 5. 保存到指标文件
-if [ -f "$METRICS_FILE" ]; then
-    # 追加数据
-    EXISTING_DATA=$(cat "$METRICS_FILE" | jq -c '.' 2>/dev/null || echo "[]")
-    NEW_DATA=$(echo "$PERFORMANCE_DATA" | jq -c '.')
-    echo "[$EXISTING_DATA,$NEW_DATA]" | jq '.' > "$METRICS_FILE.tmp" && mv "$METRICS_FILE.tmp" "$METRICS_FILE"
+# 5. 简化日志记录（避免 jq 卡住）
+if [ ! -f "$METRICS_FILE" ]; then
+    echo "[" > "$METRICS_FILE"
 else
-    echo "[$PERFORMANCE_DATA]" | jq '.' > "$METRICS_FILE"
+    # 只保留最后100行
+    tail -100 "$METRICS_FILE" > "${METRICS_FILE}.tmp" 2>/dev/null || echo "[" > "${METRICS_FILE}.tmp"
+    mv "${METRICS_FILE}.tmp" "$METRICS_FILE"
 fi
+
+echo "$(date -Iseconds): CPU=${CPU_USAGE}%, MEM=${MEMORY_USAGE}%, DISK=${DISK_USAGE}%, SCORE=$PERFORMANCE_SCORE" >> "$METRICS_FILE"
+echo "1]" >> "$METRICS_FILE" 2>/dev/null || true
 
 # 6. 检查是否需要优化
 CPU_THRESHOLD=80

@@ -8,12 +8,16 @@
 # - 记录错误到错误日志
 # - 提供修复建议
 
-set -e
+# 不要在错误时退出（某些检查可能失败）
+set +e
 
 # 配置
 WORKSPACE="${WORKSPACE:-$HOME/.openclaw/workspace}"
 SELF_IMPROVING_DIR="$WORKSPACE/self-improving"
 SKILL_DIR="${SKILL_DIR:-$HOME/.openclaw/skills/self-evolving-agent}"
+
+# 确保目录存在
+mkdir -p "$SELF_IMPROVING_DIR/errors"
 
 # 日志文件
 LOGFILE="$SELF_IMPROVING_DIR/errors/error-log-$(date +%Y%m%d).json"
