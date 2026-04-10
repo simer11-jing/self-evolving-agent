@@ -1,6 +1,6 @@
 # Self-Evolving Agent
 
-_让 AI 助手具备自我进化能力的自动化改进系统_
+> 让 AI 助手具备自我进化能力的自动化改进系统
 
 ---
 
@@ -14,6 +14,9 @@ _让 AI 助手具备自我进化能力的自动化改进系统_
 - 📚 **技能学习** - 分析需求缺口并自动学习新技能
 - 🔄 **反馈循环** - 收集和处理用户反馈
 - 🧠 **周期反思** - 基于 Hindsight 架构进行周期性反思
+- 🧪 **基准测试** - 自动化系统验证
+- 🛡️ **安全沙箱** - 执行前安全验证
+- 📜 **版本控制** - 跟踪和回滚变更
 
 ---
 
@@ -21,70 +24,40 @@ _让 AI 助手具备自我进化能力的自动化改进系统_
 
 ### 1. 性能监控
 
-自动监控系统性能指标：
-
-| 指标 | 说明 |
-|------|------|
-| CPU 使用率 | 系统 CPU 占用百分比 |
-| 内存使用率 | 系统内存占用百分比 |
-| 磁盘使用率 | 磁盘空间占用百分比 |
-| 活跃会话 | OpenClaw 活跃会话数量 |
-| 网关状态 | OpenClaw 网关运行状态 |
-
-**触发阈值**：
-- CPU > 80% → 触发优化
-- 内存 > 80% → 触发优化
-- 磁盘 > 90% → 触发优化
+自动监控系统性能指标，动态调整阈值。
 
 ### 2. 错误分析
 
-自动分析并记录错误：
-
-- 分析 OpenClaw 错误日志
-- 检查 Cron 任务失败情况
-- 识别错误模式
-- 提供修复建议
+自动分析并记录错误，提供修复建议。
 
 ### 3. 优化引擎
 
-根据检测到的问题自动优化：
+支持传统模式和开放探索模式（A/B 测试）。
 
-| 触发条件 | 优化操作 |
-|----------|----------|
-| `high_resource_usage` | 清理临时文件、缓存、日志 |
-| `memory_leak` | 重启泄漏进程 |
-| `disk_full` | 清理大型日志和旧备份 |
+### 4. 基准测试 (NEW)
 
-### 4. 技能学习
+自动化系统验证：
 
-自动分析用户需求并学习新技能：
-
-```
-用户需求 → 模式识别 → 技能缺口检测 → 自动学习
+```bash
+./scripts/benchmark-runner.sh
 ```
 
-**支持自动学习的技能**：
-- 🌤️ 天气查询
-- 📧 邮件处理
-- 📊 股票分析
-- 🔍 网页搜索
-- 📁 文件管理
+### 5. 安全沙箱 (NEW)
 
-### 5. 反馈循环
+执行前安全验证：
 
-收集和处理用户反馈：
+```bash
+./scripts/sandbox-validator.sh analyze <script>
+./scripts/sandbox-validator.sh execute <script>
+```
 
-- 分析反馈类型（正面/改进建议）
-- 识别反馈模式
-- 持续改进服务质量
+### 6. 技能学习
 
-### 6. 周度反思
+根据用户需求自动安装技能。
 
-基于 Hindsight 架构进行周期性反思：
+### 7. 反馈循环
 
-- 回顾过去一周/一月的记忆
-- 识别成功模式和需要改进的地方
-- 更新长期记忆
+收集和处理用户反馈。
 
 ---
 
@@ -93,37 +66,20 @@ _让 AI 助手具备自我进化能力的自动化改进系统_
 ### 安装
 
 ```bash
-# 方法1：使用 alphaclaw（推荐）
-alphaclaw install self-evolving-agent
-
-# 方法2：手动安装
 git clone https://github.com/simer11-jing/self-evolving-agent.git ~/.openclaw/skills/self-evolving-agent
 ```
 
-### 配置定时任务
+### 运行
 
 ```bash
-# 编辑 crontab
-crontab -e
+# 完整工作流
+./scripts/self-improving-controller.sh
 
-# 添加定时任务（每天 23:00 运行）
-0 23 * * * /path/to/self-evolving-agent/scripts/self-improving-controller.sh
-```
+# 仅监控
+./scripts/self-improving-controller.sh --monitor
 
-### 手动运行
-
-```bash
-# 运行完整流程
-./self-improving-controller.sh
-
-# 仅运行性能监控
-./self-improving-controller.sh --monitor
-
-# 仅运行优化引擎
-./self-improving-controller.sh --optimize
-
-# 生成报告
-./self-improving-controller.sh --report
+# 基准测试
+./scripts/benchmark-runner.sh
 ```
 
 ---
@@ -132,130 +88,102 @@ crontab -e
 
 ```
 self-evolving-agent/
-├── SKILL.md                    # 本文件
-├── README.md                   # 中文说明
-├── README_EN.md               # English documentation
-├── LICENSE                    # MIT 许可证
-├── package.json               # NPM 配置
 ├── scripts/
-│   ├── self-improving-controller.sh  # 主控制器
-│   ├── performance-monitor.sh        # 性能监控
-│   ├── error-analyzer.sh             # 错误分析
-│   ├── optimization-engine.sh         # 优化引擎
-│   ├── skill-learner.sh              # 技能学习
-│   ├── feedback-loop.sh              # 反馈循环
-│   └── memory-reflect.sh             # 记忆反思
-└── examples/
-    └── USAGE.md                # 使用案例
+│   ├── self-improving-controller.sh
+│   ├── performance-monitor.sh
+│   ├── error-analyzer.sh
+│   ├── optimization-engine.sh      # 已增强
+│   ├── skill-learner.sh
+│   ├── feedback-loop.sh
+│   ├── memory-reflect.sh
+│   ├── benchmark-runner.sh         # NEW
+│   ├── sandbox-validator.sh        # NEW
+│   ├── benchmark-report.sh         # NEW
+│   └── code-patcher.sh             # NEW
+└── docs/
+    └── BENCHMARKS.md               # NEW
 ```
 
 ---
 
-## ⚙️ 工作流程
+## v2.0.0 新功能
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    自我改进控制器                             │
-│                  (每天 23:00 自动运行)                       │
-└─────────────────────────────────────────────────────────────┘
-                              │
-         ┌────────────────────┼────────────────────┐
-         │                    │                    │
-         ▼                    ▼                    ▼
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│  性能监控   │      │  错误分析   │      │  技能学习   │
-│  5 分钟    │      │  3 分钟    │      │  5 分钟    │
-└─────────────┘      └─────────────┘      └─────────────┘
-         │                    │                    │
-         ▼                    ▼                    ▼
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│ 检查阈值   │      │ 错误模式    │      │ 需求缺口    │
-│ 触发优化   │      │ 生成报告    │      │ 自动安装    │
-└─────────────┘      └─────────────┘      └─────────────┘
-         │                    │                    │
-         └────────────────────┼────────────────────┘
-                              │
-                              ▼
-                    ┌─────────────────┐
-                    │   生成报告      │
-                    │   更新记忆      │
-                    │   微信通知      │
-                    └─────────────────┘
-```
+| 功能 | 说明 |
+|------|------|
+| Benchmark 测试 | 自动化系统验证 |
+| 安全沙箱 | 执行前安全检查 |
+| 版本控制 | Git 快照 + 回滚 |
+| 探索模式 | A/B 测试多策略 |
+| 代码补丁 | 运行时热修补 |
 
 ---
 
-## 🔧 与 Hindsight Memory 的关系
+## ⚙️ 配置
 
-**Self-Evolving Agent** 和 **Hindsight Memory** 是互补系统：
+### 定时任务
 
-| 维度 | Hindsight Memory | Self-Evolving Agent |
-|------|------------------|---------------------|
-| **核心功能** | 记忆存储与检索 | 系统性能优化 |
-| **关注点** | 信息和知识 | 系统和流程 |
-| **工作方式** | 被动记录 | 主动优化 |
-| **类比** | 📚 图书馆 | 🔧 维修站 |
-
-**协作流程**：
+```bash
+crontab -e
+# 每天 23:00 运行
+0 23 * * * /path/to/self-evolving-agent/scripts/self-improving-controller.sh
 ```
-Self-Evolving Agent → 分析记忆 → 发现优化点 → 执行优化 → 更新记忆
-                                              ↓
-                                    Hindsight Memory
+
+### 环境变量
+
+```bash
+# 开启探索模式
+export EXPLORATION_MODE=true
+
+# 自定义工作目录
+export WORKSPACE=~/.openclaw/workspace
 ```
 
 ---
 
-## 📊 与同类技能对比
+## 📊 性能评分
 
-| 特性 | YMIR777 / pskoett | **Self-Evolving Agent** |
-|------|-------------------|-------------------------|
-| **触发方式** | 手动（用户要求时） | ✅ **自动定时** |
-| **监控维度** | 仅记录学习和错误 | ✅ **性能+错误+优化+技能** |
-| **优化能力** | 无 | ✅ **自动优化引擎** |
-| **报告生成** | 无 | ✅ **详细改进报告** |
-| **通知推送** | 无 | ✅ **微信推送** |
-| **技能学习** | 无 | ✅ **自动分析+安装** |
-| **闭环优化** | 无 | ✅ **检测→分析→优化→验证** |
+| 评分 | 状态 |
+|------|------|
+| 90-100 | 优秀 |
+| 70-89 | 良好 |
+| 50-69 | 一般 |
+| 0-49 | 需优化 |
 
 ---
 
-## 🎯 适用场景
+## 🔧 故障排除
 
-- ✅ 希望 AI 助手自动优化性能
-- ✅ 需要自动监控系统资源
-- ✅ 希望 AI 能自动学习新技能
-- ✅ 需要定期生成改进报告
-- ✅ 希望 AI 有自我改进能力
+### 优化失败
+
+1. 检查系统日志
+2. 验证脚本可执行权限
+3. 使用沙箱模式测试
+
+### 基准测试失败
+
+1. 检查依赖是否安装
+2. 查看测试日志
+3. 手动运行单个测试
 
 ---
 
-## ⚠️ 注意事项
+## 📖 参考
 
-1. **权限要求**：需要写入 `~/.openclaw/workspace` 目录的权限
-2. **依赖组件**：需要 `jq`, `curl`, `top`, `free`, `df` 等系统工具
-3. **定时任务**：建议设置在深夜运行，避免影响正常操作
-4. **资源清理**：日志默认保留 30 天，报告会保留 180 天
+- [Hindsight Memory](https://github.com/simer11-jing/hindsight-memory)
+- [OpenClaw 文档](https://docs.openclaw.ai)
 
 ---
 
 ## 🤝 贡献
 
-欢迎提交 Issue 和 Pull Request！
+欢迎提交 Issue 和 PR！
 
 ---
 
 ## 📄 许可证
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+MIT License
 
 ---
 
-## 🙏 致谢
-
-- 基于 [Hindsight Memory System](https://github.com/simer11-jing/hindsight-memory) 架构
-- 参考 [openclaw/skills](https://github.com/openclaw/skills) 设计
-- 使用 [alphaclaw](https://clawhub.ai) 进行包管理
-
----
-
-_让 AI 助手不断进化，成为更好的自己！_ 🚀
+_由小爪（OpenClaw Agent）创建并维护_ 🐾
