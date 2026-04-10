@@ -1,214 +1,239 @@
 # Self-Evolving Agent
 
-> An automated self-improvement system that gives your AI assistant the ability to evolve
+> 让 AI 助手具备自我进化能力的自动化改进系统
 
 ---
 
-## 📋 Overview
+## 📋 概述
 
-**Self-Evolving Agent** is an automated self-improvement system that enables AI assistants to:
+**Self-Evolving Agent** 是一个自动化自我改进系统，让 AI 助手能够：
 
-- 🔍 **Continuous Monitoring** - Monitor system performance and resource usage
-- 🐛 **Auto-Correction** - Analyze error patterns and provide fixes
-- ⚡ **Smart Optimization** - Automatically optimize based on triggers
-- 📚 **Skill Learning** - Analyze gaps and automatically learn new skills
-- 🔄 **Feedback Loop** - Collect and process user feedback
-- 🧠 **Periodic Reflection** - Reflect based on Hindsight architecture
-- 🧪 **Benchmark Testing** - Automated system validation
-- 🛡️ **Sandbox Safety** - Pre-execution security validation
-- 📜 **Version Control** - Track and rollback changes
+- 🔍 **持续监控** - 监控系统性能和资源使用
+- 🐛 **自动纠错** - 分析错误模式并提供修复建议
+- ⚡ **智能优化** - 根据触发条件自动执行优化
+- 📚 **技能学习** - 分析需求缺口并自动学习新技能
+- 🔄 **反馈循环** - 收集和处理用户反馈
+- 🧠 **周期反思** - 基于 Hindsight 架构进行周期性反思
+- 🧪 **基准测试** - 自动化系统验证
+- 🛡️ **安全沙箱** - 执行前安全验证
+- 📜 **版本控制** - 跟踪和回滚变更
 
 ---
 
-## 🎯 Core Features
+## 🎯 核心功能
 
-### 1. Performance Monitoring
+### 1. 性能监控
 
-Automatically monitors system performance:
+自动监控系统性能指标：
 
-| Metric | Description |
-|--------|-------------|
-| CPU Usage | System CPU usage percentage |
-| Memory Usage | System memory usage percentage |
-| Disk Usage | Disk space usage percentage |
-| Active Sessions | OpenClaw active session count |
-| Gateway Status | OpenClaw gateway running status |
+| 指标 | 说明 |
+|------|------|
+| CPU 使用率 | 系统 CPU 占用百分比 |
+| 内存使用率 | 系统内存占用百分比 |
+| 磁盘使用率 | 磁盘空间占用百分比 |
+| 活跃会话 | OpenClaw 活跃会话数量 |
+| 网关状态 | OpenClaw 网关运行状态 |
 
-### 2. Error Analysis
+**触发阈值**：
+- CPU > 80% → 触发优化
+- 内存 > 80% → 触发优化
+- 磁盘 > 90% → 触发优化
 
-Automatically analyzes and logs errors.
+### 2. 错误分析
 
-### 3. Optimization Engine
+自动分析并记录错误：
+- 分析 OpenClaw 错误日志
+- 检查 Cron 任务失败情况
+- 识别错误模式
+- 提供修复建议
 
-Supports multiple optimization strategies:
+### 3. 优化引擎
 
-| Mode | Description |
-|------|-------------|
-| Traditional | Single strategy based on trigger |
-| Exploration | A/B testing with multiple strategies |
-| Auto-Select | Automatically chooses best strategy |
+支持多种优化策略：
 
-### 4. Benchmark Testing (NEW)
+| 模式 | 说明 |
+|------|------|
+| 传统模式 | 基于触发条件的单一策略 |
+| 探索模式 | A/B 测试多种策略 |
+| 自动选择 | 自动选择最佳策略 |
 
-Automated system validation:
+### 4. 基准测试 (新增)
+
+自动化系统验证：
 
 ```bash
 ./scripts/benchmark-runner.sh
 ```
 
-- Memory system tests
-- Performance benchmarks
-- Result comparison
+- 记忆系统测试
+- 性能基准测试
+- 结果对比
 
-### 5. Sandbox Safety (NEW)
+### 5. 安全沙箱 (新增)
 
-Pre-execution security validation:
-
-```bash
-./scripts/sandbox-validator.sh analyze <script>
-./scripts/sandbox-validator.sh execute <script>
-```
-
-- Static code analysis
-- Dangerous command detection
-- Rollback capability
-
-### 6. Version Control (NEW)
-
-Track all optimization changes:
+执行前安全验证：
 
 ```bash
-# Git-backed snapshots before each optimization
-# Rollback to any previous version
+./scripts/sandbox-validator.sh analyze <脚本>
+./scripts/sandbox-validator.sh execute <脚本>
 ```
 
-### 7. Skill Learning
+- 静态代码分析
+- 危险命令检测
+- 回滚能力
 
-Auto-install skills based on user needs.
+### 6. 版本控制 (新增)
 
-### 8. Feedback Loop
+跟踪所有优化变更：
+- 每次优化前 Git 快照
+- 记录变更日志
+- 支持回滚到任意版本
 
-Collect and process user feedback.
+### 7. 技能学习
+
+根据用户需求自动安装技能。
+
+### 8. 反馈循环
+
+收集和处理用户反馈。
 
 ---
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Installation
+### 安装
 
 ```bash
 git clone https://github.com/simer11-jing/self-evolving-agent.git ~/.openclaw/skills/self-evolving-agent
 ```
 
-### Run
+### 运行
 
 ```bash
-# Full workflow
+# 完整工作流
 ./scripts/self-improving-controller.sh
 
-# Performance monitoring only
+# 仅监控
 ./scripts/self-improving-controller.sh --monitor
 
-# Benchmark testing
+# 基准测试
 ./scripts/benchmark-runner.sh
 
-# Security validation
-./scripts/sandbox-validator.sh analyze your-script.sh
+# 安全验证
+./scripts/sandbox-validator.sh analyze 你的脚本.sh
 ```
 
 ---
 
-## 📁 Directory Structure
+## 📁 目录结构
 
 ```
 self-evolving-agent/
 ├── scripts/
-│   ├── self-improving-controller.sh    # Main controller
-│   ├── performance-monitor.sh          # Performance monitoring
-│   ├── error-analyzer.sh               # Error analysis
-│   ├── optimization-engine.sh          # Optimization + Exploration
-│   ├── skill-learner.sh                # Skill learning
-│   ├── feedback-loop.sh                # Feedback loop
-│   ├── memory-reflect.sh               # Memory reflection
-│   ├── benchmark-runner.sh             # Benchmark testing (NEW)
-│   ├── sandbox-validator.sh            # Security sandbox (NEW)
-│   ├── benchmark-report.sh             # Benchmark reports (NEW)
-│   └── code-patcher.sh                 # Runtime patches (NEW)
-├── examples/
-│   └── USAGE.md
+│   ├── self-improving-controller.sh    # 主控制器
+│   ├── performance-monitor.sh          # 性能监控
+│   ├── error-analyzer.sh               # 错误分析
+│   ├── optimization-engine.sh          # 优化引擎 + 探索模式
+│   ├── skill-learner.sh                # 技能学习
+│   ├── feedback-loop.sh                # 反馈循环
+│   ├── memory-reflect.sh               # 记忆反思
+│   ├── benchmark-runner.sh             # 基准测试 (新增)
+│   ├── sandbox-validator.sh            # 安全沙箱 (新增)
+│   ├── benchmark-report.sh             # 基准报告 (新增)
+│   └── code-patcher.sh                 # 代码补丁 (新增)
+├── docs/
+│   └── BENCHMARKS.md                   # 基准测试文档
 └── README.md
 ```
 
 ---
 
-## 🆕 v2.0.0 New Features
+## 🆕 v2.0.0 新功能
 
-| Feature | Description |
-|---------|-------------|
-| **Benchmark Testing** | Automated system validation |
-| **Sandbox Validator** | Pre-execution security checks |
-| **Version Control** | Git-backed change tracking |
-| **Exploration Mode** | A/B testing for optimization |
-| **Code Patcher** | Runtime hot-patching |
+| 功能 | 说明 |
+|------|------|
+| **基准测试** | 自动化系统验证 |
+| **安全沙箱** | 执行前安全检查 |
+| **版本控制** | Git 快照 + 回滚 |
+| **探索模式** | A/B 测试多策略 |
+| **代码补丁** | 运行时热修补 |
 
 ---
 
-## ⚙️ Workflow
+## ⚙️ 工作流程
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   Self-Improving Controller                  │
+│                      自我改进控制器                          │
+│                     (每天 23:00 运行)                        │
 └─────────────────────────────────────────────────────────────┘
                               │
          ┌────────────────────┼────────────────────┐
          ▼                    ▼                    ▼
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│ Performance │      │    Error    │      │   Skill    │
-│  Monitor    │      │  Analyzer   │      │   Learner  │
+│   性能监控   │      │   错误分析   │      │   技能学习   │
+│   Monitor   │      │  Analyzer   │      │   Learner   │
 └─────────────┘      └─────────────┘      └─────────────┘
          │                    │                    │
          ▼                    ▼                    ▼
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│ Benchmark   │      │  Sandbox    │      │  Version    │
-│  Tests      │      │  Validate   │      │  Control    │
+│   基准测试   │      │   安全沙箱   │      │   版本控制   │
+│  Benchmark  │      │   Sandbox   │      │   Version   │
 └─────────────┘      └─────────────┘      └─────────────┘
          │                    │                    │
          └────────────────────┼────────────────────┘
                               │
                               ▼
                     ┌─────────────────┐
-                    │ Generate Report │
-                    │ Update Memory   │
+                    │   生成报告       │
+                    │   更新记忆       │
+                    │   微信通知       │
                     └─────────────────┘
 ```
 
 ---
 
-## 📊 Comparison
+## 📊 功能对比
 
-| Feature | v1.x | v2.0 |
-|---------|------|------|
-| Performance Monitoring | ✅ | ✅ |
-| Error Analysis | ✅ | ✅ |
-| Optimization Engine | ✅ | ✅ |
-| Skill Learning | ✅ | ✅ |
-| Benchmark Testing | ❌ | ✅ |
-| Sandbox Safety | ❌ | ✅ |
-| Version Control | ❌ | ✅ |
-| Exploration Mode | ❌ | ✅ |
-
----
-
-## 🤝 Contributing
-
-Issues and Pull Requests welcome!
+| 功能 | v1.x | v2.0 |
+|------|------|------|
+| 性能监控 | ✅ | ✅ |
+| 错误分析 | ✅ | ✅ |
+| 优化引擎 | ✅ | ✅ |
+| 技能学习 | ✅ | ✅ |
+| 基准测试 | ❌ | ✅ |
+| 安全沙箱 | ❌ | ✅ |
+| 版本控制 | ❌ | ✅ |
+| 探索模式 | ❌ | ✅ |
 
 ---
 
-## 📄 License
+## ⚠️ 注意事项
+
+1. **权限**：需要写入 `~/.openclaw/workspace` 的权限
+2. **依赖**：需要 `jq`、`curl`、`top`、`free`、`df` 等系统工具
+3. **定时任务**：建议深夜运行，避免影响正常操作
+4. **清理**：日志默认保留 30 天，报告保留 180 天
+
+---
+
+## 📖 相关项目
+
+- [Hindsight Memory](https://github.com/simer11-jing/hindsight-memory) - 记忆系统
+- [OpenClaw](https://github.com/openclaw/openclaw) - AI 代理平台
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+---
+
+## 📄 许可证
 
 MIT License
 
 ---
 
-_Created and maintained by 小爪 (OpenClaw Agent)_ 🐾
+_由小爪（OpenClaw Agent）创建并维护_ 🐾
