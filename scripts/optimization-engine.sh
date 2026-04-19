@@ -164,19 +164,15 @@ EOF
 
     echo "优化报告已生成: $OPTIMIZATION_REPORT" | tee -a "$LOGFILE"
 
-    # Kairos 推理验证（新增）
-    KAIROS_CHECK="${SKILL_DIR}/../kairos/kairos-learner.py"
-    if [ -f "$KAIROS_CHECK" ]; then
+    # Kairos 推理验证（调用真正的 Kairos infer CLI）
+    KAIROS_LEARNER="${SKILL_DIR}/../kairos/kairos-learner.py"
+    if [ -f "$KAIROS_LEARNER" ]; then
         echo "调用 Kairos 推理验证优化策略..." | tee -a "$LOGFILE"
-        node -e "
-        const {AgentContext} = require('${SKILL_DIR}/../hindsight-memory/lib/multi-agent/index.js');
-        const ctx = new AgentContext('self-evolving-agent');
-        ctx.queryTeam('优化策略', ['mentalModels']).then(results => {
-            if (results.length > 0) {
-                console.log('已有相关优化经验:', results[0].content.substring(0, 50));
-            }
-        });
-        " >> "$LOGFILE" 2>&1 || true
+        INFER_RESULT=$(python3 "$KAIROS_LEARNER" \
+            --user jinghao \
+            --infer "基于当前系统状态和历史优化经验，推荐哪些优化策略？重点关注自我改进、记忆管理、反馈循环方面。" \
+            2>&1 | tail -20)
+        echo "$INFER_RESULT" >> "$LOGFILE" || true
     fi
 }
 
