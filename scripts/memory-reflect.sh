@@ -126,7 +126,7 @@ find "$SELF_IMPROVING_DIR/monitoring" -name "reflection-*.md" -mtime +180 -delet
 # 6. 写入团队共享记忆（跨 Agent 可见）
 echo "写入团队共享记忆..." | tee -a "$LOGFILE"
 node -e "
-const {AgentContext} = require('/home/jinghao/.openclaw/skills/hindsight-memory/lib/multi-agent/index.js');
+const {AgentContext} = require(process.env.HOME + '/.openclaw/skills/hindsight-memory/lib/multi-agent/index.js');
 const ctx = new AgentContext('self-evolving-agent');
 ctx.writeShared('observations', \`反思周期：过去 $PERIOD 天\n- 决策：$DECISIONS 个\n- 错误：$ERRORS 个\n- 改进：$IMPROVEMENTS 项\n报告：$REFLECT_REPORT\`, { confidence: 0.8, tags: ['self-improving', '周期反思'] }).then(r => console.log('团队记忆已更新')).catch(e => console.error('写入失败:', e.message));
 " 2>&1 | tee -a "$LOGFILE" || true

@@ -19,10 +19,10 @@ const { spawn, execSync } = require('child_process');
 
 const CONFIG = {
   pidFile: '/tmp/self-evolving-daemon.pid',
-  stateFile: '/home/jinghao/.openclaw/workspace/self-improving/daemon-state.json',
-  crashStateFile: '/home/jinghao/.openclaw/workspace/self-improving/daemon-crash-state.json',
-  logDir: '/home/jinghao/.openclaw/workspace/self-improving',
-  scriptsDir: '/home/jinghao/.openclaw/skills/self-evolving-agent/scripts',
+  stateFile: path.join(process.env.HOME || os.homedir(), '.openclaw/workspace/self-improving/daemon-state.json'),
+  crashStateFile: path.join(process.env.HOME || os.homedir(), '.openclaw/workspace/self-improving/daemon-crash-state.json'),
+  logDir: path.join(process.env.HOME || os.homedir(), '.openclaw/workspace/self-improving'),
+  scriptsDir: path.join(process.env.HOME || os.homedir(), '.openclaw/skills/self-evolving-agent/scripts'),
   statusIntervalMs: 60 * 60 * 1000, // 每小时打印状态
   heartbeatIntervalMs: 5 * 60 * 1000, // 每5分钟更新心跳
 };
