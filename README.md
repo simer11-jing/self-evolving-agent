@@ -17,6 +17,8 @@
 - 🧪 **基准测试** - 自动化系统验证
 - 🛡️ **安全沙箱** - 执行前安全验证
 - 📜 **版本控制** - 跟踪和回滚变更
+- 🤝 **跨 Agent 记忆** - 通过 Hindsight Memory 与团队共享经验
+- 🧠 **Kairos 推理** - 优化决策前先查历史经验
 
 ---
 
@@ -57,7 +59,30 @@
 | 探索模式 | A/B 测试多种策略 |
 | 自动选择 | 自动选择最佳策略 |
 
-### 4. 基准测试 (新增)
+**Kairos 推理集成**：生成优化建议前，自动查询团队历史经验，避免重复踩坑。
+
+### 4. 技能学习
+
+根据用户需求自动安装技能。
+
+### 5. 记忆反思
+
+基于 Hindsight 架构进行周期性反思（默认每天 23:55 运行）：
+- 收集过去 N 天的记忆文件
+- 统计决策数量、错误数量、改进数量
+- 生成反思报告，写入私有 MEMORY.md
+- **同时写入** `~/.openclaw/agents/shared/observations` 层供团队共享
+
+```bash
+./scripts/memory-reflect.sh 7    # 周度反思
+./scripts/memory-reflect.sh 30   # 月度反思
+```
+
+### 6. 反馈循环
+
+收集和处理用户反馈。
+
+### 7. 基准测试
 
 自动化系统验证：
 
@@ -69,7 +94,7 @@
 - 性能基准测试
 - 结果对比
 
-### 5. 安全沙箱 (新增)
+### 8. 安全沙箱
 
 执行前安全验证：
 
@@ -81,21 +106,6 @@
 - 静态代码分析
 - 危险命令检测
 - 回滚能力
-
-### 6. 版本控制 (新增)
-
-跟踪所有优化变更：
-- 每次优化前 Git 快照
-- 记录变更日志
-- 支持回滚到任意版本
-
-### 7. 技能学习
-
-根据用户需求自动安装技能。
-
-### 8. 反馈循环
-
-收集和处理用户反馈。
 
 ---
 
@@ -125,6 +135,27 @@ git clone https://github.com/simer11-jing/self-evolving-agent.git ~/.openclaw/sk
 
 ---
 
+## 🤝 跨系统集成
+
+### Hindsight Memory（记忆系统）
+
+`memory-reflect.sh` 反思结论自动写入共享记忆层，其他 Agent 可实时查询：
+
+```bash
+# 团队共享记忆路径
+~/.openclaw/agents/shared/
+```
+
+### Kairos 推理引擎
+
+`optimization-engine.sh` 在生成优化策略前，自动查询团队历史经验：
+
+```
+检测到问题 → 查询 Kairos 历史记忆 → 生成优化建议 → 执行
+```
+
+---
+
 ## 📁 目录结构
 
 ```
@@ -133,30 +164,31 @@ self-evolving-agent/
 │   ├── self-improving-controller.sh    # 主控制器
 │   ├── performance-monitor.sh          # 性能监控
 │   ├── error-analyzer.sh               # 错误分析
-│   ├── optimization-engine.sh          # 优化引擎 + 探索模式
+│   ├── optimization-engine.sh          # 优化引擎 + Kairos 集成
 │   ├── skill-learner.sh                # 技能学习
 │   ├── feedback-loop.sh                # 反馈循环
-│   ├── memory-reflect.sh               # 记忆反思
-│   ├── benchmark-runner.sh             # 基准测试 (新增)
-│   ├── sandbox-validator.sh            # 安全沙箱 (新增)
-│   ├── benchmark-report.sh             # 基准报告 (新增)
-│   └── code-patcher.sh                 # 代码补丁 (新增)
-├── docs/
-│   └── BENCHMARKS.md                   # 基准测试文档
-└── README.md
+│   ├── memory-reflect.sh               # 记忆反思 + 共享层写入
+│   ├── memory-integrator.sh            # 记忆规整
+│   ├── benchmark-runner.sh             # 基准测试
+│   ├── sandbox-validator.sh            # 安全沙箱
+│   ├── benchmark-report.sh             # 基准报告
+│   └── code-patcher.sh                 # 代码补丁
+└── docs/
+    └── BENCHMARKS.md                   # 基准测试文档
 ```
 
 ---
 
-## 🆕 v2.0.0 新功能
+## 🆕 v2.1.0 新功能
 
 | 功能 | 说明 |
 |------|------|
+| **跨 Agent 记忆** | 反思结论写入 hindsight-memory 共享层 |
+| **Kairos 推理集成** | 优化前查询历史经验，推理驱动决策 |
 | **基准测试** | 自动化系统验证 |
 | **安全沙箱** | 执行前安全检查 |
 | **版本控制** | Git 快照 + 回滚 |
 | **探索模式** | A/B 测试多策略 |
-| **代码补丁** | 运行时热修补 |
 
 ---
 
@@ -177,8 +209,8 @@ self-evolving-agent/
          │                    │                    │
          ▼                    ▼                    ▼
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   基准测试   │      │   安全沙箱   │      │   版本控制   │
-│  Benchmark  │      │   Sandbox   │      │   Version   │
+│   基准测试   │      │   安全沙箱   │      │   Kairos    │
+│  Benchmark  │      │   Sandbox   │      │  推理验证    │
 └─────────────┘      └─────────────┘      └─────────────┘
          │                    │                    │
          └────────────────────┼────────────────────┘
@@ -187,24 +219,10 @@ self-evolving-agent/
                     ┌─────────────────┐
                     │   生成报告       │
                     │   更新记忆       │
+                    │   → shared/     │ ← 团队共享
                     │   微信通知       │
                     └─────────────────┘
 ```
-
----
-
-## 📊 功能对比
-
-| 功能 | v1.x | v2.0 |
-|------|------|------|
-| 性能监控 | ✅ | ✅ |
-| 错误分析 | ✅ | ✅ |
-| 优化引擎 | ✅ | ✅ |
-| 技能学习 | ✅ | ✅ |
-| 基准测试 | ❌ | ✅ |
-| 安全沙箱 | ❌ | ✅ |
-| 版本控制 | ❌ | ✅ |
-| 探索模式 | ❌ | ✅ |
 
 ---
 
@@ -219,7 +237,8 @@ self-evolving-agent/
 
 ## 📖 相关项目
 
-- [Hindsight Memory](https://github.com/simer11-jing/hindsight-memory) - 记忆系统
+- [Hindsight Memory](https://github.com/simer11-jing/hindsight-memory) - 记忆系统（含跨 Agent 共享层）
+- [Kairos](https://github.com/simer11-jing/Kairos) - 推理引擎
 - [OpenClaw](https://github.com/openclaw/openclaw) - AI 代理平台
 
 ---
