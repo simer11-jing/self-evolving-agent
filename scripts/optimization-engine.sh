@@ -162,6 +162,21 @@ run_traditional_optimization() {
 EOF
 
     echo "优化报告已生成: $OPTIMIZATION_REPORT" | tee -a "$LOGFILE"
+
+    # Kairos 推理验证（新增）
+    KAIROS_CHECK="${SKILL_DIR}/../kairos/kairos-learner.py"
+    if [ -f "$KAIROS_CHECK" ]; then
+        echo "调用 Kairos 推理验证优化策略..." | tee -a "$LOGFILE"
+        node -e "
+        const {AgentContext} = require('${SKILL_DIR}/../hindsight-memory/lib/multi-agent/index.js');
+        const ctx = new AgentContext('self-evolving-agent');
+        ctx.queryTeam('优化策略', ['mentalModels']).then(results => {
+            if (results.length > 0) {
+                console.log('已有相关优化经验:', results[0].content.substring(0, 50));
+            }
+        });
+        " >> "$LOGFILE" 2>&1 || true
+    fi
 }
 
 # ============================================
