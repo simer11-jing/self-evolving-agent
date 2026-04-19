@@ -202,6 +202,22 @@ run_feedback() {
     fi
 }
 
+# 运行记忆规整（整合 hindsight-memory）
+run_memory_integrator() {
+    log_info "运行记忆规整系统..."
+    
+    local script="$SKILL_DIR/scripts/memory-integrator.sh"
+    if [ -f "$script" ]; then
+        if bash "$script" >> "$SELF_IMPROVING_DIR/controller-$(date +%Y%m%d).log" 2>&1; then
+            log_success "记忆规整完成"
+        else
+            log_error "记忆规整失败"
+        fi
+    else
+        log_warning "记忆规整脚本不存在"
+    fi
+}
+
 # 运行周度反思
 run_reflection() {
     local day_of_week=$(date +%u)
@@ -312,6 +328,7 @@ Self-Evolving Agent - 自我改进控制器
     --optimize     仅运行优化引擎
     --errors       仅运行错误分析
     --skills       仅运行技能学习
+    --memory     仅运行记忆规整
     --feedback     仅运行反馈循环
     --reflect      仅运行周度反思
     --report       仅生成报告
@@ -345,6 +362,9 @@ main() {
         --skills)
             run_skill_learning
             ;;
+        --memory)
+            run_memory_integrator
+            ;;
         --feedback)
             run_feedback
             ;;
@@ -364,6 +384,7 @@ main() {
             run_error_analysis
             run_optimization
             run_skill_learning
+            run_memory_integrator
             run_feedback
             run_reflection
             generate_report
