@@ -145,4 +145,44 @@ ${ODDS_REPORT}
 EOF
 
 echo "✅ 报告已生成: $REPORT" | tee -a "$LOGFILE"
+
+# ==================== 5. 飞书推送（可选）====================
+FEISHU_PUSH="$HOME/.openclaw/agents/main/send_feishu.js"
+if [ -f "$FEISHU_PUSH" ] && [ -n "$FEISHU_WEBHOOK_URL" ]; then
+    echo "📤 推送分析结果到飞书..." | tee -a "$LOGFILE"
+    
+    # 推送分析结果摘要
+    MATCH_COUNT=$(echo "$ODDS_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d.get('value',{}).get('matchList',[])))" 2>/dev/null || echo "0")
+    SUMMARY="📊 竞彩分析报告 $(date +%m/%d)\n\n"
+    SUMMARY+="• Kairos 推理: 已完成\n"
+    SUMMARY+="• 赔率分析: $MATCH_COUNT 场比赛\n"
+    SUMMARY+="• 报告: $REPORT"
+    
+    node "$FEISHU_PUSH" "$SUMMARY" 2>/dev/null || true
+    
+    # 赔率异常告警
+    ANOMALY_ALERTS=$(echo "$ODDS_DATA" | python3 -c "
+import sys, json
+try:
+    data = json.load(sys.stdin)
+    matches = data.get('value', {}).get('matchList', [])
+    anomalies = []
+    for m in matches:
+        home = m.get('homeTeamName', m.get('homeName', '?'))
+        away = m.get('awayTeamName', m.get('awayName', '?'))
+        had = m.get('hadOddsList', [{}])[0] if m.get('hadOddsList') else {}
+        odds = float(had.get('odds', 0) or 0)
+        if odds > 4.0:
+            anomalies.append(f'{home} vs {away} 高赔主胜({odds})')
+    if anomalies:
+        print('\n'.join(anomalies[:5]))
+except: pass
+" 2>/dev/null)
+    
+    if [ -n "$ANOMALY_ALERTS" ]; then
+        ALERT_MSG="🚨 赔率异常警告\n\n$ANOMALY_ALERTS"
+        node "$FEISHU_PUSH" "$ALERT_MSG" 2>/dev/null || true
+    fi
+fi
+
 echo "=== 竞彩分析完成 - $(date) ===" | tee -a "$LOGFILE"

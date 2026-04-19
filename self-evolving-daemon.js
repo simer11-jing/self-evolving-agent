@@ -43,10 +43,27 @@ const SCHEDULE = [
 // ============================================================================
 
 class Logger {
-  constructor(logDir) {
+  constructor(logDir, maxSizeMB = 10, maxFiles = 7) {
     this.logDir = logDir;
+    this.maxSize = maxSizeMB * 1024 * 1024;
+    this.maxFiles = maxFiles;
     this.currentLogFile = null;
     this.currentLogDate = null;
+    this.currentSize = 0;
+    
+    // 初始化时检查当前日志文件大小
+    this._ensureLogFile();
+  }
+
+  _ensureLogFile() {
+    const logFile = this.getLogFilePath();
+    if (fs.existsSync(logFile)) {
+      const stat = fs.statSync(logFile);
+      this.currentSize = stat.size;
+      if (this.currentSize > this.maxSize) {
+        this._rotate();
+      }
+    }
   }
 
   getLogFilePath() {
@@ -54,8 +71,40 @@ class Logger {
     if (date !== this.currentLogDate) {
       this.currentLogDate = date;
       this.currentLogFile = path.join(this.logDir, `daemon-${date}.log`);
+      // 日期变化时重置大小并检查
+      this._ensureLogFile();
     }
     return this.currentLogFile;
+  }
+
+  _rotate() {
+    if (!this.currentLogFile || !fs.existsSync(this.currentLogFile)) {
+      return;
+    }
+    
+    // 轮转：重命名旧文件，添加时间戳
+    const timestamp = Date.now();
+    const rotated = this.currentLogFile.replace('.log', `-${timestamp}.log`);
+    try {
+      fs.renameSync(this.currentLogFile, rotated);
+    } catch (e) {
+      // 忽略重命名错误
+    }
+    this.currentSize = 0;
+    
+    // 清理过期文件
+    try {
+      const files = fs.readdirSync(this.logDir)
+        .filter(f => f.startsWith('daemon-') && f.endsWith('.log'))
+        .sort()
+        .reverse();
+      
+      for (const f of files.slice(this.maxFiles)) {
+        fs.unlinkSync(path.join(this.logDir, f));
+      }
+    } catch (e) {
+      // 忽略清理错误
+    }
   }
 
   log(level, message) {
@@ -66,7 +115,13 @@ class Logger {
     process.stdout.write(logLine);
     
     try {
-      fs.appendFileSync(this.getLogFilePath(), logLine);
+      const logFile = this.getLogFilePath();
+      // 检查是否需要轮转
+      if (this.currentSize > this.maxSize) {
+        this._rotate();
+      }
+      fs.appendFileSync(logFile, logLine);
+      this.currentSize += Buffer.byteLength(logLine);
     } catch (e) {
       // 忽略日志写入错误
     }
@@ -485,6 +540,49 @@ class Daemon {
 }
 
 // ============================================================================
+// HTTP Status Server
+// ============================================================================
+
+function startHttpServer(daemon, port = 3001) {
+  const http = require('http');
+  
+  const server = http.createServer((req, res) => {
+    if (req.url === '/status' && req.method === 'GET') {
+      // 返回 JSON 状态
+      const state = daemon.stateStore.state;
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({
+        uptime: process.uptime(),
+        status: 'running',
+        tasks: state.tasks,
+        startTime: state.startTime,
+        pid: process.pid
+      }, null, 2));
+    } else if (req.url === '/health' && req.method === 'GET') {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end('OK');
+    } else {
+      res.writeHead(404);
+      res.end('Not Found');
+    }
+  });
+  
+  server.listen(port, '127.0.0.1', () => {
+    daemon.logger.info(`💻 HTTP 状态面板: http://localhost:${port}/status`);
+  });
+  
+  server.on('error', (e) => {
+    if (e.code === 'EADDRINUSE') {
+      daemon.logger.warn(`⚠️ 端口 ${port} 已被占用，跳过 HTTP 服务器`);
+    } else {
+      daemon.logger.error(`HTTP 服务器错误: ${e.message}`);
+    }
+  });
+  
+  return server;
+}
+
+// ============================================================================
 // CLI
 // ============================================================================
 
@@ -514,6 +612,10 @@ Self-Evolving Agent Daemon
   node self-evolving-daemon.js --status 打印当前状态
   node self-evolving-daemon.js --help   显示帮助
 
+HTTP 状态面板:
+  curl http://localhost:3001/status   查看 JSON 状态
+  curl http://localhost:3001/health   健康检查
+
 系统服务:
   systemctl start self-evolving-daemon   启动服务
   systemctl status self-evolving-daemon  查看状态
@@ -521,6 +623,9 @@ Self-Evolving Agent Daemon
 `);
     process.exit(0);
   }
+
+  // 启动 HTTP 状态面板
+  startHttpServer(daemon);
 
   // 正常启动 daemon
   daemon.start();
