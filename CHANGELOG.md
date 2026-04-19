@@ -7,6 +7,47 @@
 
 ---
 
+## [2.2.0] - 2026-04-20
+
+### 新增
+
+- ✨ **竞彩定时推送体系**
+  - `jingcai-morning.sh` (10:00) - 早盘预测，五大联赛焦点预览
+  - `jingcai-review.sh` (12:00) - 午间复盘，昨日胜率统计
+  - `jingcai-afternoon.sh` (15:00) - 午后修正，赔率异常检测
+  - `jingcai-evening.sh` (21:00) - 晚盘报告，今日完整分析
+  - 所有脚本直发飞书群
+
+- ✨ **竞彩赛果自动抓取** (`jingcai-results-fetcher.sh`)
+  - sporttery.cn 官方 API，每12小时自动抓取
+  - 自动去重写入 betting-results.md
+
+- ✨ **Daemon 崩溃重启飞书通知**
+  - `checkCrashRestart()` 检测异常退出
+  - 心跳机制（每5分钟写状态文件）
+  - 崩溃后自动发送飞书通知
+
+- ✨ **日志 gzip 压缩轮转**
+  - 10MB 触发压缩，保留 maxFiles*2 个旧日志
+  - 减少磁盘占用
+
+- ✨ **memory-compact 调度**
+  - 每3天自动调用 hindsight-memory compact
+  - 保持记忆文件健康
+
+- ✨ **skill-learner 高级投注模式**
+  - 连胜/连负识别
+  - 高赔偏好检测（>3.5）
+  - 主客场偏差统计
+  - 各联赛独立胜率
+
+### 修复
+
+- 🐛 **硬编码路径** - `/home/jinghao` → `$HOME`/`process.env.HOME`
+  - self-evolving-daemon.js: 5处
+  - kairos-learner.py: 5处
+  - memory-reflect.sh: 1处
+
 ## [2.1.0] - 2026-04-15
 
 ### 新增
