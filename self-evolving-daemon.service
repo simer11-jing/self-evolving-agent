@@ -1,0 +1,22 @@
+[Unit]
+Description=Self-Evolving Agent Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=jinghao
+Group=jinghao
+WorkingDirectory=/home/jinghao/.openclaw/skills/self-evolving-agent
+ExecStart=/usr/bin/node /home/jinghao/.openclaw/skills/self-evolving-agent/self-evolving-daemon.js
+Restart=on-failure
+RestartSec=10
+
+# 日志
+StandardOutput=append:/home/jinghao/.openclaw/workspace/self-improving/daemon.log
+StandardError=append:/home/jinghao/.openclaw/workspace/self-improving/daemon.log
+
+# 环境变量
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

@@ -8,7 +8,7 @@
 # - 记录优化结果
 # - 开放探索模式：多策略并行、A/B测试、最佳策略选择
 
-set -e
+
 
 # 配置
 WORKSPACE="${WORKSPACE:-$HOME/.openclaw/workspace}"
@@ -59,6 +59,7 @@ echo "=== 优化引擎完成 - $(date) ===" | tee -a "$LOGFILE"
 # ============================================
 # 传统优化模式
 # ============================================
+
 run_traditional_optimization() {
     local trigger="$1"
     local IMPROVEMENTS=0
