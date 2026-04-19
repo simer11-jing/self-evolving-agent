@@ -173,6 +173,29 @@ EOF
             --infer "基于当前系统状态和历史优化经验，推荐哪些优化策略？重点关注自我改进、记忆管理、反馈循环方面。" \
             2>&1 | tail -20)
         echo "$INFER_RESULT" >> "$LOGFILE" || true
+        
+        # 提取策略建议写入 JSON，供 jingcai-analyzer 下次启动时引用
+        STRATEGY_UPDATE_FILE="$SELF_IMPROVING_DIR/optimizations/strategy-updates.json"
+        echo "$INFER_RESULT" | python3 -c "
+import sys, json, re
+content = sys.stdin.read()
+# 提取关键建议行
+suggestions = [line.strip() for line in content.split('\n') if line.strip() and len(line.strip()) > 10]
+suggestion_text = '\n'.join(suggestions[:10]) if suggestions else content[:300]
+try:
+    data = {}
+    try:
+        with open('$STRATEGY_UPDATE_FILE') as f:
+            data = json.load(f)
+    except: pass
+    data['last_optimization'] = '$(date -I)'
+    data['strategy'] = suggestion_text
+    with open('$STRATEGY_UPDATE_FILE', 'w') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print('策略建议已保存到 strategy-updates.json')
+except Exception as e:
+    print(f'策略保存失败: {e}')
+" 2>/dev/null || true
     fi
 }
 

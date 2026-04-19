@@ -25,6 +25,25 @@ echo "=== 竞彩分析 - $(date) ===" | tee -a "$LOGFILE"
 # ==================== 1. 用 Kairos 推理生成分析 ====================
 echo "🤖 使用 Kairos 推理生成投注分析..." | tee -a "$LOGFILE"
 
+# 读取优化引擎的策略建议（如果有）
+OPTIMIZATION_CONTEXT=""
+STRATEGY_FILE="$SELF_IMPROVING_DIR/optimizations/strategy-updates.json"
+if [ -f "$STRATEGY_FILE" ]; then
+    LAST_OPT=$(python3 -c "
+import json, sys
+try:
+    with open('$STRATEGY_FILE') as f:
+        d = json.load(f)
+    print(d.get('last_optimization', ''))
+    print('---策略建议---')
+    print(d.get('strategy', '')[:300])
+except: pass
+" 2>/dev/null)
+    if [ -n "$LAST_OPT" ]; then
+        OPTIMIZATION_CONTEXT="\n优化策略建议（近期）：\n$LAST_OPT"
+    fi
+fi
+
 # Kairos infer 基于竞彩经验库推理
 INFER_RESULT=$(python3 "$KAIROS" \
     --user jinghao \
@@ -32,7 +51,7 @@ INFER_RESULT=$(python3 "$KAIROS" \
 1. 优先分析英超/德甲/意甲焦点比赛
 2. 重点关注：保级队主场（战意 > 实力）、欧战资格队分心情况
 3. 识别赔率异常变化 > 15% 的比赛
-4. 给出投注方向建议（优先让球盘/大小球，慎投胜平负高赔）
+4. 给出投注方向建议（优先让球盘/大小球，慎投胜平负高赔）${OPTIMIZATION_CONTEXT}
 
 请输出格式：
 ## 今日重点比赛
