@@ -80,9 +80,9 @@ echo "$(date -Iseconds): CPU=${CPU_USAGE}%, MEM=${MEMORY_USAGE}%, DISK=${DISK_US
 echo "1]" >> "$METRICS_FILE" 2>/dev/null || true
 
 # 6. 检查是否需要优化
-CPU_THRESHOLD=80
-MEM_THRESHOLD=80
-DISK_THRESHOLD=90
+CPU_THRESHOLD=60  # 60% 以上触发优化
+MEM_THRESHOLD=70  # 70% 以上触发优化
+DISK_THRESHOLD=75  # 75% 以上触发优化（90%太迟）
 
 NEED_OPTIMIZATION=0
 
