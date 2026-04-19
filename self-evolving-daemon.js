@@ -36,6 +36,7 @@ const SCHEDULE = [
   { name: 'memory-integrator', intervalMs: 24 * 60 * 60 * 1000 },      // 24小时
   { name: 'jingcai-monitor', intervalMs: 24 * 60 * 60 * 1000 },       // 竞彩监控（每天晚6点）
   { name: 'jingcai-analyzer', intervalMs: 24 * 60 * 60 * 1000 },      // 竞彩分析（每天晚7点）
+  { name: 'jingcai-results-fetcher', intervalMs: 12 * 60 * 60 * 1000 }, // 赛果抓取（每天早9点）
   { name: 'jingcai-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },     // 竞彩学习（每周一次）
   { name: 'memory-compact', intervalMs: 3 * 24 * 60 * 60 * 1000 },       // 记忆压缩（每3天）
   { name: 'skill-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },      // 7天
