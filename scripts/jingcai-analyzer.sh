@@ -194,8 +194,33 @@ cat >> "$REPORT" << 'EOF'
 EOF
 
 # 从 Kairos 推理结果中提取比赛，追加到表格
+INFER_SESSION_ID="infer-$(date +%Y%m%d-%H%M%S)"
+
 if echo "$INFER_RESULT" | grep -qE "英超|德甲|意甲|西甲|欧冠|欧联"; then
     echo "| $TODAY | 待填充 | 待填充 | 待填充 | 待填充 | 待填充 | 中 |" >> "$REPORT"
 fi
+
+cat >> "$REPORT" << 'EOF'
+
+## 采纳反馈
+
+| 反馈类型 | session_id | 备注 |
+|----------|-----------|------|
+| adopted / adjusted / rejected | SESSION_ID_PLACEHOLDER | 如：调整了赔率区间 |
+
+```bash
+# 采纳（分析准确）
+python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:adopted
+
+# 调整后采纳
+python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:adjusted:主队赔率偏高
+
+# 不采纳
+python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:rejected:战意判断错误
+```
+EOF
+
+# 替换占位符为真实 session_id
+sed -i "s|SESSION_ID_PLACEHOLDER|$INFER_SESSION_ID|g" "$REPORT"
 
 echo "=== 竞彩分析完成 - $(date) ===" | tee -a "$LOGFILE"
