@@ -103,19 +103,34 @@ try:
     
     shift = (current - initial) / initial
     
-    # 判断等级
-    if shift > 0.30:
-        status = "🚨 果断避开"
-        level = "danger"
-    elif shift > 0.15:
-        status = "⚠️ 谨慎"
-        level = "warning"
-    elif shift < -0.15:
-        status = "📉 主队强势"
-        level = "opportunity"
-    else:
-        status = "✅ 正常"
-        level = "normal"
+ODDS_THRESHOLDS="$SELF_IMPROVING_DIR/jingcai/odds-thresholds.json"
+
+# 读取阈值配置（默认）
+DANGER_THR=0.30
+WARNING_THR=0.15
+OPPORTUNITY_THR=-0.15
+if [ -f "$ODDS_THRESHOLDS" ]; then
+    DANGER_THR=$(jq -r '.danger_threshold // 0.30' "$ODDS_THRESHOLDS")
+    WARNING_THR=$(jq -r '.warning_threshold // 0.15' "$ODDS_THRESHOLDS")
+    OPPORTUNITY_THR=$(jq -r '.opportunity_threshold // -0.15' "$ODDS_THRESHOLDS")
+fi
+
+echo "[赔率阈值] danger>$DANGER_THR warning>$WARNING_THR opportunity<$OPPORTUNITY_THR" | tee -a "$LOGFILE"
+
+# 判断等级
+if shift > $DANGER_THR; then
+    status = "🚨 果断避开"
+    level = "danger"
+elif shift > $WARNING_THR; then
+    status = "⚠️ 谨慎"
+    level = "warning"
+elif shift < $OPPORTUNITY_THR; then
+    status = "📉 主队强势"
+    level = "opportunity"
+else
+    status = "✅ 正常"
+    level = "normal"
+fi
     
     print(f'  [$match_id] $home_team vs $away_team | 初:{initial:.2f} → 现:{current:.2f} | 变化:{shift*100:+.1f}% {status}')
     
@@ -251,16 +266,16 @@ cat >> "$REPORT" <<EOF
 
 ### 赔率异常统计
 
-- 🚨 危险（暴升>30%）：$DANGER_COUNT 场
-- ⚠️ 警告（上升15-30%）：$WARNING_COUNT 场
+- 🚨 危险（暴升>$DANGER_THR%）：$DANGER_COUNT 场
+- ⚠️ 警告（上升${WARNING_THR}%-${DANGER_THR}%）：$WARNING_COUNT 场
 - 📉 机会（下降>15%）：$OPPORTUNITY_COUNT 场
 
 ## 赔率判断标准
 
 | 变化幅度 | 判断 | 建议 |
 |---------|------|------|
-| > +30% | 🚨 果断避开 | 庄家不看好主队 |
-| +15% ~ +30% | ⚠️ 谨慎 | 观察为主 |
+| > +${DANGER_THR}% | 🚨 果断避开 | 庄家不看好主队 |
+| +${WARNING_THR}% ~ +${DANGER_THR}% | ⚠️ 谨慎 | 观察为主 |
 | -15% ~ +15% | ✅ 正常 | 可考虑 |
 | < -15% | 📉 主队强势 | 可以关注 |
 
