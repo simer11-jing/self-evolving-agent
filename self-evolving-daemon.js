@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { spawn } = require('child_process');
+const { spawn, execSync } = require('child_process');
 
 // ============================================================================
 // 配置
@@ -20,9 +20,11 @@ const { spawn } = require('child_process');
 const CONFIG = {
   pidFile: '/tmp/self-evolving-daemon.pid',
   stateFile: '/home/jinghao/.openclaw/workspace/self-improving/daemon-state.json',
+  crashStateFile: '/home/jinghao/.openclaw/workspace/self-improving/daemon-crash-state.json',
   logDir: '/home/jinghao/.openclaw/workspace/self-improving',
   scriptsDir: '/home/jinghao/.openclaw/skills/self-evolving-agent/scripts',
   statusIntervalMs: 60 * 60 * 1000, // 每小时打印状态
+  heartbeatIntervalMs: 5 * 60 * 1000, // 每5分钟更新心跳
 };
 
 // 调度表配置
@@ -35,6 +37,7 @@ const SCHEDULE = [
   { name: 'jingcai-monitor', intervalMs: 24 * 60 * 60 * 1000 },       // 竞彩监控（每天晚6点）
   { name: 'jingcai-analyzer', intervalMs: 24 * 60 * 60 * 1000 },      // 竞彩分析（每天晚7点）
   { name: 'jingcai-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },     // 竞彩学习（每周一次）
+  { name: 'memory-compact', intervalMs: 3 * 24 * 60 * 60 * 1000 },       // 记忆压缩（每3天）
   { name: 'skill-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },      // 7天
   { name: 'memory-reflect', intervalMs: 7 * 24 * 60 * 60 * 1000, dayOfWeek: 0 }, // 7天，周日触发
 ];
@@ -93,18 +96,34 @@ class Logger {
     }
     this.currentSize = 0;
     
-    // 清理过期文件
+    // 压缩旧日志 (gzip)
+    this._compressLog(rotated);
+    
+    // 清理过期文件 (支持 .log 和 .log.gz)
     try {
       const files = fs.readdirSync(this.logDir)
-        .filter(f => f.startsWith('daemon-') && f.endsWith('.log'))
-        .sort()
-        .reverse();
+        .filter(f => f.startsWith('daemon-') && (f.endsWith('.log') || f.endsWith('.log.gz')))
+        .map(f => ({ name: f, time: fs.statSync(path.join(this.logDir, f)).mtime }))
+        .sort((a, b) => b.time - a.time);
       
-      for (const f of files.slice(this.maxFiles)) {
-        fs.unlinkSync(path.join(this.logDir, f));
+      // maxFiles * 2 因为每个日志可能有 .log 和 .log.gz 两个版本
+      for (const f of files.slice(this.maxFiles * 2)) {
+        fs.unlinkSync(path.join(this.logDir, f.name));
       }
     } catch (e) {
       // 忽略清理错误
+    }
+  }
+
+  _compressLog(logFile) {
+    if (!fs.existsSync(logFile)) return;
+    
+    try {
+      // 检查 gzip 是否可用
+      execSync('which gzip', { stdio: 'ignore' });
+      execSync(`gzip -9 "${logFile}"`, { stdio: 'ignore' });
+    } catch (e) {
+      // gzip 不可用，静默跳过压缩
     }
   }
 
@@ -389,6 +408,87 @@ class Scheduler {
 }
 
 // ============================================================================
+// 崩溃重启检测
+// ============================================================================
+
+function processKillCheck(pid) {
+  try {
+    process.kill(pid, 0);
+    return true;  // 进程存在
+  } catch {
+    return false; // 进程不存在
+  }
+}
+
+function sendFeishuNotification(text) {
+  try {
+    const pushScript = path.join(process.env.HOME, '.openclaw', 'agents', 'main', 'send_feishu.js');
+    if (fs.existsSync(pushScript)) {
+      execSync(`node "${pushScript}" "${text.replace(/"/g, '\\"')}"`, { stdio: 'ignore' });
+    }
+  } catch (e) {
+    // 飞书通知失败不阻断启动
+    console.error('飞书通知失败:', e.message);
+  }
+}
+
+function checkCrashRestart(logger) {
+  const stateFile = CONFIG.crashStateFile;
+  let state = {};
+  
+  if (fs.existsSync(stateFile)) {
+    try {
+      state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
+    } catch (e) {
+      // 忽略解析错误
+    }
+  }
+  
+  const wasRunning = state.status === 'running';
+  const lastPid = state.pid;
+  const abnormal = wasRunning && lastPid && !processKillCheck(lastPid);
+  
+  if (abnormal) {
+    const msg = `🚨 Daemon 异常重启
+
+上次运行状态: ${state.status}
+PID: ${lastPid}
+崩溃时间: ${state.lastHeartbeat || '未知'}
+重启时间: ${new Date().toISOString()}`;
+    
+    if (logger) {
+      logger.warn('检测到异常重启，发送飞书通知...');
+    }
+    sendFeishuNotification(msg);
+  }
+  
+  // 更新状态
+  state.status = 'running';
+  state.pid = process.pid;
+  state.startTime = new Date().toISOString();
+  state.lastHeartbeat = new Date().toISOString();
+  
+  try {
+    fs.writeFileSync(stateFile, JSON.stringify(state, null, 2));
+  } catch (e) {
+    // 忽略写入错误
+  }
+}
+
+function updateHeartbeat() {
+  const stateFile = CONFIG.crashStateFile;
+  try {
+    if (fs.existsSync(stateFile)) {
+      const state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
+      state.lastHeartbeat = new Date().toISOString();
+      fs.writeFileSync(stateFile, JSON.stringify(state, null, 2));
+    }
+  } catch (e) {
+    // 忽略错误
+  }
+}
+
+// ============================================================================
 // Daemon
 // ============================================================================
 
@@ -407,6 +507,7 @@ class Daemon {
       this.logger
     );
     this.statusTimer = null;
+    this.heartbeatTimer = null;
   }
 
   // PID 文件管理
@@ -459,6 +560,14 @@ class Daemon {
   start() {
     this.checkPid();
     this.setupSignals();
+    
+    // 检查是否崩溃重启
+    checkCrashRestart(this.logger);
+    
+    // 启动心跳更新
+    this.heartbeatTimer = setInterval(() => {
+      updateHeartbeat();
+    }, CONFIG.heartbeatIntervalMs);
 
     // 注册所有任务
     for (const task of SCHEDULE) {
@@ -480,10 +589,26 @@ class Daemon {
   }
 
   stop() {
+    if (this.heartbeatTimer) {
+      clearInterval(this.heartbeatTimer);
+    }
     if (this.statusTimer) {
       clearInterval(this.statusTimer);
     }
     this.scheduler.stop();
+    
+    // 更新状态为停止
+    const stateFile = CONFIG.crashStateFile;
+    try {
+      if (fs.existsSync(stateFile)) {
+        const state = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
+        state.status = 'stopped';
+        state.stopTime = new Date().toISOString();
+        fs.writeFileSync(stateFile, JSON.stringify(state, null, 2));
+      }
+    } catch (e) {
+      // 忽略错误
+    }
   }
 
   printStatus() {
