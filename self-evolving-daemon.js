@@ -32,6 +32,8 @@ const SCHEDULE = [
   { name: 'optimization-engine', intervalMs: 24 * 60 * 60 * 1000 },    // 24小时
   { name: 'feedback-loop', intervalMs: 24 * 60 * 60 * 1000 },          // 24小时
   { name: 'memory-integrator', intervalMs: 24 * 60 * 60 * 1000 },      // 24小时
+  { name: 'jingcai-monitor', intervalMs: 24 * 60 * 60 * 1000 },       // 竞彩监控（每天晚6点）
+  { name: 'jingcai-analyzer', intervalMs: 24 * 60 * 60 * 1000 },      // 竞彩分析（每天晚7点）
   { name: 'skill-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },      // 7天
   { name: 'memory-reflect', intervalMs: 7 * 24 * 60 * 60 * 1000, dayOfWeek: 0 }, // 7天，周日触发
 ];
