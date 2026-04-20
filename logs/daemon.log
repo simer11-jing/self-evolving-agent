@@ -1,0 +1,163 @@
+[2026-04-20T19:01:33.471Z] [INFO] Daemon 启动 (PID: 3719556)
+[2026-04-20T19:01:33.479Z] [INFO] 调度器启动
+[2026-04-20T19:01:33.479Z] [INFO] 已注册 13 个任务
+[2026-04-20T19:01:33.479Z] [INFO] [performance-monitor] 下次运行: 2026-04-20T22:11:47.725Z (190分钟后)
+[2026-04-20T19:01:33.480Z] [INFO] [error-analyzer] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.480Z] [INFO] [optimization-engine] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.480Z] [INFO] [feedback-loop] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.480Z] [INFO] [memory-integrator] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.480Z] [INFO] [jingcai-monitor] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.480Z] [INFO] [jingcai-realtime] 下次运行: 2026-04-20T19:01:34.480Z (1秒后)
+[2026-04-20T19:01:33.484Z] [INFO] [jingcai-analyzer] 下次运行: 2026-04-20T19:01:34.484Z (1秒后)
+[2026-04-20T19:01:33.485Z] [INFO] [jingcai-results-fetcher] 下次运行: 2026-04-20T20:37:34.701Z (96分钟后)
+[2026-04-20T19:01:33.485Z] [INFO] [jingcai-learner] 下次运行: 2026-04-26T20:38:12.349Z (8737分钟后)
+[2026-04-20T19:01:33.485Z] [INFO] [memory-compact] 下次运行: 2026-04-22T19:44:36.308Z (2923分钟后)
+[2026-04-20T19:01:33.485Z] [INFO] [skill-learner] 下次运行: 2026-04-26T18:54:30.966Z (8633分钟后)
+[2026-04-20T19:01:33.485Z] [INFO] [memory-reflect] 下次运行: 2026-05-02T18:00:00.000Z (17218分钟后)
+[2026-04-20T19:01:33.485Z] [INFO] === Daemon 状态 ===
+[2026-04-20T19:01:33.486Z] [INFO]   performance-monitor: 状态=success, 运行次数=5, 上次=2026-04-20T16:11:47.725Z, 下次=2026-04-20T22:11:47.725Z
+[2026-04-20T19:01:33.486Z] [INFO]   error-analyzer: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:28.644Z, 下次=2026-04-20T18:54:28.644Z
+[2026-04-20T19:01:33.486Z] [INFO]   optimization-engine: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:28.660Z, 下次=2026-04-20T18:54:28.660Z
+[2026-04-20T19:01:33.486Z] [INFO]   feedback-loop: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:29.329Z, 下次=2026-04-20T18:54:29.329Z
+[2026-04-20T19:01:33.486Z] [INFO]   memory-integrator: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:29.377Z, 下次=2026-04-20T18:54:29.377Z
+[2026-04-20T19:01:33.486Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=1, 上次=2026-04-19T18:54:29.838Z, 下次=2026-04-20T18:54:29.838Z
+[2026-04-20T19:01:33.486Z] [INFO]   jingcai-realtime: 状态=never, 运行次数=0, 上次=从未运行, 下次=1970-01-01T00:05:00.000Z
+[2026-04-20T19:01:33.486Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=1, 上次=2026-04-19T18:54:30.779Z, 下次=2026-04-20T18:54:30.779Z
+[2026-04-20T19:01:33.486Z] [INFO]   jingcai-results-fetcher: 状态=success, 运行次数=2, 上次=2026-04-20T08:37:34.701Z, 下次=2026-04-20T20:37:34.701Z
+[2026-04-20T19:01:33.486Z] [INFO]   jingcai-learner: 状态=success, 运行次数=1, 上次=2026-04-19T20:38:12.349Z, 下次=2026-04-26T20:38:12.349Z
+[2026-04-20T19:01:33.486Z] [INFO]   memory-compact: 状态=success, 运行次数=1, 上次=2026-04-19T19:44:36.308Z, 下次=2026-04-22T19:44:36.308Z
+[2026-04-20T19:01:33.486Z] [INFO]   skill-learner: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:30.966Z, 下次=2026-04-26T18:54:30.966Z
+[2026-04-20T19:01:33.486Z] [INFO]   memory-reflect: 状态=success, 运行次数=1, 上次=2026-04-19T18:54:31.366Z, 下次=2026-05-02T18:00:00.000Z
+[2026-04-20T19:01:33.486Z] [INFO] ==================
+[2026-04-20T19:01:33.486Z] [INFO] Daemon 运行中...
+[2026-04-20T19:01:33.505Z] [INFO] 💻 HTTP 状态面板: http://localhost:3001/status
+[2026-04-20T19:01:34.480Z] [INFO] [error-analyzer] 开始执行...
+[2026-04-20T19:01:34.489Z] [INFO] [optimization-engine] 开始执行...
+[2026-04-20T19:01:34.493Z] [INFO] [feedback-loop] 开始执行...
+[2026-04-20T19:01:34.500Z] [INFO] [memory-integrator] 开始执行...
+[2026-04-20T19:01:34.506Z] [INFO] [jingcai-monitor] 开始执行...
+[2026-04-20T19:01:34.513Z] [DEBUG] [error-analyzer] === 开始错误分析 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.514Z] [DEBUG] [optimization-engine] === 开始优化引擎 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.514Z] [DEBUG] [feedback-loop] === 反馈循环 v2 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.514Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-04-20T19:01:34.517Z] [INFO] [jingcai-analyzer] 开始执行...
+[2026-04-20T19:01:34.522Z] [DEBUG] [feedback-loop] 📥 读取飞书消息历史...
+[2026-04-20T19:01:34.527Z] [DEBUG] [memory-integrator] === 记忆系统集成 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.534Z] [DEBUG] [memory-integrator] MEMORY.md 状态: 186 行, 8KB
+[2026-04-20T19:01:34.534Z] [DEBUG] [memory-integrator] ✅ MEMORY.md 状态正常
+[2026-04-20T19:01:34.536Z] [DEBUG] [optimization-engine] 触发条件: high_resource_usage
+[2026-04-20T19:01:34.543Z] [DEBUG] [optimization-engine] === 优化引擎完成 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.544Z] [DEBUG] [jingcai-analyzer] === 竞彩分析 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.546Z] [DEBUG] [jingcai-monitor] === 竞彩监控 - 2026年 04月 21日 星期二 03:01:34 CST ===
+[2026-04-20T19:01:34.546Z] [DEBUG] [memory-integrator] 日志文件数量: 41
+[2026-04-20T19:01:34.546Z] [DEBUG] [memory-integrator] ⚠️ 日志文件过多 (41)，触发归档...
+[2026-04-20T19:01:34.547Z] [DEBUG] [jingcai-analyzer] 🤖 使用 Kairos 推理生成投注分析...
+[2026-04-20T19:01:34.550Z] [INFO] [optimization-engine] 完成，耗时 0.1s
+[2026-04-20T19:01:34.550Z] [INFO] [optimization-engine] 下次运行: 2026-04-21T19:01:34.550Z (1440分钟后)
+[2026-04-20T19:01:34.551Z] [DEBUG] [jingcai-monitor] 📥 获取当日比赛列表...
+[2026-04-20T19:01:34.601Z] [DEBUG] [error-analyzer] 发现失败的 Cron 任务
+[2026-04-20T19:01:34.617Z] [DEBUG] [memory-integrator] 🔍 Memory 日志归档脚本
+[2026-04-20T19:01:34.617Z] [DEBUG] [memory-integrator] 📁 内存目录: /home/jinghao/.openclaw/agents/main/memory
+[2026-04-20T19:01:34.617Z] [DEBUG] [memory-integrator] 📦 归档目录: /home/jinghao/.openclaw/agents/main/memory/archive
+[2026-04-20T19:01:34.617Z] [DEBUG] [memory-integrator] ⏰ 归档策略: 90 天前的日志
+[2026-04-20T19:01:34.623Z] [DEBUG] [memory-integrator] 📊 发现 21 个日志文件
+[2026-04-20T19:01:34.624Z] [DEBUG] [memory-integrator] 📦 归档旧文件 (90+ 天前): 0 个
+[2026-04-20T19:01:34.624Z] [DEBUG] [memory-integrator] 🔄 重复变体文件: 0 个
+[2026-04-20T19:01:34.624Z] [DEBUG] [memory-integrator] ⚙️  开始执行...
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator] ✅ 完成！
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator] 📊 统计:
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator]    - 归档: 0 个文件
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator]    - 删除: 0 个重复
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator]    - 保留: 21 个文件
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator] ⏰ 建议添加定时任务 (crontab):
+[2026-04-20T19:01:34.627Z] [DEBUG] [memory-integrator]    0 3 * * * cd /home/jinghao/.openclaw/agents/main && node scripts/memory-archive.js >> /tmp/memory-archive.log 2>&1
+[2026-04-20T19:01:34.637Z] [DEBUG] [memory-integrator] ✅ 归档完成
+[2026-04-20T19:01:34.638Z] [DEBUG] [memory-integrator] === 记忆系统集成完成 ===
+[2026-04-20T19:01:34.638Z] [INFO] [memory-integrator] 完成，耗时 0.1s
+[2026-04-20T19:01:34.639Z] [INFO] [memory-integrator] 下次运行: 2026-04-21T19:01:34.638Z (1440分钟后)
+[2026-04-20T19:01:34.703Z] [DEBUG] [jingcai-monitor]   ⚠️ API 返回异常
+[2026-04-20T19:01:34.712Z] [DEBUG] [jingcai-monitor] 📊 分析赔率变化...
+[2026-04-20T19:01:34.718Z] [DEBUG] [jingcai-monitor] 💾 写入共享记忆层...
+[2026-04-20T19:01:35.009Z] [DEBUG] [feedback-loop] 📥 读取记忆文件反馈...
+[2026-04-20T19:01:35.017Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-04-20T19:01:35.016Z ===
+[2026-04-20T19:01:35.017Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前3:02)
+[2026-04-20T19:01:35.029Z] [DEBUG] [feedback-loop]   从 2026-04-21 内存找到反馈线索
+[2026-04-20T19:01:35.034Z] [DEBUG] [feedback-loop]   从 2026-04-20 内存找到反馈线索
+[2026-04-20T19:01:35.041Z] [DEBUG] [feedback-loop] 📥 检查 Kairos 用户画像变化...
+[2026-04-20T19:01:35.053Z] [INFO] [jingcai-realtime] 完成，耗时 0.5s
+[2026-04-20T19:01:35.054Z] [INFO] [jingcai-realtime] 下次运行: 2026-04-20T19:06:35.053Z (5分钟后)
+[2026-04-20T19:01:35.163Z] [DEBUG] [jingcai-monitor] 写入结果: {"layer":"observations","content":"## 20260421 竞彩比赛数据\n\n### 比赛数量\n0 场\n\n### 比赛列表\n\n\n### 生成时间\n20260421\n","agent":"jingcai-monitor","timestamp":"2026-04-20T19:01:34.762Z"}
+[2026-04-20T19:01:35.188Z] [DEBUG] [jingcai-monitor] ✅ 报告已生成: /home/jinghao/.openclaw/workspace/self-improving/jingcai/report-20260421.md
+[2026-04-20T19:01:35.190Z] [DEBUG] [jingcai-monitor] === 竞彩监控完成 - 2026年 04月 21日 星期二 03:01:35 CST ===
+[2026-04-20T19:01:35.191Z] [INFO] [jingcai-monitor] 完成，耗时 0.7s
+[2026-04-20T19:01:35.191Z] [INFO] [jingcai-monitor] 下次运行: 2026-04-21T19:01:35.191Z (1440分钟后)
+[2026-04-20T19:01:35.420Z] [DEBUG] [feedback-loop] 📊 分析 6 条反馈...
+[2026-04-20T19:01:35.427Z] [DEBUG] [feedback-loop]   [neutral] **更正内容**（来自用户反馈）：
+[2026-04-20T19:01:35.432Z] [DEBUG] [feedback-loop]   [neutral] **更正内容**（来自用户反馈，2026-04-21 02:56）：
+[2026-04-20T19:01:35.438Z] [DEBUG] [feedback-loop]   [neutral] 2. **反馈循环 v2**：接入 4 个真实反馈源
+[2026-04-20T19:01:35.444Z] [DEBUG] [feedback-loop]   [neutral]    - 飞书消息历史（反馈信号词）
+[2026-04-20T19:01:35.451Z] [DEBUG] [feedback-loop]   [neutral] ## 竞彩反馈闭环（GitHub 9fac8a1）
+[2026-04-20T19:01:35.459Z] [DEBUG] [feedback-loop]   [neutral] ### 用户反馈（4/19复盘）
+[2026-04-20T19:01:35.483Z] [DEBUG] [feedback-loop] ✅ 报告已生成: /home/jinghao/.openclaw/workspace/self-improving/feedback/report-20260421.md
+[2026-04-20T19:01:35.489Z] [DEBUG] [feedback-loop] === 反馈循环完成 - 2026年 04月 21日 星期二 03:01:35 CST ===
+[2026-04-20T19:01:35.491Z] [INFO] [feedback-loop] 完成，耗时 1.0s
+[2026-04-20T19:01:35.491Z] [INFO] [feedback-loop] 下次运行: 2026-04-21T19:01:35.491Z (1440分钟后)
+[2026-04-20T19:01:35.509Z] [DEBUG] [jingcai-analyzer] 📊 分析赔率数据...
+[2026-04-20T19:01:35.608Z] [DEBUG] [jingcai-analyzer] 解析错误: Expecting value: line 1 column 1 (char 0)
+[2026-04-20T19:01:35.610Z] [DEBUG] [jingcai-analyzer] 💾 写入共享记忆层...
+[2026-04-20T19:01:35.950Z] [DEBUG] [jingcai-analyzer] ✅ 分析已写入共享记忆
+[2026-04-20T19:01:35.974Z] [DEBUG] [jingcai-analyzer] ✅ 报告已生成: /home/jinghao/.openclaw/workspace/self-improving/jingcai/analysis-20260421.md
+[2026-04-20T19:01:35.989Z] [DEBUG] [jingcai-analyzer] === 竞彩分析完成 - 2026年 04月 21日 星期二 03:01:35 CST ===
+[2026-04-20T19:01:35.990Z] [INFO] [jingcai-analyzer] 完成，耗时 1.5s
+[2026-04-20T19:01:35.991Z] [INFO] [jingcai-analyzer] 下次运行: 2026-04-21T19:01:35.990Z (1440分钟后)
+[2026-04-20T19:01:36.160Z] [DEBUG] [error-analyzer] 错误报告已生成: /home/jinghao/.openclaw/workspace/self-improving/errors/error-summary-20260421.md
+[2026-04-20T19:01:36.163Z] [DEBUG] [error-analyzer] 发现错误数: 50
+[2026-04-20T19:01:36.165Z] [DEBUG] [error-analyzer] 新增记录: 24
+[2026-04-20T19:01:36.168Z] [DEBUG] [error-analyzer] === 错误分析完成 - 2026年 04月 21日 星期二 03:01:36 CST ===
+[2026-04-20T19:01:36.170Z] [DEBUG] [error-analyzer] 发现较多新错误 (24)，触发记忆反思...
+[2026-04-20T19:01:36.177Z] [DEBUG] [error-analyzer] === 开始记忆反思 - 2026年 04月 21日 星期二 03:01:36 CST ===
+[2026-04-20T19:01:36.178Z] [DEBUG] [error-analyzer] 反思周期: error 天
+[2026-04-20T19:01:36.180Z] [DEBUG] [error-analyzer] 收集过去 error 天的记忆文件...
+[2026-04-20T19:01:36.183Z] [DEBUG] [error-analyzer] 没有找到过去的记忆文件
+[2026-04-20T19:01:36.187Z] [INFO] [error-analyzer] 完成，耗时 1.7s
+[2026-04-20T19:01:36.187Z] [INFO] [error-analyzer] 下次运行: 2026-04-21T19:01:36.186Z (1440分钟后)
+[2026-04-20T19:06:35.054Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-04-20T19:06:35.367Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-04-20T19:06:35.367Z ===
+[2026-04-20T19:06:35.368Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前3:07)
+[2026-04-20T19:06:35.385Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-04-20T19:06:35.385Z] [INFO] [jingcai-realtime] 下次运行: 2026-04-20T19:11:35.384Z (5分钟后)
+[2026-04-20T19:10:19.811Z] [INFO] 收到 SIGTERM 信号，正在关闭...
+[2026-04-20T19:10:19.811Z] [INFO] 调度器停止
+[2026-04-20T19:10:20.880Z] [INFO] Daemon 启动 (PID: 3734195)
+[2026-04-20T19:10:20.882Z] [INFO] 调度器启动
+[2026-04-20T19:10:20.882Z] [INFO] 已注册 13 个任务
+[2026-04-20T19:10:20.882Z] [INFO] [performance-monitor] 下次运行: 2026-04-20T22:11:47.725Z (181分钟后)
+[2026-04-20T19:10:20.882Z] [INFO] [error-analyzer] 下次运行: 2026-04-21T19:01:36.186Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [optimization-engine] 下次运行: 2026-04-21T19:01:34.550Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [feedback-loop] 下次运行: 2026-04-21T19:01:35.491Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [memory-integrator] 下次运行: 2026-04-21T19:01:34.638Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [jingcai-monitor] 下次运行: 2026-04-21T19:01:35.191Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [jingcai-realtime] 下次运行: 2026-04-20T19:11:35.384Z (1分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [jingcai-analyzer] 下次运行: 2026-04-21T19:01:35.990Z (1431分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [jingcai-results-fetcher] 下次运行: 2026-04-20T20:37:34.701Z (87分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [jingcai-learner] 下次运行: 2026-04-26T20:38:12.349Z (8728分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [memory-compact] 下次运行: 2026-04-22T19:44:36.308Z (2914分钟后)
+[2026-04-20T19:10:20.883Z] [INFO] [skill-learner] 下次运行: 2026-04-26T18:54:30.966Z (8624分钟后)
+[2026-04-20T19:10:20.884Z] [INFO] [memory-reflect] 下次运行: 2026-05-02T18:00:00.000Z (17210分钟后)
+[2026-04-20T19:10:20.884Z] [INFO] === Daemon 状态 ===
+[2026-04-20T19:10:20.884Z] [INFO]   performance-monitor: 状态=success, 运行次数=5, 上次=2026-04-20T16:11:47.725Z, 下次=2026-04-20T22:11:47.725Z
+[2026-04-20T19:10:20.884Z] [INFO]   error-analyzer: 状态=success, 运行次数=3, 上次=2026-04-20T19:01:36.186Z, 下次=2026-04-21T19:01:36.186Z
+[2026-04-20T19:10:20.884Z] [INFO]   optimization-engine: 状态=success, 运行次数=3, 上次=2026-04-20T19:01:34.550Z, 下次=2026-04-21T19:01:34.550Z
+[2026-04-20T19:10:20.884Z] [INFO]   feedback-loop: 状态=success, 运行次数=3, 上次=2026-04-20T19:01:35.491Z, 下次=2026-04-21T19:01:35.491Z
+[2026-04-20T19:10:20.884Z] [INFO]   memory-integrator: 状态=success, 运行次数=3, 上次=2026-04-20T19:01:34.638Z, 下次=2026-04-21T19:01:34.638Z
+[2026-04-20T19:10:20.884Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=2, 上次=2026-04-20T19:01:35.191Z, 下次=2026-04-21T19:01:35.191Z
+[2026-04-20T19:10:20.884Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=2, 上次=2026-04-20T19:06:35.384Z, 下次=2026-04-20T19:11:35.384Z
+[2026-04-20T19:10:20.884Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=2, 上次=2026-04-20T19:01:35.990Z, 下次=2026-04-21T19:01:35.990Z
+[2026-04-20T19:10:20.884Z] [INFO]   jingcai-results-fetcher: 状态=success, 运行次数=2, 上次=2026-04-20T08:37:34.701Z, 下次=2026-04-20T20:37:34.701Z
+[2026-04-20T19:10:20.884Z] [INFO]   jingcai-learner: 状态=success, 运行次数=1, 上次=2026-04-19T20:38:12.349Z, 下次=2026-04-26T20:38:12.349Z
+[2026-04-20T19:10:20.884Z] [INFO]   memory-compact: 状态=success, 运行次数=1, 上次=2026-04-19T19:44:36.308Z, 下次=2026-04-22T19:44:36.308Z
+[2026-04-20T19:10:20.884Z] [INFO]   skill-learner: 状态=success, 运行次数=2, 上次=2026-04-19T18:54:30.966Z, 下次=2026-04-26T18:54:30.966Z
+[2026-04-20T19:10:20.884Z] [INFO]   memory-reflect: 状态=success, 运行次数=1, 上次=2026-04-19T18:54:31.366Z, 下次=2026-05-02T18:00:00.000Z
+[2026-04-20T19:10:20.884Z] [INFO] ==================
+[2026-04-20T19:10:20.884Z] [INFO] Daemon 运行中...
+[2026-04-20T19:10:20.890Z] [INFO] 💻 HTTP 状态面板: http://localhost:3001/status

@@ -68,11 +68,8 @@ do_restart() {
     NEW_PID=$!
     echo "✅ daemon 已启动 (PID=$NEW_PID)"
     
-    # 通知
-    node -e "
-    const {sendToFeishu} = require('$HOME/.openclaw/agents/main/send_feishu.js');
-    sendToFeishu('🔄 Self-Evolving Daemon 自动重启 (PID=$NEW_PID)');
-    " 2>/dev/null || true
+    # 通知（直接调用 CLI，不通过 require）
+    node "$HOME/.openclaw/agents/main/send_feishu.js" "🔄 Self-Evolving Daemon 自动重启 (PID=$NEW_PID)" 2>/dev/null || true
 }
 
 # 主流程
