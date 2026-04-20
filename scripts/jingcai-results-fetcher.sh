@@ -33,7 +33,7 @@ python3 -c "import json; json.load(open('$TMPFILE'))" 2>/dev/null || {
 
 echo "✅ API 调用成功"
 
-python3 << PYEOF
+python3 <<-'PYEOF'
 import json, re, os
 
 TMPFILE = "$TMPFILE"

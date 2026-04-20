@@ -35,6 +35,7 @@ const SCHEDULE = [
   { name: 'feedback-loop', intervalMs: 24 * 60 * 60 * 1000 },          // 24小时
   { name: 'memory-integrator', intervalMs: 24 * 60 * 60 * 1000 },      // 24小时
   { name: 'jingcai-monitor', intervalMs: 24 * 60 * 60 * 1000 },       // 竞彩监控（每天晚6点）
+  { name: 'jingcai-realtime', intervalMs: 5 * 60 * 1000 },                    // 竞彩临场监控（每5分钟，21:00-21:30有效）
   { name: 'jingcai-analyzer', intervalMs: 24 * 60 * 60 * 1000 },      // 竞彩分析（每天晚7点）
   { name: 'jingcai-results-fetcher', intervalMs: 12 * 60 * 60 * 1000 }, // 赛果抓取（每天早9点）
   { name: 'jingcai-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },     // 竞彩学习（每周一次）
@@ -307,7 +308,18 @@ class Scheduler {
     this.running = true;
 
     this.logger.info('调度器启动');
-    this.logger.info(`已注册 ${this.tasks.size} 个任务`);
+    const expectedCount = this.tasks.size;
+    this.logger.info(`已注册 ${expectedCount} 个任务`);
+
+    // 检查是否有遗漏的任务（SCHEDULE 中有但未注册的）
+    const scheduledNames = this.tasks.keys();
+    const missing = [];
+    for (const s of SCHEDULE) {
+      if (!this.tasks.has(s.name)) missing.push(s.name);
+    }
+    if (missing.length > 0) {
+      this.logger.warn(`⚠️ 有 ${missing.length} 个任务未注册（需重启 daemon）: ${missing.join(', ')}`);
+    }
 
     for (const [name, task] of this.tasks) {
       this.scheduleNext(task);
@@ -614,6 +626,11 @@ class Daemon {
 
   printStatus() {
     this.logger.info('=== Daemon 状态 ===');
+    const registeredNames = new Set(this.scheduler.tasks.keys());
+    const missing = SCHEDULE.filter(s => !registeredNames.has(s.name));
+    if (missing.length > 0) {
+      this.logger.warn(`⚠️ 未注册任务（需重启 daemon）: ${missing.map(s=>s.name).join(', ')}`);
+    }
     for (const [name, task] of this.scheduler.tasks) {
       const state = this.stateStore.getTaskState(name);
       const nextRun = this.scheduler.nextRun(name);
