@@ -6,7 +6,7 @@
 # - 读取当日比赛数据（从共享记忆）
 # - 分析赔率变化、战意、盘路
 # - 生成投注建议（胜平负/让球/大小球）
-# - 写入共享记忆供 Kairos 推理使用
+# - 写入共享记忆供 OpenClaw memory-core / Kairos fallback 推理使用
 
 set -e
 
@@ -14,7 +14,10 @@ WORKSPACE="${WORKSPACE:-$HOME/.openclaw/workspace}"
 SELF_IMPROVING_DIR="$WORKSPACE/self-improving"
 SKILL_DIR="${SKILL_DIR:-$HOME/.openclaw/skills/self-evolving-agent}"
 MEMORY_SKILL="$HOME/.openclaw/skills/hindsight-memory/lib/multi-agent"
+MEMORY_INFER="$SKILL_DIR/scripts/openclaw-memory-infer.py"
 KAIROS="$HOME/.openclaw/skills/kairos/kairos-learner.py"
+INFER_TOOL="$MEMORY_INFER"
+[ -f "$INFER_TOOL" ] || INFER_TOOL="$KAIROS"
 
 TODAY=$(date +%Y-%m-%d)
 LOGFILE="$SELF_IMPROVING_DIR/jingcai/jingcai-analyzer-$(date +%Y%m%d).log"
@@ -22,8 +25,8 @@ mkdir -p "$SELF_IMPROVING_DIR/jingcai"
 
 echo "=== 竞彩分析 - $(date) ===" | tee -a "$LOGFILE"
 
-# ==================== 1. 用 Kairos 推理生成分析 ====================
-echo "🤖 使用 Kairos 推理生成投注分析..." | tee -a "$LOGFILE"
+# ==================== 1. 用 OpenClaw memory-core 推理生成分析 ====================
+echo "🤖 使用 OpenClaw memory-core 推理生成投注分析..." | tee -a "$LOGFILE"
 
 # 读取优化引擎的策略建议（如果有）
 OPTIMIZATION_CONTEXT=""
@@ -44,8 +47,8 @@ except: pass
     fi
 fi
 
-# Kairos infer 基于竞彩经验库推理
-INFER_RESULT=$(python3 "$KAIROS" \
+# OpenClaw memory-core infer 基于竞彩经验库推理（Kairos 仅作 fallback）
+INFER_RESULT=$(python3 "$INFER_TOOL" \
     --user jinghao \
     --infer "今天是 $TODAY。请基于以下背景生成今日竞彩投注分析：
 1. 优先分析英超/德甲/意甲焦点比赛
@@ -118,7 +121,7 @@ const ctx = new AgentContext('jingcai-analyzer');
 
 const report = \`## $TODAY 竞彩分析报告
 
-### Kairos 推理分析
+### OpenClaw memory-core 推理分析
 
 ${INFER_RESULT}
 
@@ -150,7 +153,7 @@ cat > "$REPORT" <<EOF
 **时间：** $(date)
 **分析时间：** $TODAY
 
-## Kairos 推理结果
+## OpenClaw memory-core 推理结果
 
 ${INFER_RESULT}
 
@@ -173,7 +176,7 @@ if [ -f "$FEISHU_PUSH" ] && [ -n "$FEISHU_WEBHOOK_URL" ]; then
     # 推送分析结果摘要
     MATCH_COUNT=$(echo "$ODDS_DATA" | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d.get('value',{}).get('matchList',[])))" 2>/dev/null || echo "0")
     SUMMARY="📊 竞彩分析报告 $(date +%m/%d)\n\n"
-    SUMMARY+="• Kairos 推理: 已完成\n"
+    SUMMARY+="• OpenClaw memory-core 推理: 已完成\n"
     SUMMARY+="• 赔率分析: $MATCH_COUNT 场比赛\n"
     SUMMARY+="• 报告: $REPORT"
     
@@ -212,7 +215,7 @@ cat >> "$REPORT" << 'EOF'
 |------|------|------|------|------|---------|------|
 EOF
 
-# 从 Kairos 推理结果中提取比赛，追加到表格
+# 从 OpenClaw memory-core 推理结果中提取比赛，追加到表格
 INFER_SESSION_ID="infer-$(date +%Y%m%d-%H%M%S)"
 
 if echo "$INFER_RESULT" | grep -qE "英超|德甲|意甲|西甲|欧冠|欧联"; then
@@ -229,13 +232,13 @@ cat >> "$REPORT" << 'EOF'
 
 ```bash
 # 采纳（分析准确）
-python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:adopted
+python3 ~/.openclaw/skills/self-evolving-agent/scripts/openclaw-memory-infer.py --record-feedback SESSION_ID_PLACEHOLDER:adopted
 
 # 调整后采纳
-python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:adjusted:主队赔率偏高
+python3 ~/.openclaw/skills/self-evolving-agent/scripts/openclaw-memory-infer.py --record-feedback SESSION_ID_PLACEHOLDER:adjusted:主队赔率偏高
 
 # 不采纳
-python3 ~/.openclaw/skills/kairos/kairos-learner.py --record-feedback SESSION_ID_PLACEHOLDER:rejected:战意判断错误
+python3 ~/.openclaw/skills/self-evolving-agent/scripts/openclaw-memory-infer.py --record-feedback SESSION_ID_PLACEHOLDER:rejected:战意判断错误
 ```
 EOF
 

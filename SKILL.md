@@ -79,25 +79,25 @@
 
 #### 竞彩分析引擎
 - **脚本**: `jingcai-analyzer.sh`
-- **功能**: 使用 Kairos 推理引擎分析比赛
+- **功能**: 使用 OpenClaw memory-core 推理（Kairos fallback）引擎分析比赛
 - **频率**: 每天 19:00 运行
-- **推理**: 集成 Kairos CLI 进行深度分析
+- **推理**: 集成 OpenClaw memory-core 进行深度分析，Kairos 仅作 fallback
 - **输出**: 生成分析报告和投注建议
 
 #### 投注反馈学习
 - **脚本**: `jingcai-learner.sh`
-- **功能**: 分析投注结果，更新 Kairos 画像
+- **功能**: 分析投注结果，更新 OpenClaw memory-core 反馈画像
 - **频率**: 每周运行一次
 - **学习内容**:
   - 分析 `betting-results.md` 中的投注记录
-  - 更新 Kairos 推理画像
+  - 更新 OpenClaw memory-core 推理（Kairos fallback）画像
   - 自动调整 monitor 的赔率阈值
   - 识别高级投注模式
 
 #### 定时推送
-- **jingcai-morning.sh**: 每天 10:00 推送早场推荐
-- **jingcai-afternoon.sh: 每天 15:00 推送午后修正
-- **jingcai-review.sh: 每天 12:00 推送午间复盘
+- **jingcai-morning.sh**: 每天 11:20 推送早场推荐
+- **jingcai-afternoon.sh**: 每天 15:00 推送午后修正
+- **jingcai-review.sh**: 每天 16:00 推送午间复盘
 - **jingcai-evening.sh**: 每天 21:00 推送晚场推荐
 - **特点**: 直接推送至飞书，无需通过控制器
 

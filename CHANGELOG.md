@@ -7,12 +7,41 @@
 
 ---
 
+## [2.3.0] - 2026-04-29
+
+### 新增
+
+- ✨ **自我诊断模块 (self-diagnostics.js)**
+  - 7 类健康检查：进程/系统资源/Gateway/Cron/日志/网络/记忆
+  - 严重问题自动修复（restart_daemon, restart_gateway, cleanup_disk 等）
+  - JSON 格式诊断报告
+  - 每 30 分钟自动运行
+
+- ✨ **诊断包装脚本**
+  - `self-diagnostics.sh` - daemon 调度入口
+  - `run-diagnostics.sh` - 手动运行 + 通知
+  - 集成到 daemon SCHEDULE
+
+### 检查项
+
+| 检查项 | 说明 | 自动修复 |
+|--------|------|----------|
+| 进程健康 | daemon CPU/内存使用 | restart_daemon |
+| 系统资源 | CPU/内存/磁盘 | cleanup_disk |
+| Gateway 健康 | 进程 + 端口响应 | restart_gateway |
+| Cron 任务 | 最近失败任务 | - |
+| 日志错误 | 错误频率 + 模式分析 | - |
+| 网络连接 | NewAPI/Chat2API 连通性 | - |
+| 记忆系统 | MEMORY.md 容量 + 向量索引 | consolidate_memory, build_index |
+
+---
+
 ## [2.2.0] - 2026-04-20
 
 ### 新增
 
 - ✨ **竞彩定时推送体系**
-  - `jingcai-morning.sh` (10:00) - 早盘预测，五大联赛焦点预览
+  - `jingcai-morning.sh` (11:20) - 早盘预测，五大联赛焦点预览
   - `jingcai-review.sh` (12:00) - 午间复盘，昨日胜率统计
   - `jingcai-afternoon.sh` (15:00) - 午后修正，赔率异常检测
   - `jingcai-evening.sh` (21:00) - 晚盘报告，今日完整分析

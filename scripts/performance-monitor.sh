@@ -79,12 +79,32 @@ fi
 echo "$(date -Iseconds): CPU=${CPU_USAGE}%, MEM=${MEMORY_USAGE}%, DISK=${DISK_USAGE}%, SCORE=$PERFORMANCE_SCORE" >> "$METRICS_FILE"
 echo "1]" >> "$METRICS_FILE" 2>/dev/null || true
 
-# 6. 检查是否需要优化
+# 6. Capability Evolver 快速健康检查（第一层）
+CAPABILITY_EVOLVER_SCRIPT="$SKILL_DIR/scripts/capability-evolver-integration.sh"
+HEALTH_SCORE=""
+EVOLVER_TRIGGERED=0
+
+if [ -x "$CAPABILITY_EVOLVER_SCRIPT" ] && [ -n "$CLAW0X_API_KEY" ]; then
+    echo "调用 Capability Evolver 进行快速健康检查..." | tee -a "$LOGFILE"
+    EVOLVER_OUTPUT=$($CAPABILITY_EVOLVER_SCRIPT 2>&1) || true
+    HEALTH_SCORE=$(echo "$EVOLVER_OUTPUT" | grep "HEALTH_SCORE=" | cut -d= -f2 || echo "")
+    
+    if [ -n "$HEALTH_SCORE" ]; then
+        echo "Capability Evolver 健康评分: $HEALTH_SCORE/100" | tee -a "$LOGFILE"
+        
+        # 如果健康评分低于阈值，标记需要深度分析
+        if [ "$(awk "BEGIN {print ($HEALTH_SCORE < 70) ? 1 : 0}")" -eq 1 ]; then
+            echo "警告：健康评分低于阈值，需要深度分析" | tee -a "$LOGFILE"
+            EVOLVER_TRIGGERED=1
+            NEED_OPTIMIZATION=1
+        fi
+    fi
+fi
+
+# 7. 检查系统资源阈值（第二层）
 CPU_THRESHOLD=60  # 60% 以上触发优化
 MEM_THRESHOLD=70  # 70% 以上触发优化
 DISK_THRESHOLD=75  # 75% 以上触发优化（90%太迟）
-
-NEED_OPTIMIZATION=0
 
 if [ "$(awk "BEGIN {print ($CPU_USAGE > $CPU_THRESHOLD) ? 1 : 0}")" -eq 1 ]; then
     echo "警告：CPU使用率过高 (${CPU_USAGE}%)" | tee -a "$LOGFILE"
@@ -101,14 +121,25 @@ if [ "$DISK_USAGE" -gt "$DISK_THRESHOLD" ]; then
     NEED_OPTIMIZATION=1
 fi
 
-# 7. 触发优化引擎（如需要）
+# 8. 触发优化引擎（如需要）
 if [ $NEED_OPTIMIZATION -eq 1 ]; then
     echo "触发优化引擎..." | tee -a "$LOGFILE"
     mkdir -p "$SELF_IMPROVING_DIR/optimizations"
-    echo "high_resource_usage" > "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
+    
+    # 根据触发源记录不同原因
+    if [ $EVOLVER_TRIGGERED -eq 1 ]; then
+        echo "capability_evolver_low_health:$HEALTH_SCORE" > "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
+        echo "触发源: Capability Evolver 健康评分低" | tee -a "$LOGFILE"
+    else
+        echo "high_resource_usage" > "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
+        echo "触发源: 系统资源使用率高" | tee -a "$LOGFILE"
+    fi
+    
+    # 记录详细指标
+    echo "CPU=$CPU_USAGE,MEM=$MEMORY_USAGE,DISK=$DISK_USAGE" >> "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
 fi
 
-# 8. 清理旧日志（保留30天）
+# 9. 清理旧日志（保留30天）
 find "$SELF_IMPROVING_DIR/monitoring" -name "performance-*.log" -mtime +30 -delete 2>/dev/null || true
 find "$SELF_IMPROVING_DIR/monitoring" -name "metrics.json" -mtime +30 -delete 2>/dev/null || true
 

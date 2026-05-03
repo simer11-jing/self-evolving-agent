@@ -30,6 +30,7 @@ const CONFIG = {
 
 // 调度表配置
 const SCHEDULE = [
+  { name: 'self-diagnostics', intervalMs: 30 * 60 * 1000 },         // 30分钟
   { name: 'performance-monitor', intervalMs: 6 * 60 * 60 * 1000 },      // 6小时
   { name: 'error-analyzer', intervalMs: 24 * 60 * 60 * 1000 },         // 24小时
   { name: 'optimization-engine', intervalMs: 24 * 60 * 60 * 1000 },    // 24小时

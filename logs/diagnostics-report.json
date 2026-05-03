@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-05-03T04:33:06.808Z",
+  "summary": {
+    "totalChecks": 7,
+    "totalIssues": 3,
+    "criticalIssues": 0,
+    "autoFixed": 0
+  },
+  "results": [
+    {
+      "name": "进程健康",
+      "issues": []
+    },
+    {
+      "name": "系统资源",
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "磁盘使用率偏高: 87%",
+          "fix": "plan_cleanup"
+        }
+      ]
+    },
+    {
+      "name": "Gateway 健康",
+      "issues": []
+    },
+    {
+      "name": "Cron 任务",
+      "issues": []
+    },
+    {
+      "name": "日志错误",
+      "issues": []
+    },
+    {
+      "name": "网络连接",
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Chat2API 无法连接 (192.168.50.2:8111)",
+          "fix": "check_service"
+        }
+      ]
+    },
+    {
+      "name": "记忆系统",
+      "issues": [
+        {
+          "severity": "info",
+          "message": "向量索引已过期 (103小时前)",
+          "fix": "rebuild_index"
+        }
+      ]
+    }
+  ],
+  "criticalIssues": [],
+  "fixed": []
+}

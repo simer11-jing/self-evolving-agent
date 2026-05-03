@@ -1,12 +1,16 @@
 #!/bin/bash
 # 竞彩投注结果学习器
-# 从历史投注记录中学习，更新 Kairos 用户画像 + 调优赔率阈值
+# 从历史投注记录中学习，更新 OpenClaw memory-core 反馈画像 + 调优赔率阈值
 
 set -e
 
 WORKSPACE="${WORKSPACE:-$HOME/.openclaw/workspace}"
 SELF_IMPROVING_DIR="$WORKSPACE/self-improving"
+SKILL_DIR="${SKILL_DIR:-$HOME/.openclaw/skills/self-evolving-agent}"
+MEMORY_INFER="$SKILL_DIR/scripts/openclaw-memory-infer.py"
 KAIROS="$HOME/.openclaw/skills/kairos/kairos-learner.py"
+INFER_TOOL="$MEMORY_INFER"
+[ -f "$INFER_TOOL" ] || INFER_TOOL="$KAIROS"
 MEMORY_SKILL="$HOME/.openclaw/skills/hindsight-memory/lib/multi-agent"
 
 TODAY=$(date +%Y-%m-%d)
@@ -101,8 +105,8 @@ ctx.queryTeam('竞彩', ['observations', 'mentalModels']).then(results => {
 
 echo "  历史: ${#HISTORY} 字符" | tee -a "$LOGFILE"
 
-# ==================== 3. 调用 Kairos 画像更新 ====================
-echo "🎯 更新 Kairos 画像..." | tee -a "$LOGFILE"
+# ==================== 3. 调用 OpenClaw memory-core 画像更新 ====================
+echo "🎯 更新 OpenClaw memory-core 画像..." | tee -a "$LOGFILE"
 
 INFER_INPUT="/tmp/jingcai-infer-input-$$.txt"
 cat > "$INFER_INPUT" << INPUTEOF
@@ -116,10 +120,10 @@ cat >> "$INFER_INPUT" << EOF
 请分析以上信息，提取用户竞彩投注特征（只输出特征列表，每行一个）。
 EOF
 
-python3 "$KAIROS" \
+python3 "$INFER_TOOL" \
     --user jinghao \
     --infer "$(cat $INFER_INPUT)" \
-    2>&1 | tail -10 >> "$LOGFILE" || echo "  Kairos 完成" | tee -a "$LOGFILE"
+    2>&1 | tail -10 >> "$LOGFILE" || echo "  记忆推理完成" | tee -a "$LOGFILE"
 rm -f "$INFER_INPUT"
 
 # ==================== 4. 写入共享记忆 ====================

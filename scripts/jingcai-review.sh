@@ -4,11 +4,10 @@
 
 set -e
 
-WORKSPACE="${WORKSPACE:-$HOME/.openclaw/workspace}"
+WORKSPACE="/home/jinghao/.openclaw/workspace"
 SELF_IMPROVING_DIR="$WORKSPACE/self-improving"
 JINGCAI_DIR="$SELF_IMPROVING_DIR/jingcai"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-FEISHU_PUSH="$HOME/.openclaw/agents/main/send_feishu.js"
 LOGFILE="$JINGCAI_DIR/logs/review-$(date +%Y%m%d).log"
 
 mkdir -p "$JINGCAI_DIR/logs"
@@ -28,7 +27,6 @@ PY_RET=$?
 
 if [ $PY_RET -eq 0 ] && [ -n "$SUMMARY" ]; then
     echo "$SUMMARY" | tee -a "$LOGFILE"
-    node "$FEISHU_PUSH" "$SUMMARY" 2>/dev/null && echo "飞书推送成功" | tee -a "$LOGFILE" || echo "飞书推送失败" | tee -a "$LOGFILE"
 else
     echo "复盘失败或无内容" | tee -a "$LOGFILE"
 fi

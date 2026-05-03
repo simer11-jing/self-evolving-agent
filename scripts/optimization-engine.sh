@@ -25,37 +25,6 @@ OPTIMIZATION_REPORT="$SELF_IMPROVING_DIR/optimizations/report-$(date +%Y%m%d).md
 # 探索模式开关
 EXPLORATION_MODE="${EXPLORATION_MODE:-false}"
 
-echo "=== 开始优化引擎 - $(date) ===" | tee -a "$LOGFILE"
-
-# 确保探索目录存在
-mkdir -p "$EXPLORATION_DIR"
-
-# 检查触发条件
-if [ ! -f "$SELF_IMPROVING_DIR/optimizations/trigger.txt" ]; then
-    echo "没有优化触发条件" | tee -a "$LOGFILE"
-    # 如果开启探索模式，随机触发探索
-    if [ "$EXPLORATION_MODE" = "true" ]; then
-        echo "探索模式：执行探索性优化..." | tee -a "$LOGFILE"
-        run_exploration_mode
-    fi
-    exit 0
-fi
-
-TRIGGER=$(cat "$SELF_IMPROVING_DIR/optimizations/trigger.txt")
-echo "触发条件: $TRIGGER" | tee -a "$LOGFILE"
-
-# 判断是否使用探索模式
-if [ "$EXPLORATION_MODE" = "true" ] || [[ "$TRIGGER" == *"explore"* ]]; then
-    run_exploration_mode
-else
-    run_traditional_optimization "$TRIGGER"
-fi
-
-# 清理触发文件
-rm -f "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
-
-echo "=== 优化引擎完成 - $(date) ===" | tee -a "$LOGFILE"
-
 # ============================================
 # 传统优化模式
 # ============================================
@@ -164,11 +133,19 @@ EOF
 
     echo "优化报告已生成: $OPTIMIZATION_REPORT" | tee -a "$LOGFILE"
 
-    # Kairos 推理验证（调用真正的 Kairos infer CLI）
+    # OpenClaw memory-core 推理验证（Kairos 仅作兼容 fallback）
+    MEMORY_INFER="${SKILL_DIR}/scripts/openclaw-memory-infer.py"
     KAIROS_LEARNER="${SKILL_DIR}/../kairos/kairos-learner.py"
-    if [ -f "$KAIROS_LEARNER" ]; then
-        echo "调用 Kairos 推理验证优化策略..." | tee -a "$LOGFILE"
-        INFER_RESULT=$(python3 "$KAIROS_LEARNER" \
+    INFER_TOOL=""
+    if [ -f "$MEMORY_INFER" ]; then
+        INFER_TOOL="$MEMORY_INFER"
+        echo "调用 OpenClaw memory-core 推理验证优化策略..." | tee -a "$LOGFILE"
+    elif [ -f "$KAIROS_LEARNER" ]; then
+        INFER_TOOL="$KAIROS_LEARNER"
+        echo "调用 Kairos fallback 推理验证优化策略..." | tee -a "$LOGFILE"
+    fi
+    if [ -n "$INFER_TOOL" ]; then
+        INFER_RESULT=$(python3 "$INFER_TOOL" \
             --user jinghao \
             --infer "基于当前系统状态和历史优化经验，推荐哪些优化策略？重点关注自我改进、记忆管理、反馈循环方面。" \
             2>&1 | tail -20)
@@ -377,6 +354,45 @@ EOF
     echo "探索报告已生成: $EXPLORATION_DIR/report-${EXPLORATION_ID}.md" | tee -a "$LOGFILE"
     echo "=== 探索模式完成 ===" | tee -a "$LOGFILE"
 }
+
+# 导出函数供外部调用
+export -f run_exploration_mode
+export -f run_traditional_optimization
+# ============================================
+# Main
+# ============================================
+
+echo "=== 开始优化引擎 - $(date) ===" | tee -a "$LOGFILE"
+
+# 确保探索目录存在
+mkdir -p "$EXPLORATION_DIR"
+
+# 检查触发条件
+if [ ! -f "$SELF_IMPROVING_DIR/optimizations/trigger.txt" ]; then
+    echo "没有优化触发条件" | tee -a "$LOGFILE"
+    # 如果开启探索模式，随机触发探索
+    if [ "$EXPLORATION_MODE" = "true" ]; then
+        echo "探索模式：执行探索性优化..." | tee -a "$LOGFILE"
+        run_exploration_mode
+    fi
+    exit 0
+fi
+
+TRIGGER=$(cat "$SELF_IMPROVING_DIR/optimizations/trigger.txt")
+echo "触发条件: $TRIGGER" | tee -a "$LOGFILE"
+
+# 判断是否使用探索模式
+if [ "$EXPLORATION_MODE" = "true" ] || [[ "$TRIGGER" == *"explore"* ]]; then
+    run_exploration_mode
+else
+    run_traditional_optimization "$TRIGGER"
+fi
+
+# 清理触发文件
+rm -f "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
+
+echo "=== 优化引擎完成 - $(date) ===" | tee -a "$LOGFILE"
+
 
 # 导出函数供外部调用
 export -f run_exploration_mode

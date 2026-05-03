@@ -3,7 +3,7 @@
 # 接真实反馈源：
 #   1. 飞书消息历史（用户消息中的反馈信号）
 #   2. memory/YYYY-MM-DD.md（用户评价/满意度）
-#   3. Kairos 推理结果（置信度变化）
+#   3. OpenClaw memory-core / Hindsight 反馈变化
 #   4. 文件式 incoming（兜底）
 #
 set -e
@@ -53,18 +53,26 @@ for date_check in "$TODAY" "$YESTERDAY"; do
     fi
 done
 
-# ==================== 反馈源 3：Kairos representation 变化 ====================
-echo "📥 检查 Kairos 用户画像变化..." | tee -a "$LOGFILE"
+# ==================== 反馈源 3：OpenClaw memory-core 反馈变化 ====================
+echo "📥 检查 OpenClaw memory-core 反馈变化..." | tee -a "$LOGFILE"
+MEMORY_INFER="$SKILL_DIR/scripts/openclaw-memory-infer.py"
 KAIROS_LEARNER="$SKILL_DIR/../kairos/kairos-learner.py"
-if [ -f "$KAIROS_LEARNER" ]; then
+INFER_TOOL=""
+if [ -f "$MEMORY_INFER" ]; then
+    INFER_TOOL="$MEMORY_INFER"
+elif [ -f "$KAIROS_LEARNER" ]; then
+    # 兼容 fallback：迁移完成前保留 Kairos，不作为主路径
+    INFER_TOOL="$KAIROS_LEARNER"
+fi
+if [ -n "$INFER_TOOL" ]; then
     # 运行反馈模式（不写入，只打印）
-    FEEDBACK_REPORT=$(python3 "$KAIROS_LEARNER" --user jinghao --feedback 2>/dev/null || true)
+    FEEDBACK_REPORT=$(python3 "$INFER_TOOL" --user jinghao --feedback 2>/dev/null || true)
     if [ -n "$FEEDBACK_REPORT" ]; then
-        # 提取矛盾特征（高置信度变化）
-        CONTRADICTIONS=$(echo "$FEEDBACK_REPORT" | grep -A2 "矛盾特征" | head -5 || true)
-        if [ -n "$CONTRADICTIONS" ]; then
-            echo "  检测到用户特征变化：$CONTRADICTIONS" | tee -a "$LOGFILE"
-            FEEDBACKS+=("Kairos特征变化: $CONTRADICTIONS")
+        # 提取明显变化/统计行
+        MEMORY_CHANGES=$(echo "$FEEDBACK_REPORT" | grep -E "Status counts|Total feedback|矛盾特征|变化" | head -5 || true)
+        if [ -n "$MEMORY_CHANGES" ]; then
+            echo "  检测到记忆反馈变化：$MEMORY_CHANGES" | tee -a "$LOGFILE"
+            FEEDBACKS+=("OpenClaw记忆反馈变化: $MEMORY_CHANGES")
             FEEDBACK_COUNT=$((FEEDBACK_COUNT + 1))
         fi
     fi

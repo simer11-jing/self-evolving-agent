@@ -148,7 +148,7 @@ run_optimization() {
             if bash "$script" >> "$SELF_IMPROVING_DIR/controller-$(date +%Y%m%d).log" 2>&1; then
                 log_success "优化引擎完成"
                 jq '.components.optimization = "completed" | .improvements_made += 1' "$SELF_IMPROVING_DIR/status.json" > "$SELF_IMPROVING_DIR/status.json.tmp" && mv "$SELF_IMPROVING_DIR/status.json.tmp" "$SELF_IMPROVING_DIR/status.json"
-                rm "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
+                rm -f "$SELF_IMPROVING_DIR/optimizations/trigger.txt"
             else
                 log_error "优化引擎失败"
                 jq '.components.optimization = "failed"' "$SELF_IMPROVING_DIR/status.json" > "$SELF_IMPROVING_DIR/status.json.tmp" && mv "$SELF_IMPROVING_DIR/status.json.tmp" "$SELF_IMPROVING_DIR/status.json"
