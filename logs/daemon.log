@@ -26255,3 +26255,18 @@ FileNotFoundError: [Errno 2] No such file or directory: '$TMPFILE'
 [2026-05-03T17:00:03.506Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
 [2026-05-03T17:00:03.506Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
 [2026-05-03T17:00:03.506Z] [INFO] ==================
+[2026-05-03T17:03:12.856Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T17:03:12.915Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T17:03:12.919Z] [DEBUG] [self-diagnostics] ✅ 系统资源: 0 个问题
+[2026-05-03T17:03:12.953Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T17:03:12.953Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T17:03:12.958Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T17:03:12.961Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T17:03:12.965Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T17:03:12.966Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 2 个问题, 0 个严重, 0 个已修复
+[2026-05-03T17:03:12.966Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T17:03:12.975Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T17:03:12.975Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T17:33:12.975Z (30分钟后)
+[2026-05-03T17:03:15.296Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T17:03:15.297Z] [ERROR] [jingcai-realtime] 失败: 脚本不存在: /home/jinghao/.openclaw/skills/self-evolving-agent/scripts/jingcai-realtime.sh
+[2026-05-03T17:03:15.297Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T17:08:15.297Z (5分钟后)

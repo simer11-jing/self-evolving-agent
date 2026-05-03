@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-03T16:33:12.847Z",
+  "timestamp": "2026-05-03T17:03:12.965Z",
   "summary": {
     "totalChecks": 7,
     "totalIssues": 2,
@@ -42,7 +42,7 @@
       "issues": [
         {
           "severity": "info",
-          "message": "向量索引已过期 (115小时前)",
+          "message": "向量索引已过期 (116小时前)",
           "fix": "rebuild_index"
         }
       ]

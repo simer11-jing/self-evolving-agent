@@ -23,7 +23,6 @@ STATE_DIR = BASE / "workspace/self-improving/memory-core"
 STATE_FILE = STATE_DIR / "state.json"
 MEMORY_FILE = BASE / "agents/main/MEMORY.md"
 DAILY_DIR = BASE / "agents/main/memory"
-BETTING_FILE = BASE / "workspace/self-improving/jingcai/betting-results.md"
 
 
 def load_state():
