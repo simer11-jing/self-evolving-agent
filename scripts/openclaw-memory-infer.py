@@ -47,7 +47,7 @@ def strip_tags(line):
 
 def collect_memory(prompt="", limit=60):
     terms = [t for t in re.split(r"\W+", prompt) if len(t) >= 2]
-    default_terms = ["竞彩", "赔率", "联赛", "战意", "cron", "Gateway", "OpenClaw", "配置", "错误", "优化", "记忆", "系统"]
+    default_terms = ["赔率", "联赛", "战意", "cron", "Gateway", "OpenClaw", "配置", "错误", "优化", "记忆", "系统"]
     terms = list(dict.fromkeys(terms + default_terms))
     lines = []
 
@@ -101,7 +101,7 @@ def infer(user, prompt):
         print("- 未找到强相关记忆，采用保守默认策略。")
 
     print("\n## 推理建议")
-    if any(k in prompt for k in ["竞彩", "投注", "赔率", "比赛", "联赛"]):
+    if any(k in prompt for k in ["投注", "赔率", "比赛", "联赛"]):
         print("- 优先使用已验证联赛：英超/德甲/瑞超/挪超。")
         print("- 赔率 1.35-1.50 优先；1.50-2.00 和 >3.00 降低置信度。")
         print("- 临场暴升 >0.3、杯赛深盘、法甲/葡超/美职/J联赛默认避险。")

@@ -14,6 +14,11 @@ const path = require('path');
 const os = require('os');
 const { spawn, execSync } = require('child_process');
 
+// 导入新模块
+const TokenCache = require('./scripts/token-cache.js');
+const MessageDedup = require('./scripts/message-dedup.js');
+const ConnectionPool = require('./scripts/connection-pool.js');
+
 // ============================================================================
 // 配置
 // ============================================================================
@@ -28,6 +33,10 @@ const CONFIG = {
   heartbeatIntervalMs: 5 * 60 * 1000, // 每5分钟更新心跳
 };
 
+// 初始化新模块
+const tokenCache = new TokenCache();
+const messageDedup = new MessageDedup();
+
 // 调度表配置
 const SCHEDULE = [
   { name: 'self-diagnostics', intervalMs: 30 * 60 * 1000 },         // 30分钟
@@ -36,14 +45,10 @@ const SCHEDULE = [
   { name: 'optimization-engine', intervalMs: 24 * 60 * 60 * 1000 },    // 24小时
   { name: 'feedback-loop', intervalMs: 24 * 60 * 60 * 1000 },          // 24小时
   { name: 'memory-integrator', intervalMs: 24 * 60 * 60 * 1000 },      // 24小时
-  { name: 'jingcai-monitor', intervalMs: 24 * 60 * 60 * 1000 },       // 竞彩监控（每天晚6点）
-  { name: 'jingcai-realtime', intervalMs: 5 * 60 * 1000 },                    // 竞彩临场监控（每5分钟，21:00-21:30有效）
-  { name: 'jingcai-analyzer', intervalMs: 24 * 60 * 60 * 1000 },      // 竞彩分析（每天晚7点）
-  { name: 'jingcai-results-fetcher', intervalMs: 12 * 60 * 60 * 1000 }, // 赛果抓取（每天早9点）
-  { name: 'jingcai-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },     // 竞彩学习（每周一次）
   { name: 'memory-compact', intervalMs: 3 * 24 * 60 * 60 * 1000 },       // 记忆压缩（每3天）
   { name: 'skill-learner', intervalMs: 7 * 24 * 60 * 60 * 1000 },      // 7天
   { name: 'memory-reflect', intervalMs: 7 * 24 * 60 * 60 * 1000, dayOfWeek: 0 }, // 7天，周日触发
+  { name: 'cache-cleanup', intervalMs: 24 * 60 * 60 * 1000 },           // 清理缓存（每天）
 ];
 
 // ============================================================================

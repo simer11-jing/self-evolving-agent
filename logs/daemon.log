@@ -24842,3 +24842,1416 @@ FileNotFoundError: [Errno 2] No such file or directory: '$TMPFILE'
 [2026-05-03T04:56:57.125Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前12:57)
 [2026-05-03T04:56:57.143Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
 [2026-05-03T04:56:57.143Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:01:57.143Z (5分钟后)
+[2026-05-03T05:00:03.348Z] [INFO] === Daemon 状态 ===
+[2026-05-03T05:00:03.349Z] [INFO]   self-diagnostics: 状态=success, 运行次数=206, 上次=2026-05-03T04:33:06.812Z, 下次=2026-05-03T05:03:06.812Z
+[2026-05-03T05:00:03.349Z] [INFO]   performance-monitor: 状态=success, 运行次数=54, 上次=2026-05-02T23:38:30.137Z, 下次=2026-05-03T05:38:30.137Z
+[2026-05-03T05:00:03.349Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T05:00:03.349Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T05:00:03.349Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T05:00:03.349Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T05:00:03.349Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T05:00:03.349Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3494, 上次=2026-05-03T04:56:57.143Z, 下次=2026-05-03T05:01:57.143Z
+[2026-05-03T05:00:03.349Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T05:00:03.349Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=27, 上次=2026-05-02T20:37:41.365Z, 下次=2026-05-03T08:37:41.365Z
+[2026-05-03T05:00:03.349Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T05:00:03.349Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T05:00:03.349Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T05:00:03.349Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T05:00:03.349Z] [INFO] ==================
+[2026-05-03T05:01:57.150Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:01:57.419Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:01:57.418Z ===
+[2026-05-03T05:01:57.419Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:02)
+[2026-05-03T05:01:57.448Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:01:57.448Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:06:57.447Z (5分钟后)
+[2026-05-03T05:03:06.828Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T05:03:06.886Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T05:03:06.889Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T05:03:06.916Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T05:03:06.916Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T05:03:06.920Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T05:03:06.922Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T05:03:06.925Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T05:03:06.926Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T05:03:06.926Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T05:03:06.929Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T05:03:06.929Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T05:33:06.929Z (30分钟后)
+[2026-05-03T05:06:57.453Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:06:57.723Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:06:57.722Z ===
+[2026-05-03T05:06:57.723Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:07)
+[2026-05-03T05:06:57.740Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:06:57.740Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:11:57.740Z (5分钟后)
+[2026-05-03T05:11:57.747Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:11:58.037Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:11:58.036Z ===
+[2026-05-03T05:11:58.037Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:12)
+[2026-05-03T05:11:58.058Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:11:58.058Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:16:58.058Z (5分钟后)
+[2026-05-03T05:16:58.064Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:16:58.338Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:16:58.337Z ===
+[2026-05-03T05:16:58.338Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:17)
+[2026-05-03T05:16:58.355Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:16:58.355Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:21:58.354Z (5分钟后)
+[2026-05-03T05:21:58.361Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:21:58.617Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:21:58.616Z ===
+[2026-05-03T05:21:58.617Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:22)
+[2026-05-03T05:21:58.637Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:21:58.637Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:26:58.637Z (5分钟后)
+[2026-05-03T05:26:58.644Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:26:58.946Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:26:58.945Z ===
+[2026-05-03T05:26:58.946Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:27)
+[2026-05-03T05:26:58.965Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:26:58.966Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:31:58.965Z (5分钟后)
+[2026-05-03T05:31:58.964Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:31:59.255Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:31:59.254Z ===
+[2026-05-03T05:31:59.255Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:32)
+[2026-05-03T05:31:59.277Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:31:59.277Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:36:59.277Z (5分钟后)
+[2026-05-03T05:33:06.944Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T05:33:07.008Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T05:33:07.012Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T05:33:07.045Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T05:33:07.045Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T05:33:07.049Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T05:33:07.052Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T05:33:07.055Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T05:33:07.056Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T05:33:07.056Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T05:33:07.060Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T05:33:07.060Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T06:03:07.060Z (30分钟后)
+[2026-05-03T05:36:59.284Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:36:59.562Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:36:59.561Z ===
+[2026-05-03T05:36:59.562Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:37)
+[2026-05-03T05:36:59.578Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:36:59.578Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:41:59.578Z (5分钟后)
+[2026-05-03T05:38:30.144Z] [INFO] [performance-monitor] 开始执行...
+[2026-05-03T05:38:30.149Z] [DEBUG] [performance-monitor] === 开始性能监控 - 2026年 05月 03日 星期日 13:38:30 CST ===
+[2026-05-03T05:38:30.396Z] [DEBUG] [performance-monitor] 系统CPU使用率: 0.0%
+[2026-05-03T05:38:30.397Z] [DEBUG] [performance-monitor] 系统内存使用率: 19.72%
+[2026-05-03T05:38:30.399Z] [DEBUG] [performance-monitor] 磁盘使用率: 87%
+[2026-05-03T05:38:30.407Z] [DEBUG] [performance-monitor] OpenClaw活跃会话: 0
+[2026-05-03T05:38:30.408Z] [DEBUG] [performance-monitor] 网关状态: stopped
+[2026-05-03T05:38:30.411Z] [DEBUG] [performance-monitor] 性能评分: 76.68/100
+[2026-05-03T05:38:30.420Z] [DEBUG] [performance-monitor] 警告：磁盘使用率过高 (87%)
+[2026-05-03T05:38:30.422Z] [DEBUG] [performance-monitor] 触发优化引擎...
+[2026-05-03T05:38:30.424Z] [DEBUG] [performance-monitor] 触发源: 系统资源使用率高
+[2026-05-03T05:38:30.429Z] [DEBUG] [performance-monitor] === 性能监控完成 - 2026年 05月 03日 星期日 13:38:30 CST ===
+[2026-05-03T05:38:30.430Z] [INFO] [performance-monitor] 完成，耗时 0.3s
+[2026-05-03T05:38:30.430Z] [INFO] [performance-monitor] 下次运行: 2026-05-03T11:38:30.430Z (360分钟后)
+[2026-05-03T05:41:59.577Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:41:59.859Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:41:59.859Z ===
+[2026-05-03T05:41:59.860Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:42)
+[2026-05-03T05:41:59.880Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:41:59.880Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:46:59.880Z (5分钟后)
+[2026-05-03T05:46:59.888Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:47:00.161Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:47:00.160Z ===
+[2026-05-03T05:47:00.161Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:47)
+[2026-05-03T05:47:00.184Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:47:00.185Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:52:00.184Z (5分钟后)
+[2026-05-03T05:52:00.191Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:52:00.488Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:52:00.487Z ===
+[2026-05-03T05:52:00.488Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:52)
+[2026-05-03T05:52:00.508Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:52:00.508Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T05:57:00.508Z (5分钟后)
+[2026-05-03T05:57:00.514Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T05:57:00.802Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T05:57:00.802Z ===
+[2026-05-03T05:57:00.803Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前13:57)
+[2026-05-03T05:57:00.823Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T05:57:00.823Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:02:00.823Z (5分钟后)
+[2026-05-03T06:00:03.360Z] [INFO] === Daemon 状态 ===
+[2026-05-03T06:00:03.360Z] [INFO]   self-diagnostics: 状态=success, 运行次数=208, 上次=2026-05-03T05:33:07.060Z, 下次=2026-05-03T06:03:07.060Z
+[2026-05-03T06:00:03.360Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T06:00:03.360Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T06:00:03.360Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T06:00:03.360Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T06:00:03.360Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T06:00:03.360Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T06:00:03.361Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3506, 上次=2026-05-03T05:57:00.823Z, 下次=2026-05-03T06:02:00.823Z
+[2026-05-03T06:00:03.361Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T06:00:03.361Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=27, 上次=2026-05-02T20:37:41.365Z, 下次=2026-05-03T08:37:41.365Z
+[2026-05-03T06:00:03.361Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T06:00:03.361Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T06:00:03.361Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T06:00:03.361Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T06:00:03.361Z] [INFO] ==================
+[2026-05-03T06:02:00.829Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:02:01.185Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:02:01.185Z ===
+[2026-05-03T06:02:01.186Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:02)
+[2026-05-03T06:02:01.219Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T06:02:01.220Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:07:01.219Z (5分钟后)
+[2026-05-03T06:03:07.074Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T06:03:07.134Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T06:03:07.138Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T06:03:07.166Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T06:03:07.166Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T06:03:07.170Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T06:03:07.173Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T06:03:07.176Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T06:03:07.176Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T06:03:07.177Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T06:03:07.183Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T06:03:07.183Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T06:33:07.182Z (30分钟后)
+[2026-05-03T06:07:01.227Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:07:01.508Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:07:01.507Z ===
+[2026-05-03T06:07:01.508Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:07)
+[2026-05-03T06:07:01.528Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:07:01.528Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:12:01.528Z (5分钟后)
+[2026-05-03T06:12:01.536Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:12:01.820Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:12:01.819Z ===
+[2026-05-03T06:12:01.820Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:12)
+[2026-05-03T06:12:01.836Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:12:01.836Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:17:01.836Z (5分钟后)
+[2026-05-03T06:17:01.845Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:17:02.326Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:17:02.325Z ===
+[2026-05-03T06:17:02.327Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:17)
+[2026-05-03T06:17:02.356Z] [INFO] [jingcai-realtime] 完成，耗时 0.5s
+[2026-05-03T06:17:02.356Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:22:02.355Z (5分钟后)
+[2026-05-03T06:22:02.363Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:22:02.632Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:22:02.631Z ===
+[2026-05-03T06:22:02.632Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:22)
+[2026-05-03T06:22:02.652Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:22:02.652Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:27:02.652Z (5分钟后)
+[2026-05-03T06:27:02.656Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:27:02.927Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:27:02.927Z ===
+[2026-05-03T06:27:02.928Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:27)
+[2026-05-03T06:27:02.947Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:27:02.947Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:32:02.947Z (5分钟后)
+[2026-05-03T06:32:02.955Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:32:03.234Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:32:03.234Z ===
+[2026-05-03T06:32:03.234Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:32)
+[2026-05-03T06:32:03.251Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:32:03.251Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:37:03.251Z (5分钟后)
+[2026-05-03T06:33:07.194Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T06:33:07.253Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T06:33:07.257Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T06:33:07.292Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T06:33:07.292Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T06:33:07.297Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T06:33:07.300Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T06:33:07.304Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T06:33:07.305Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T06:33:07.305Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T06:33:07.311Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T06:33:07.312Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T07:03:07.311Z (30分钟后)
+[2026-05-03T06:37:03.260Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:37:03.543Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:37:03.542Z ===
+[2026-05-03T06:37:03.543Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:37)
+[2026-05-03T06:37:03.564Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:37:03.565Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:42:03.564Z (5分钟后)
+[2026-05-03T06:42:03.574Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:42:03.870Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:42:03.870Z ===
+[2026-05-03T06:42:03.870Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:42)
+[2026-05-03T06:42:03.891Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:42:03.891Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:47:03.890Z (5分钟后)
+[2026-05-03T06:47:03.899Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:47:04.167Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:47:04.167Z ===
+[2026-05-03T06:47:04.167Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:47)
+[2026-05-03T06:47:04.184Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:47:04.184Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:52:04.184Z (5分钟后)
+[2026-05-03T06:52:04.193Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:52:04.473Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:52:04.473Z ===
+[2026-05-03T06:52:04.474Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:52)
+[2026-05-03T06:52:04.494Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:52:04.494Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T06:57:04.493Z (5分钟后)
+[2026-05-03T06:57:04.502Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T06:57:04.776Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T06:57:04.775Z ===
+[2026-05-03T06:57:04.776Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前14:57)
+[2026-05-03T06:57:04.793Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T06:57:04.793Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:02:04.793Z (5分钟后)
+[2026-05-03T07:00:03.367Z] [INFO] === Daemon 状态 ===
+[2026-05-03T07:00:03.368Z] [INFO]   self-diagnostics: 状态=success, 运行次数=210, 上次=2026-05-03T06:33:07.311Z, 下次=2026-05-03T07:03:07.311Z
+[2026-05-03T07:00:03.368Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T07:00:03.368Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T07:00:03.368Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T07:00:03.368Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T07:00:03.368Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T07:00:03.368Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T07:00:03.368Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3518, 上次=2026-05-03T06:57:04.793Z, 下次=2026-05-03T07:02:04.793Z
+[2026-05-03T07:00:03.368Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T07:00:03.368Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=27, 上次=2026-05-02T20:37:41.365Z, 下次=2026-05-03T08:37:41.365Z
+[2026-05-03T07:00:03.368Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T07:00:03.368Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T07:00:03.368Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T07:00:03.368Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T07:00:03.368Z] [INFO] ==================
+[2026-05-03T07:02:04.802Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:02:05.068Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:02:05.068Z ===
+[2026-05-03T07:02:05.068Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:02)
+[2026-05-03T07:02:05.085Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:02:05.085Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:07:05.084Z (5分钟后)
+[2026-05-03T07:03:07.323Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T07:03:07.378Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T07:03:07.381Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T07:03:07.408Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T07:03:07.409Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T07:03:07.412Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T07:03:07.415Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T07:03:07.418Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T07:03:07.418Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T07:03:07.418Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T07:03:07.422Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T07:03:07.422Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T07:33:07.422Z (30分钟后)
+[2026-05-03T07:07:05.094Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:07:05.372Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:07:05.371Z ===
+[2026-05-03T07:07:05.372Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:07)
+[2026-05-03T07:07:05.397Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:07:05.397Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:12:05.396Z (5分钟后)
+[2026-05-03T07:12:05.406Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:12:05.673Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:12:05.673Z ===
+[2026-05-03T07:12:05.674Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:12)
+[2026-05-03T07:12:05.695Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:12:05.695Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:17:05.695Z (5分钟后)
+[2026-05-03T07:17:05.705Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:17:06.017Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:17:06.016Z ===
+[2026-05-03T07:17:06.018Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:17)
+[2026-05-03T07:17:06.047Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:17:06.047Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:22:06.047Z (5分钟后)
+[2026-05-03T07:22:06.058Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:22:06.338Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:22:06.337Z ===
+[2026-05-03T07:22:06.338Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:22)
+[2026-05-03T07:22:06.358Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:22:06.358Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:27:06.357Z (5分钟后)
+[2026-05-03T07:27:06.368Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:27:06.651Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:27:06.650Z ===
+[2026-05-03T07:27:06.651Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:27)
+[2026-05-03T07:27:06.671Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:27:06.671Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:32:06.671Z (5分钟后)
+[2026-05-03T07:32:06.681Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:32:06.963Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:32:06.963Z ===
+[2026-05-03T07:32:06.963Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:32)
+[2026-05-03T07:32:06.982Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:32:06.982Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:37:06.982Z (5分钟后)
+[2026-05-03T07:33:07.433Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T07:33:07.485Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T07:33:07.489Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T07:33:07.516Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T07:33:07.516Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T07:33:07.520Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T07:33:07.522Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T07:33:07.525Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T07:33:07.525Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T07:33:07.525Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T07:33:07.529Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T07:33:07.529Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T08:03:07.528Z (30分钟后)
+[2026-05-03T07:37:06.993Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:37:07.325Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:37:07.325Z ===
+[2026-05-03T07:37:07.326Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:37)
+[2026-05-03T07:37:07.346Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T07:37:07.347Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:42:07.346Z (5分钟后)
+[2026-05-03T07:42:07.356Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:42:07.681Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:42:07.681Z ===
+[2026-05-03T07:42:07.682Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:42)
+[2026-05-03T07:42:07.706Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:42:07.706Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:47:07.706Z (5分钟后)
+[2026-05-03T07:47:07.712Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:47:08.003Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:47:08.002Z ===
+[2026-05-03T07:47:08.005Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:47)
+[2026-05-03T07:47:08.024Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:47:08.024Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:52:08.024Z (5分钟后)
+[2026-05-03T07:52:08.035Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:52:08.297Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:52:08.297Z ===
+[2026-05-03T07:52:08.297Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:52)
+[2026-05-03T07:52:08.314Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:52:08.314Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T07:57:08.314Z (5分钟后)
+[2026-05-03T07:57:08.325Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T07:57:08.612Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T07:57:08.612Z ===
+[2026-05-03T07:57:08.613Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前15:57)
+[2026-05-03T07:57:08.634Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T07:57:08.634Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:02:08.634Z (5分钟后)
+[2026-05-03T08:00:03.374Z] [INFO] === Daemon 状态 ===
+[2026-05-03T08:00:03.375Z] [INFO]   self-diagnostics: 状态=success, 运行次数=212, 上次=2026-05-03T07:33:07.528Z, 下次=2026-05-03T08:03:07.528Z
+[2026-05-03T08:00:03.375Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T08:00:03.375Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T08:00:03.375Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T08:00:03.375Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T08:00:03.375Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T08:00:03.375Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T08:00:03.375Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3530, 上次=2026-05-03T07:57:08.634Z, 下次=2026-05-03T08:02:08.634Z
+[2026-05-03T08:00:03.375Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T08:00:03.375Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=27, 上次=2026-05-02T20:37:41.365Z, 下次=2026-05-03T08:37:41.365Z
+[2026-05-03T08:00:03.375Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T08:00:03.375Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T08:00:03.375Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T08:00:03.375Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T08:00:03.375Z] [INFO] ==================
+[2026-05-03T08:02:08.645Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:02:08.911Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:02:08.911Z ===
+[2026-05-03T08:02:08.911Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:02)
+[2026-05-03T08:02:08.928Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:02:08.928Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:07:08.927Z (5分钟后)
+[2026-05-03T08:03:07.538Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T08:03:07.601Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T08:03:07.605Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T08:03:07.631Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T08:03:07.632Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T08:03:07.635Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T08:03:07.638Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T08:03:07.640Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T08:03:07.641Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T08:03:07.641Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T08:03:07.644Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T08:03:07.645Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T08:33:07.644Z (30分钟后)
+[2026-05-03T08:07:08.939Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:07:09.211Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:07:09.211Z ===
+[2026-05-03T08:07:09.212Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:07)
+[2026-05-03T08:07:09.227Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:07:09.228Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:12:09.227Z (5分钟后)
+[2026-05-03T08:12:09.237Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:12:09.495Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:12:09.494Z ===
+[2026-05-03T08:12:09.495Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:12)
+[2026-05-03T08:12:09.511Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:12:09.511Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:17:09.511Z (5分钟后)
+[2026-05-03T08:17:09.520Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:17:10.010Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:17:10.008Z ===
+[2026-05-03T08:17:10.010Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:17)
+[2026-05-03T08:17:10.069Z] [INFO] [jingcai-realtime] 完成，耗时 0.5s
+[2026-05-03T08:17:10.069Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:22:10.069Z (5分钟后)
+[2026-05-03T08:22:10.080Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:22:10.372Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:22:10.372Z ===
+[2026-05-03T08:22:10.372Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:22)
+[2026-05-03T08:22:10.393Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:22:10.393Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:27:10.393Z (5分钟后)
+[2026-05-03T08:27:10.404Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:27:10.683Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:27:10.682Z ===
+[2026-05-03T08:27:10.683Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:27)
+[2026-05-03T08:27:10.702Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:27:10.702Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:32:10.702Z (5分钟后)
+[2026-05-03T08:32:10.714Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:32:11.029Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:32:11.028Z ===
+[2026-05-03T08:32:11.029Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:32)
+[2026-05-03T08:32:11.051Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:32:11.051Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:37:11.051Z (5分钟后)
+[2026-05-03T08:33:07.653Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T08:33:07.715Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T08:33:07.718Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T08:33:07.745Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T08:33:07.746Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T08:33:07.749Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T08:33:07.752Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T08:33:07.755Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T08:33:07.755Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T08:33:07.756Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T08:33:07.758Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T08:33:07.759Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T09:03:07.758Z (30分钟后)
+[2026-05-03T08:37:11.055Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:37:11.336Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:37:11.335Z ===
+[2026-05-03T08:37:11.336Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:37)
+[2026-05-03T08:37:11.355Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:37:11.355Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:42:11.355Z (5分钟后)
+[2026-05-03T08:37:41.376Z] [INFO] [jingcai-results-fetcher] 开始执行...
+[2026-05-03T08:37:41.389Z] [DEBUG] [jingcai-results-fetcher] === 赛果抓取 - 2026-05-02 ===
+[2026-05-03T08:37:41.598Z] [DEBUG] [jingcai-results-fetcher] ✅ API 调用成功
+[2026-05-03T08:37:41.713Z] [ERROR] [jingcai-results-fetcher] 失败: 退出码 1: Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '$TMPFILE'
+
+[2026-05-03T08:37:41.713Z] [INFO] [jingcai-results-fetcher] 下次运行: 2026-05-03T20:37:41.713Z (720分钟后)
+[2026-05-03T08:42:11.367Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:42:11.638Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:42:11.638Z ===
+[2026-05-03T08:42:11.639Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:42)
+[2026-05-03T08:42:11.655Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:42:11.655Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:47:11.655Z (5分钟后)
+[2026-05-03T08:47:11.667Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:47:11.938Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:47:11.938Z ===
+[2026-05-03T08:47:11.938Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:47)
+[2026-05-03T08:47:11.960Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:47:11.960Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:52:11.960Z (5分钟后)
+[2026-05-03T08:52:11.968Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:52:12.257Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:52:12.257Z ===
+[2026-05-03T08:52:12.258Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:52)
+[2026-05-03T08:52:12.277Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:52:12.277Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T08:57:12.277Z (5分钟后)
+[2026-05-03T08:57:12.281Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T08:57:12.550Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T08:57:12.549Z ===
+[2026-05-03T08:57:12.550Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前16:57)
+[2026-05-03T08:57:12.566Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T08:57:12.566Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:02:12.566Z (5分钟后)
+[2026-05-03T09:00:03.377Z] [INFO] === Daemon 状态 ===
+[2026-05-03T09:00:03.378Z] [INFO]   self-diagnostics: 状态=success, 运行次数=214, 上次=2026-05-03T08:33:07.758Z, 下次=2026-05-03T09:03:07.758Z
+[2026-05-03T09:00:03.378Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T09:00:03.378Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T09:00:03.378Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T09:00:03.378Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T09:00:03.378Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T09:00:03.378Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T09:00:03.378Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3542, 上次=2026-05-03T08:57:12.566Z, 下次=2026-05-03T09:02:12.566Z
+[2026-05-03T09:00:03.378Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T09:00:03.378Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T09:00:03.378Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T09:00:03.378Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T09:00:03.378Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T09:00:03.378Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T09:00:03.378Z] [INFO] ==================
+[2026-05-03T09:02:12.573Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:02:12.836Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:02:12.835Z ===
+[2026-05-03T09:02:12.836Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:02)
+[2026-05-03T09:02:12.853Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T09:02:12.853Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:07:12.853Z (5分钟后)
+[2026-05-03T09:03:07.766Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T09:03:07.828Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T09:03:07.832Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T09:03:07.861Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T09:03:07.862Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T09:03:07.866Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T09:03:07.868Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T09:03:07.872Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T09:03:07.872Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T09:03:07.873Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T09:03:07.879Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T09:03:07.879Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T09:33:07.879Z (30分钟后)
+[2026-05-03T09:07:12.866Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:07:13.175Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:07:13.174Z ===
+[2026-05-03T09:07:13.175Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:07)
+[2026-05-03T09:07:13.194Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T09:07:13.194Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:12:13.194Z (5分钟后)
+[2026-05-03T09:12:13.197Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:12:13.473Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:12:13.472Z ===
+[2026-05-03T09:12:13.473Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:12)
+[2026-05-03T09:12:13.490Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T09:12:13.491Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:17:13.490Z (5分钟后)
+[2026-05-03T09:17:13.503Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:17:14.278Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:17:14.277Z ===
+[2026-05-03T09:17:14.279Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:17)
+[2026-05-03T09:17:14.336Z] [INFO] [jingcai-realtime] 完成，耗时 0.8s
+[2026-05-03T09:17:14.336Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:22:14.335Z (5分钟后)
+[2026-05-03T09:22:14.349Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:22:15.249Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:22:15.248Z ===
+[2026-05-03T09:22:15.249Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:22)
+[2026-05-03T09:22:15.295Z] [INFO] [jingcai-realtime] 完成，耗时 0.9s
+[2026-05-03T09:22:15.295Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:27:15.294Z (5分钟后)
+[2026-05-03T09:27:15.308Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:27:16.063Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:27:16.062Z ===
+[2026-05-03T09:27:16.065Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:27)
+[2026-05-03T09:27:16.162Z] [INFO] [jingcai-realtime] 完成，耗时 0.9s
+[2026-05-03T09:27:16.162Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:32:16.162Z (5分钟后)
+[2026-05-03T09:32:16.178Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:32:17.028Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:32:17.026Z ===
+[2026-05-03T09:32:17.028Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:32)
+[2026-05-03T09:32:17.119Z] [INFO] [jingcai-realtime] 完成，耗时 0.9s
+[2026-05-03T09:32:17.119Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:37:17.116Z (5分钟后)
+[2026-05-03T09:33:07.888Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T09:33:08.058Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T09:33:08.073Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 2 个问题
+[2026-05-03T09:33:08.200Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T09:33:08.201Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T09:33:08.234Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T09:33:08.242Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T09:33:08.252Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T09:33:08.252Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 4 个问题, 0 个严重, 0 个已修复
+[2026-05-03T09:33:08.252Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T09:33:08.272Z] [INFO] [self-diagnostics] 完成，耗时 0.4s
+[2026-05-03T09:33:08.272Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T10:03:08.271Z (30分钟后)
+[2026-05-03T09:37:17.133Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:37:18.296Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:37:18.294Z ===
+[2026-05-03T09:37:18.296Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:37)
+[2026-05-03T09:37:18.383Z] [INFO] [jingcai-realtime] 完成，耗时 1.2s
+[2026-05-03T09:37:18.383Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:42:18.382Z (5分钟后)
+[2026-05-03T09:42:18.399Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:42:19.068Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:42:19.066Z ===
+[2026-05-03T09:42:19.069Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:42)
+[2026-05-03T09:42:19.110Z] [INFO] [jingcai-realtime] 完成，耗时 0.7s
+[2026-05-03T09:42:19.110Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:47:19.109Z (5分钟后)
+[2026-05-03T09:47:19.125Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:47:19.824Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:47:19.822Z ===
+[2026-05-03T09:47:19.824Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:47)
+[2026-05-03T09:47:19.898Z] [INFO] [jingcai-realtime] 完成，耗时 0.8s
+[2026-05-03T09:47:19.898Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:52:19.897Z (5分钟后)
+[2026-05-03T09:52:19.925Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:52:20.943Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:52:20.942Z ===
+[2026-05-03T09:52:20.944Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:52)
+[2026-05-03T09:52:21.077Z] [INFO] [jingcai-realtime] 完成，耗时 1.2s
+[2026-05-03T09:52:21.077Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T09:57:21.077Z (5分钟后)
+[2026-05-03T09:57:21.097Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T09:57:21.880Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T09:57:21.878Z ===
+[2026-05-03T09:57:21.880Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前17:57)
+[2026-05-03T09:57:22.057Z] [INFO] [jingcai-realtime] 完成，耗时 1.0s
+[2026-05-03T09:57:22.058Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:02:22.056Z (5分钟后)
+[2026-05-03T10:00:03.388Z] [INFO] === Daemon 状态 ===
+[2026-05-03T10:00:03.388Z] [INFO]   self-diagnostics: 状态=success, 运行次数=216, 上次=2026-05-03T09:33:08.271Z, 下次=2026-05-03T10:03:08.271Z
+[2026-05-03T10:00:03.388Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T10:00:03.388Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T10:00:03.388Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T10:00:03.388Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T10:00:03.388Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T10:00:03.388Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T10:00:03.388Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3554, 上次=2026-05-03T09:57:22.056Z, 下次=2026-05-03T10:02:22.056Z
+[2026-05-03T10:00:03.388Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T10:00:03.388Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T10:00:03.388Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T10:00:03.388Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T10:00:03.388Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T10:00:03.388Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T10:00:03.388Z] [INFO] ==================
+[2026-05-03T10:02:22.074Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:02:23.865Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:02:23.863Z ===
+[2026-05-03T10:02:23.865Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:02)
+[2026-05-03T10:02:24.018Z] [INFO] [jingcai-realtime] 完成，耗时 1.9s
+[2026-05-03T10:02:24.018Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:07:24.018Z (5分钟后)
+[2026-05-03T10:03:08.277Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T10:03:08.545Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T10:03:08.558Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 2 个问题
+[2026-05-03T10:03:08.718Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T10:03:08.719Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T10:03:08.782Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T10:03:08.786Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T10:03:08.816Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T10:03:08.817Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 4 个问题, 0 个严重, 0 个已修复
+[2026-05-03T10:03:08.818Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T10:03:08.830Z] [INFO] [self-diagnostics] 完成，耗时 0.6s
+[2026-05-03T10:03:08.830Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T10:33:08.829Z (30分钟后)
+[2026-05-03T10:07:24.038Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:07:24.845Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:07:24.843Z ===
+[2026-05-03T10:07:24.845Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:07)
+[2026-05-03T10:07:24.929Z] [INFO] [jingcai-realtime] 完成，耗时 0.9s
+[2026-05-03T10:07:24.929Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:12:24.929Z (5分钟后)
+[2026-05-03T10:12:24.951Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:12:25.397Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:12:25.396Z ===
+[2026-05-03T10:12:25.398Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:12)
+[2026-05-03T10:12:25.430Z] [INFO] [jingcai-realtime] 完成，耗时 0.5s
+[2026-05-03T10:12:25.430Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:17:25.430Z (5分钟后)
+[2026-05-03T10:17:25.451Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:17:25.744Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:17:25.744Z ===
+[2026-05-03T10:17:25.745Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:17)
+[2026-05-03T10:17:25.764Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:17:25.764Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:22:25.764Z (5分钟后)
+[2026-05-03T10:22:25.768Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:22:26.075Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:22:26.074Z ===
+[2026-05-03T10:22:26.075Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:22)
+[2026-05-03T10:22:26.103Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:22:26.103Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:27:26.102Z (5分钟后)
+[2026-05-03T10:27:26.111Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:27:26.480Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:27:26.479Z ===
+[2026-05-03T10:27:26.480Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:27)
+[2026-05-03T10:27:26.511Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T10:27:26.511Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:32:26.511Z (5分钟后)
+[2026-05-03T10:32:26.531Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:32:26.888Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:32:26.887Z ===
+[2026-05-03T10:32:26.888Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:32)
+[2026-05-03T10:32:26.913Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T10:32:26.913Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:37:26.913Z (5分钟后)
+[2026-05-03T10:33:08.833Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T10:33:08.903Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T10:33:08.906Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T10:33:08.934Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T10:33:08.934Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T10:33:08.938Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T10:33:08.940Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T10:33:08.943Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T10:33:08.944Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T10:33:08.944Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T10:33:08.948Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T10:33:08.948Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T11:03:08.948Z (30分钟后)
+[2026-05-03T10:37:26.934Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:37:27.242Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:37:27.242Z ===
+[2026-05-03T10:37:27.242Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:37)
+[2026-05-03T10:37:27.276Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:37:27.276Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:42:27.276Z (5分钟后)
+[2026-05-03T10:42:27.299Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:42:27.571Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:42:27.571Z ===
+[2026-05-03T10:42:27.572Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:42)
+[2026-05-03T10:42:27.588Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:42:27.588Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:47:27.588Z (5分钟后)
+[2026-05-03T10:47:27.609Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:47:27.876Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:47:27.876Z ===
+[2026-05-03T10:47:27.877Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:47)
+[2026-05-03T10:47:27.895Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:47:27.895Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:52:27.894Z (5分钟后)
+[2026-05-03T10:52:27.900Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:52:28.168Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:52:28.168Z ===
+[2026-05-03T10:52:28.169Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:52)
+[2026-05-03T10:52:28.185Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:52:28.185Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T10:57:28.185Z (5分钟后)
+[2026-05-03T10:57:28.208Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T10:57:28.479Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T10:57:28.478Z ===
+[2026-05-03T10:57:28.479Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前18:57)
+[2026-05-03T10:57:28.499Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T10:57:28.499Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:02:28.499Z (5分钟后)
+[2026-05-03T11:00:03.402Z] [INFO] === Daemon 状态 ===
+[2026-05-03T11:00:03.402Z] [INFO]   self-diagnostics: 状态=success, 运行次数=218, 上次=2026-05-03T10:33:08.948Z, 下次=2026-05-03T11:03:08.948Z
+[2026-05-03T11:00:03.402Z] [INFO]   performance-monitor: 状态=success, 运行次数=55, 上次=2026-05-03T05:38:30.430Z, 下次=2026-05-03T11:38:30.430Z
+[2026-05-03T11:00:03.402Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T11:00:03.402Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T11:00:03.402Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T11:00:03.403Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T11:00:03.403Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T11:00:03.403Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3566, 上次=2026-05-03T10:57:28.499Z, 下次=2026-05-03T11:02:28.499Z
+[2026-05-03T11:00:03.403Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T11:00:03.403Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T11:00:03.403Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T11:00:03.403Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T11:00:03.403Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T11:00:03.403Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T11:00:03.403Z] [INFO] ==================
+[2026-05-03T11:02:28.507Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:02:28.800Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:02:28.799Z ===
+[2026-05-03T11:02:28.800Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:02)
+[2026-05-03T11:02:28.818Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:02:28.818Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:07:28.818Z (5分钟后)
+[2026-05-03T11:03:08.951Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T11:03:09.004Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T11:03:09.007Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T11:03:09.060Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T11:03:09.060Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T11:03:09.064Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T11:03:09.067Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T11:03:09.070Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T11:03:09.070Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T11:03:09.070Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T11:03:10.687Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T11:03:10.688Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T11:03:10.688Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T11:03:10.692Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T11:03:10.692Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T11:33:10.692Z (30分钟后)
+[2026-05-03T11:07:28.824Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:07:29.100Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:07:29.100Z ===
+[2026-05-03T11:07:29.101Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:07)
+[2026-05-03T11:07:29.117Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:07:29.117Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:12:29.117Z (5分钟后)
+[2026-05-03T11:12:29.136Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:12:29.443Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:12:29.442Z ===
+[2026-05-03T11:12:29.443Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:12)
+[2026-05-03T11:12:29.462Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:12:29.462Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:17:29.462Z (5分钟后)
+[2026-05-03T11:17:29.481Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:17:29.763Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:17:29.763Z ===
+[2026-05-03T11:17:29.763Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:17)
+[2026-05-03T11:17:29.780Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:17:29.780Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:22:29.780Z (5分钟后)
+[2026-05-03T11:22:29.796Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:22:30.080Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:22:30.079Z ===
+[2026-05-03T11:22:30.080Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:23)
+[2026-05-03T11:22:30.101Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:22:30.101Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:27:30.101Z (5分钟后)
+[2026-05-03T11:27:30.125Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:27:30.405Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:27:30.404Z ===
+[2026-05-03T11:27:30.405Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:28)
+[2026-05-03T11:27:30.423Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:27:30.423Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:32:30.423Z (5分钟后)
+[2026-05-03T11:32:30.447Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:32:30.739Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:32:30.738Z ===
+[2026-05-03T11:32:30.739Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:33)
+[2026-05-03T11:32:30.759Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:32:30.759Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:37:30.758Z (5分钟后)
+[2026-05-03T11:33:10.695Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T11:33:10.762Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T11:33:10.766Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T11:33:10.792Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T11:33:10.793Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T11:33:10.796Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T11:33:10.799Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T11:33:10.801Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T11:33:10.801Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T11:33:10.802Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T11:33:10.903Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T11:33:10.903Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T11:33:10.904Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T11:33:10.907Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T11:33:10.907Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T12:03:10.907Z (30分钟后)
+[2026-05-03T11:37:30.775Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:37:31.051Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:37:31.051Z ===
+[2026-05-03T11:37:31.052Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:38)
+[2026-05-03T11:37:31.068Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:37:31.068Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:42:31.068Z (5分钟后)
+[2026-05-03T11:38:30.453Z] [INFO] [performance-monitor] 开始执行...
+[2026-05-03T11:38:30.467Z] [DEBUG] [performance-monitor] === 开始性能监控 - 2026年 05月 03日 星期日 19:38:30 CST ===
+[2026-05-03T11:38:30.698Z] [DEBUG] [performance-monitor] 系统CPU使用率: 0.0%
+[2026-05-03T11:38:30.699Z] [DEBUG] [performance-monitor] 系统内存使用率: 21.06%
+[2026-05-03T11:38:30.700Z] [DEBUG] [performance-monitor] 磁盘使用率: 91%
+[2026-05-03T11:38:30.707Z] [DEBUG] [performance-monitor] OpenClaw活跃会话: 0
+[2026-05-03T11:38:30.708Z] [DEBUG] [performance-monitor] 网关状态: stopped
+[2026-05-03T11:38:30.710Z] [DEBUG] [performance-monitor] 性能评分: 75.48/100
+[2026-05-03T11:38:30.721Z] [DEBUG] [performance-monitor] 警告：磁盘使用率过高 (91%)
+[2026-05-03T11:38:30.722Z] [DEBUG] [performance-monitor] 触发优化引擎...
+[2026-05-03T11:38:30.725Z] [DEBUG] [performance-monitor] 触发源: 系统资源使用率高
+[2026-05-03T11:38:30.729Z] [DEBUG] [performance-monitor] === 性能监控完成 - 2026年 05月 03日 星期日 19:38:30 CST ===
+[2026-05-03T11:38:30.730Z] [INFO] [performance-monitor] 完成，耗时 0.3s
+[2026-05-03T11:38:30.730Z] [INFO] [performance-monitor] 下次运行: 2026-05-03T17:38:30.730Z (360分钟后)
+[2026-05-03T11:42:31.090Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:42:31.400Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:42:31.399Z ===
+[2026-05-03T11:42:31.400Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:43)
+[2026-05-03T11:42:31.423Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:42:31.423Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:47:31.423Z (5分钟后)
+[2026-05-03T11:47:31.447Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:47:31.736Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:47:31.735Z ===
+[2026-05-03T11:47:31.736Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:48)
+[2026-05-03T11:47:31.753Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:47:31.753Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:52:31.753Z (5分钟后)
+[2026-05-03T11:52:31.777Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:52:32.075Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:52:32.074Z ===
+[2026-05-03T11:52:32.075Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:53)
+[2026-05-03T11:52:32.095Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:52:32.095Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T11:57:32.095Z (5分钟后)
+[2026-05-03T11:57:32.116Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T11:57:32.382Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T11:57:32.381Z ===
+[2026-05-03T11:57:32.382Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前19:58)
+[2026-05-03T11:57:32.399Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T11:57:32.399Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:02:32.399Z (5分钟后)
+[2026-05-03T12:00:03.424Z] [INFO] === Daemon 状态 ===
+[2026-05-03T12:00:03.424Z] [INFO]   self-diagnostics: 状态=failed, 运行次数=220, 上次=2026-05-03T11:33:10.907Z, 下次=2026-05-03T12:03:10.907Z
+[2026-05-03T12:00:03.424Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T12:00:03.424Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T12:00:03.424Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T12:00:03.426Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T12:00:03.426Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T12:00:03.426Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T12:00:03.426Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3578, 上次=2026-05-03T11:57:32.399Z, 下次=2026-05-03T12:02:32.399Z
+[2026-05-03T12:00:03.426Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T12:00:03.426Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T12:00:03.426Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T12:00:03.426Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T12:00:03.426Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T12:00:03.426Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T12:00:03.426Z] [INFO] ==================
+[2026-05-03T12:02:32.407Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:02:32.679Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:02:32.679Z ===
+[2026-05-03T12:02:32.680Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:03)
+[2026-05-03T12:02:32.703Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:02:32.703Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:07:32.703Z (5分钟后)
+[2026-05-03T12:03:10.908Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T12:03:10.970Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T12:03:10.974Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T12:03:11.013Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T12:03:11.013Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T12:03:11.018Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T12:03:11.021Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T12:03:11.024Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T12:03:11.024Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T12:03:11.024Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T12:03:11.133Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T12:03:11.134Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T12:03:11.134Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T12:03:11.138Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T12:03:11.138Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T12:33:11.138Z (30分钟后)
+[2026-05-03T12:07:32.727Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:07:33.010Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:07:33.010Z ===
+[2026-05-03T12:07:33.010Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:08)
+[2026-05-03T12:07:33.028Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:07:33.028Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:12:33.028Z (5分钟后)
+[2026-05-03T12:12:33.052Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:12:33.331Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:12:33.330Z ===
+[2026-05-03T12:12:33.331Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:13)
+[2026-05-03T12:12:33.348Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:12:33.348Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:17:33.348Z (5分钟后)
+[2026-05-03T12:17:33.372Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:17:33.656Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:17:33.656Z ===
+[2026-05-03T12:17:33.656Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:18)
+[2026-05-03T12:17:33.674Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:17:33.674Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:22:33.674Z (5分钟后)
+[2026-05-03T12:22:33.699Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:22:34.017Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:22:34.016Z ===
+[2026-05-03T12:22:34.017Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:23)
+[2026-05-03T12:22:34.040Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:22:34.040Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:27:34.039Z (5分钟后)
+[2026-05-03T12:27:34.053Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:27:34.344Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:27:34.344Z ===
+[2026-05-03T12:27:34.345Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:28)
+[2026-05-03T12:27:34.364Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:27:34.364Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:32:34.363Z (5分钟后)
+[2026-05-03T12:32:34.387Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:32:34.691Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:32:34.690Z ===
+[2026-05-03T12:32:34.691Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:33)
+[2026-05-03T12:32:34.708Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:32:34.708Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:37:34.707Z (5分钟后)
+[2026-05-03T12:33:11.139Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T12:33:11.204Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T12:33:11.207Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T12:33:11.234Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T12:33:11.235Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T12:33:11.238Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T12:33:11.241Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T12:33:11.244Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T12:33:11.244Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T12:33:11.244Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T12:33:11.346Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T12:33:11.347Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T12:33:11.347Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T12:33:11.350Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T12:33:11.350Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T13:03:11.350Z (30分钟后)
+[2026-05-03T12:37:34.732Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:37:35.026Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:37:35.026Z ===
+[2026-05-03T12:37:35.027Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:38)
+[2026-05-03T12:37:35.044Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:37:35.044Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:42:35.044Z (5分钟后)
+[2026-05-03T12:42:35.070Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:42:35.348Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:42:35.348Z ===
+[2026-05-03T12:42:35.349Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:43)
+[2026-05-03T12:42:35.365Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:42:35.365Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:47:35.365Z (5分钟后)
+[2026-05-03T12:47:35.391Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:47:35.679Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:47:35.679Z ===
+[2026-05-03T12:47:35.679Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:48)
+[2026-05-03T12:47:35.696Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:47:35.697Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:52:35.696Z (5分钟后)
+[2026-05-03T12:52:35.722Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:52:36.002Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:52:36.002Z ===
+[2026-05-03T12:52:36.003Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:53)
+[2026-05-03T12:52:36.019Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:52:36.019Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T12:57:36.019Z (5分钟后)
+[2026-05-03T12:57:36.045Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T12:57:36.320Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T12:57:36.319Z ===
+[2026-05-03T12:57:36.321Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前20:58)
+[2026-05-03T12:57:36.346Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T12:57:36.346Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:02:36.345Z (5分钟后)
+[2026-05-03T13:00:03.440Z] [INFO] === Daemon 状态 ===
+[2026-05-03T13:00:03.440Z] [INFO]   self-diagnostics: 状态=failed, 运行次数=222, 上次=2026-05-03T12:33:11.350Z, 下次=2026-05-03T13:03:11.350Z
+[2026-05-03T13:00:03.440Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T13:00:03.440Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T13:00:03.440Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T13:00:03.440Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T13:00:03.440Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T13:00:03.440Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T13:00:03.440Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3590, 上次=2026-05-03T12:57:36.345Z, 下次=2026-05-03T13:02:36.345Z
+[2026-05-03T13:00:03.440Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T13:00:03.440Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T13:00:03.440Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T13:00:03.440Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T13:00:03.440Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T13:00:03.440Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T13:00:03.440Z] [INFO] ==================
+[2026-05-03T13:02:36.352Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:02:36.622Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:02:36.622Z ===
+[2026-05-03T13:02:36.622Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:02:41.236Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:02:41.237Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:02:41.237Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (72分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (87分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (102分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (117分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (132分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (147分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.238Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (177分钟后) ⏰临场关键期
+[2026-05-03T13:02:41.240Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:02:41.240Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:02:41.249Z] [INFO] [jingcai-realtime] 完成，耗时 4.9s
+[2026-05-03T13:02:41.249Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:07:41.249Z (5分钟后)
+[2026-05-03T13:03:11.351Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T13:03:11.406Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T13:03:11.410Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T13:03:11.438Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T13:03:11.438Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T13:03:11.442Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T13:03:11.445Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T13:03:11.448Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T13:03:11.448Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T13:03:11.449Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T13:03:11.566Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T13:03:11.567Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T13:03:11.568Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T13:03:11.573Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T13:03:11.574Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T13:33:11.573Z (30分钟后)
+[2026-05-03T13:07:41.250Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:07:41.530Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:07:41.529Z ===
+[2026-05-03T13:07:41.530Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:07:45.393Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:07:45.394Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:07:45.394Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (67分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.394Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.394Z] [DEBUG] [jingcai-realtime]    赔率: 1.74 / 2.90 / 4.76 | 变化: 稳定
+[2026-05-03T13:07:45.396Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (82分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.397Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.397Z] [DEBUG] [jingcai-realtime]    赔率: 2.15 / 3.40 / 2.70 | 变化: 稳定
+[2026-05-03T13:07:45.398Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (97分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.398Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.398Z] [DEBUG] [jingcai-realtime]    赔率: 2.45 / 3.38 / 2.35 | 变化: 稳定
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (112分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    赔率: 2.22 / 3.35 / 2.63 | 变化: 稳定
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (127分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    赔率: 2.72 / 3.45 / 2.12 | 变化: 稳定
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (142分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    赔率: 3.56 / 3.74 / 1.72 | 变化: 稳定
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (172分钟后) ⏰临场关键期
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:07:45.399Z] [DEBUG] [jingcai-realtime]    赔率: 1.11 / 6.50 / 13.50 | 变化: 稳定
+[2026-05-03T13:07:45.406Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:07:45.406Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:07:45.421Z] [INFO] [jingcai-realtime] 完成，耗时 4.2s
+[2026-05-03T13:07:45.422Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:12:45.420Z (5分钟后)
+[2026-05-03T13:12:45.425Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:12:45.702Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:12:45.702Z ===
+[2026-05-03T13:12:45.703Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:12:49.539Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:12:49.540Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:12:49.540Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (62分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime]    赔率: 1.76 / 2.90 / 4.65 | 变化: 稳定
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (77分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime]    赔率: 2.15 / 3.40 / 2.70 | 变化: 稳定
+[2026-05-03T13:12:49.541Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (92分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    赔率: 2.45 / 3.38 / 2.35 | 变化: 稳定
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (107分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    赔率: 2.22 / 3.35 / 2.63 | 变化: 稳定
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (122分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    赔率: 2.72 / 3.45 / 2.12 | 变化: 稳定
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (137分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.542Z] [DEBUG] [jingcai-realtime]    赔率: 3.56 / 3.74 / 1.72 | 变化: 稳定
+[2026-05-03T13:12:49.543Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (167分钟后) ⏰临场关键期
+[2026-05-03T13:12:49.543Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:12:49.543Z] [DEBUG] [jingcai-realtime]    赔率: 1.11 / 6.50 / 13.50 | 变化: 稳定
+[2026-05-03T13:12:49.545Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:12:49.545Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:12:49.553Z] [INFO] [jingcai-realtime] 完成，耗时 4.1s
+[2026-05-03T13:12:49.553Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:17:49.553Z (5分钟后)
+[2026-05-03T13:17:49.561Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:17:49.844Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:17:49.843Z ===
+[2026-05-03T13:17:49.844Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:17:53.615Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:17:53.615Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:17:53.615Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (57分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    赔率: 1.76 / 2.90 / 4.65 | 变化: 稳定
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (72分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    赔率: 2.15 / 3.40 / 2.70 | 变化: 稳定
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (87分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    赔率: 2.45 / 3.38 / 2.35 | 变化: 稳定
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (102分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime]    赔率: 2.22 / 3.35 / 2.63 | 变化: 稳定
+[2026-05-03T13:17:53.616Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (117分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    赔率: 2.72 / 3.45 / 2.12 | 变化: 稳定
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (132分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    赔率: 3.56 / 3.74 / 1.72 | 变化: 稳定
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (162分钟后) ⏰临场关键期
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:17:53.617Z] [DEBUG] [jingcai-realtime]    赔率: 1.11 / 6.50 / 13.50 | 变化: 稳定
+[2026-05-03T13:17:53.620Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:17:53.620Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:17:53.627Z] [INFO] [jingcai-realtime] 完成，耗时 4.1s
+[2026-05-03T13:17:53.628Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:22:53.627Z (5分钟后)
+[2026-05-03T13:22:53.640Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:22:53.926Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:22:53.925Z ===
+[2026-05-03T13:22:53.926Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:22:57.670Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:22:57.672Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:22:57.672Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (52分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.673Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.673Z] [DEBUG] [jingcai-realtime]    赔率: 1.76 / 2.90 / 4.65 | 变化: 稳定
+[2026-05-03T13:22:57.674Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (67分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.674Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.674Z] [DEBUG] [jingcai-realtime]    赔率: 2.09 / 3.51 / 2.73 | 变化: 稳定
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (82分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    赔率: 2.45 / 3.38 / 2.35 | 变化: 稳定
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (97分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    赔率: 2.22 / 3.35 / 2.63 | 变化: 稳定
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (112分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    赔率: 2.72 / 3.45 / 2.12 | 变化: 稳定
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (127分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.675Z] [DEBUG] [jingcai-realtime]    赔率: 3.56 / 3.74 / 1.72 | 变化: 稳定
+[2026-05-03T13:22:57.676Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (157分钟后) ⏰临场关键期
+[2026-05-03T13:22:57.676Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:22:57.676Z] [DEBUG] [jingcai-realtime]    赔率: 1.11 / 6.50 / 13.50 | 变化: 稳定
+[2026-05-03T13:22:57.679Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:22:57.679Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:22:57.688Z] [INFO] [jingcai-realtime] 完成，耗时 4.0s
+[2026-05-03T13:22:57.688Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:27:57.688Z (5分钟后)
+[2026-05-03T13:27:57.704Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:27:57.979Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:27:57.977Z ===
+[2026-05-03T13:27:57.979Z] [DEBUG] [jingcai-realtime] 抓取500.com...
+[2026-05-03T13:28:01.711Z] [DEBUG] [jingcai-realtime] 当前比赛数: 27
+[2026-05-03T13:28:01.712Z] [DEBUG] [jingcai-realtime] [周日013] 圣保利 vs 美因茨 05-03 21:30 ⏰投注即将截止
+[2026-05-03T13:28:01.712Z] [DEBUG] [jingcai-realtime] [周日014] 赫塔费 vs 巴列卡诺 05-03 22:15 (47分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.712Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.712Z] [DEBUG] [jingcai-realtime]    赔率: 1.76 / 2.90 / 4.65 | 变化: 稳定
+[2026-05-03T13:28:01.712Z] [DEBUG] [jingcai-realtime] [周日015] 曼联 vs 利物浦 05-03 22:30 (62分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    赔率: 2.09 / 3.51 / 2.73 | 变化: 稳定
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime] [周日016] 阿尔克马 vs 特温特 05-03 22:45 (77分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    赔率: 2.45 / 3.38 / 2.35 | 变化: 稳定
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime] [周日017] 克里斯蒂 vs 汉坎 05-03 23:00 (92分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    赔率: 2.22 / 3.35 / 2.63 | 变化: 稳定
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime] [周日018] 斯特拉斯 vs 图卢兹 05-03 23:15 (107分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime]    赔率: 2.72 / 3.45 / 2.12 | 变化: 稳定
+[2026-05-03T13:28:01.713Z] [DEBUG] [jingcai-realtime] [周日019] 门兴 vs 多特蒙德 05-03 23:30 (122分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.714Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.714Z] [DEBUG] [jingcai-realtime]    赔率: 3.56 / 3.74 / 1.72 | 变化: 稳定
+[2026-05-03T13:28:01.714Z] [DEBUG] [jingcai-realtime] [周日020] 尤文图斯 vs 维罗纳 05-04 00:00 (152分钟后) ⏰临场关键期
+[2026-05-03T13:28:01.714Z] [DEBUG] [jingcai-realtime]    ✅ 赔率稳定 (最大变化0.0%)
+[2026-05-03T13:28:01.714Z] [DEBUG] [jingcai-realtime]    赔率: 1.11 / 6.50 / 13.50 | 变化: 稳定
+[2026-05-03T13:28:01.716Z] [DEBUG] [jingcai-realtime] === 监控完成 ===
+[2026-05-03T13:28:01.716Z] [DEBUG] [jingcai-realtime] 告警数: 0
+[2026-05-03T13:28:01.723Z] [INFO] [jingcai-realtime] 完成，耗时 4.0s
+[2026-05-03T13:28:01.723Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:33:01.723Z (5分钟后)
+[2026-05-03T13:33:01.743Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:33:02.033Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:33:02.032Z ===
+[2026-05-03T13:33:02.033Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:33)
+[2026-05-03T13:33:02.057Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:33:02.057Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:38:02.057Z (5分钟后)
+[2026-05-03T13:33:11.573Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T13:33:11.640Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T13:33:11.643Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T13:33:11.670Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T13:33:11.671Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T13:33:11.674Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T13:33:11.677Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T13:33:11.679Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T13:33:11.679Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T13:33:11.680Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T13:33:11.782Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T13:33:11.783Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T13:33:11.783Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T13:33:11.787Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T13:33:11.787Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T14:03:11.787Z (30分钟后)
+[2026-05-03T13:38:02.077Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:38:02.361Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:38:02.360Z ===
+[2026-05-03T13:38:02.361Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:38)
+[2026-05-03T13:38:02.383Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:38:02.383Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:43:02.382Z (5分钟后)
+[2026-05-03T13:43:02.400Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:43:02.663Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:43:02.663Z ===
+[2026-05-03T13:43:02.664Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:43)
+[2026-05-03T13:43:02.681Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:43:02.681Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:48:02.680Z (5分钟后)
+[2026-05-03T13:48:02.696Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:48:02.986Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:48:02.986Z ===
+[2026-05-03T13:48:02.988Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:48)
+[2026-05-03T13:48:03.007Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:48:03.007Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:53:03.007Z (5分钟后)
+[2026-05-03T13:53:03.028Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:53:03.321Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:53:03.320Z ===
+[2026-05-03T13:53:03.321Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:53)
+[2026-05-03T13:53:03.337Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:53:03.337Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T13:58:03.337Z (5分钟后)
+[2026-05-03T13:58:03.342Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T13:58:03.660Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T13:58:03.659Z ===
+[2026-05-03T13:58:03.660Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前21:58)
+[2026-05-03T13:58:03.680Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T13:58:03.680Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:03:03.680Z (5分钟后)
+[2026-05-03T14:00:03.456Z] [INFO] === Daemon 状态 ===
+[2026-05-03T14:00:03.456Z] [INFO]   self-diagnostics: 状态=failed, 运行次数=224, 上次=2026-05-03T13:33:11.787Z, 下次=2026-05-03T14:03:11.787Z
+[2026-05-03T14:00:03.456Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T14:00:03.456Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T14:00:03.456Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T14:00:03.456Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T14:00:03.456Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T14:00:03.456Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T14:00:03.456Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3602, 上次=2026-05-03T13:58:03.680Z, 下次=2026-05-03T14:03:03.680Z
+[2026-05-03T14:00:03.456Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T14:00:03.456Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T14:00:03.456Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T14:00:03.456Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T14:00:03.456Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T14:00:03.456Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T14:00:03.456Z] [INFO] ==================
+[2026-05-03T14:03:03.680Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:03:03.964Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:03:03.963Z ===
+[2026-05-03T14:03:03.964Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:03)
+[2026-05-03T14:03:03.985Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:03:03.985Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:08:03.985Z (5分钟后)
+[2026-05-03T14:03:11.795Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T14:03:11.847Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T14:03:11.851Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T14:03:11.879Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T14:03:11.879Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T14:03:11.884Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T14:03:11.886Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T14:03:11.889Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T14:03:11.889Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T14:03:11.890Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T14:03:11.996Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T14:03:11.996Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T14:03:11.997Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T14:03:12.000Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T14:03:12.001Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T14:33:12.000Z (30分钟后)
+[2026-05-03T14:08:04.006Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:08:04.276Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:08:04.275Z ===
+[2026-05-03T14:08:04.277Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:08)
+[2026-05-03T14:08:04.293Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:08:04.293Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:13:04.292Z (5分钟后)
+[2026-05-03T14:13:04.313Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:13:04.757Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:13:04.757Z ===
+[2026-05-03T14:13:04.758Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:13)
+[2026-05-03T14:13:04.788Z] [INFO] [jingcai-realtime] 完成，耗时 0.5s
+[2026-05-03T14:13:04.788Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:18:04.787Z (5分钟后)
+[2026-05-03T14:18:04.809Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:18:05.138Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:18:05.136Z ===
+[2026-05-03T14:18:05.138Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:18)
+[2026-05-03T14:18:05.165Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T14:18:05.165Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:23:05.165Z (5分钟后)
+[2026-05-03T14:23:05.187Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:23:05.473Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:23:05.472Z ===
+[2026-05-03T14:23:05.473Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:23)
+[2026-05-03T14:23:05.496Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:23:05.496Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:28:05.496Z (5分钟后)
+[2026-05-03T14:28:05.504Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:28:05.790Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:28:05.789Z ===
+[2026-05-03T14:28:05.790Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:28)
+[2026-05-03T14:28:05.812Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:28:05.812Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:33:05.811Z (5分钟后)
+[2026-05-03T14:33:05.827Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:33:06.096Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:33:06.095Z ===
+[2026-05-03T14:33:06.096Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:33)
+[2026-05-03T14:33:06.115Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:33:06.115Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:38:06.115Z (5分钟后)
+[2026-05-03T14:33:12.000Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T14:33:12.053Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T14:33:12.057Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T14:33:12.085Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T14:33:12.085Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T14:33:12.089Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T14:33:12.092Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T14:33:12.095Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T14:33:12.095Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T14:33:12.096Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T14:33:12.214Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T14:33:12.214Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T14:33:12.215Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T14:33:12.220Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T14:33:12.220Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T15:03:12.219Z (30分钟后)
+[2026-05-03T14:38:06.138Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:38:06.409Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:38:06.408Z ===
+[2026-05-03T14:38:06.409Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:38)
+[2026-05-03T14:38:06.425Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:38:06.426Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:43:06.425Z (5分钟后)
+[2026-05-03T14:43:06.439Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:43:06.743Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:43:06.742Z ===
+[2026-05-03T14:43:06.743Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:43)
+[2026-05-03T14:43:06.768Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:43:06.768Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:48:06.767Z (5分钟后)
+[2026-05-03T14:48:06.773Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:48:07.097Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:48:07.096Z ===
+[2026-05-03T14:48:07.097Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:48)
+[2026-05-03T14:48:07.121Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:48:07.121Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:53:07.121Z (5分钟后)
+[2026-05-03T14:53:07.143Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:53:07.488Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:53:07.488Z ===
+[2026-05-03T14:53:07.489Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:53)
+[2026-05-03T14:53:07.520Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T14:53:07.520Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T14:58:07.520Z (5分钟后)
+[2026-05-03T14:58:07.533Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T14:58:07.830Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T14:58:07.830Z ===
+[2026-05-03T14:58:07.831Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前22:58)
+[2026-05-03T14:58:07.849Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T14:58:07.849Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:03:07.848Z (5分钟后)
+[2026-05-03T15:00:03.475Z] [INFO] === Daemon 状态 ===
+[2026-05-03T15:00:03.475Z] [INFO]   self-diagnostics: 状态=failed, 运行次数=226, 上次=2026-05-03T14:33:12.219Z, 下次=2026-05-03T15:03:12.219Z
+[2026-05-03T15:00:03.475Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T15:00:03.475Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T15:00:03.475Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T15:00:03.475Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T15:00:03.475Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T15:00:03.475Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T15:00:03.475Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3614, 上次=2026-05-03T14:58:07.848Z, 下次=2026-05-03T15:03:07.848Z
+[2026-05-03T15:00:03.475Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T15:00:03.475Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T15:00:03.475Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T15:00:03.475Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T15:00:03.475Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T15:00:03.475Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T15:00:03.475Z] [INFO] ==================
+[2026-05-03T15:03:07.871Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:03:08.166Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:03:08.166Z ===
+[2026-05-03T15:03:08.167Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:03)
+[2026-05-03T15:03:08.185Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:03:08.185Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:08:08.184Z (5分钟后)
+[2026-05-03T15:03:12.223Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T15:03:12.290Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T15:03:12.294Z] [DEBUG] [self-diagnostics] ❌ 系统资源: 1 个问题
+[2026-05-03T15:03:12.332Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T15:03:12.332Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T15:03:12.336Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T15:03:12.339Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T15:03:12.343Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T15:03:12.343Z] [DEBUG] [self-diagnostics] 🔧 执行自动修复...
+[2026-05-03T15:03:12.344Z] [DEBUG] [self-diagnostics] 🧹 清理磁盘...
+[2026-05-03T15:03:12.460Z] [DEBUG] [self-diagnostics]   ❌ 磁盘使用率过高: 91% 修复失败: Command failed: find /tmp -name "*.tmp" -mtime +7 -delete
+[2026-05-03T15:03:12.461Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 1 个严重, 0 个已修复
+[2026-05-03T15:03:12.461Z] [DEBUG] [self-diagnostics] ⚠️ 发现 1 个严重问题
+[2026-05-03T15:03:12.465Z] [ERROR] [self-diagnostics] 失败: 退出码 1: 
+[2026-05-03T15:03:12.465Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T15:33:12.464Z (30分钟后)
+[2026-05-03T15:08:08.205Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:08:08.505Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:08:08.505Z ===
+[2026-05-03T15:08:08.505Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:08)
+[2026-05-03T15:08:08.526Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:08:08.526Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:13:08.526Z (5分钟后)
+[2026-05-03T15:13:08.544Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:13:08.818Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:13:08.817Z ===
+[2026-05-03T15:13:08.818Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:13)
+[2026-05-03T15:13:08.839Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:13:08.839Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:18:08.839Z (5分钟后)
+[2026-05-03T15:18:08.858Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:18:09.143Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:18:09.143Z ===
+[2026-05-03T15:18:09.144Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:18)
+[2026-05-03T15:18:09.160Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:18:09.160Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:23:09.160Z (5分钟后)
+[2026-05-03T15:23:09.171Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:23:09.467Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:23:09.466Z ===
+[2026-05-03T15:23:09.467Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:23)
+[2026-05-03T15:23:09.487Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:23:09.487Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:28:09.486Z (5分钟后)
+[2026-05-03T15:28:09.510Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:28:09.790Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:28:09.790Z ===
+[2026-05-03T15:28:09.790Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:28)
+[2026-05-03T15:28:09.811Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:28:09.811Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:33:09.811Z (5分钟后)
+[2026-05-03T15:33:09.812Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:33:10.082Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:33:10.082Z ===
+[2026-05-03T15:33:10.082Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:33)
+[2026-05-03T15:33:10.100Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:33:10.100Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:38:10.099Z (5分钟后)
+[2026-05-03T15:33:12.466Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T15:33:12.522Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T15:33:12.527Z] [DEBUG] [self-diagnostics] ⚠️ 系统资源: 1 个问题
+[2026-05-03T15:33:12.560Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T15:33:12.560Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T15:33:12.565Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T15:33:12.568Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T15:33:12.571Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T15:33:12.572Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 3 个问题, 0 个严重, 0 个已修复
+[2026-05-03T15:33:12.572Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T15:33:12.577Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T15:33:12.577Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T16:03:12.577Z (30分钟后)
+[2026-05-03T15:38:10.123Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:38:10.417Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:38:10.416Z ===
+[2026-05-03T15:38:10.417Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:38)
+[2026-05-03T15:38:10.449Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:38:10.449Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:43:10.449Z (5分钟后)
+[2026-05-03T15:43:10.453Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:43:10.731Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:43:10.730Z ===
+[2026-05-03T15:43:10.731Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:43)
+[2026-05-03T15:43:10.755Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:43:10.755Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:48:10.754Z (5分钟后)
+[2026-05-03T15:48:10.755Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:48:11.021Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:48:11.020Z ===
+[2026-05-03T15:48:11.021Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:48)
+[2026-05-03T15:48:11.038Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:48:11.038Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:53:11.038Z (5分钟后)
+[2026-05-03T15:53:11.062Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:53:11.334Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:53:11.333Z ===
+[2026-05-03T15:53:11.334Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:53)
+[2026-05-03T15:53:11.351Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:53:11.351Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T15:58:11.351Z (5分钟后)
+[2026-05-03T15:58:11.368Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T15:58:11.637Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T15:58:11.637Z ===
+[2026-05-03T15:58:11.637Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前23:58)
+[2026-05-03T15:58:11.654Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T15:58:11.654Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:03:11.654Z (5分钟后)
+[2026-05-03T16:00:03.491Z] [INFO] === Daemon 状态 ===
+[2026-05-03T16:00:03.492Z] [INFO]   self-diagnostics: 状态=success, 运行次数=228, 上次=2026-05-03T15:33:12.577Z, 下次=2026-05-03T16:03:12.577Z
+[2026-05-03T16:00:03.492Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T16:00:03.492Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T16:00:03.492Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T16:00:03.492Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T16:00:03.492Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T16:00:03.492Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T16:00:03.492Z] [INFO]   jingcai-realtime: 状态=success, 运行次数=3626, 上次=2026-05-03T15:58:11.654Z, 下次=2026-05-03T16:03:11.654Z
+[2026-05-03T16:00:03.492Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T16:00:03.492Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T16:00:03.492Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T16:00:03.492Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T16:00:03.492Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T16:00:03.492Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T16:00:03.492Z] [INFO] ==================
+[2026-05-03T16:03:11.679Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:03:11.988Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:03:11.988Z ===
+[2026-05-03T16:03:11.988Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:03)
+[2026-05-03T16:03:12.010Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:03:12.010Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:08:12.010Z (5分钟后)
+[2026-05-03T16:03:12.578Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T16:03:12.636Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T16:03:12.640Z] [DEBUG] [self-diagnostics] ✅ 系统资源: 0 个问题
+[2026-05-03T16:03:12.694Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T16:03:12.694Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T16:03:12.698Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T16:03:12.701Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T16:03:12.704Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T16:03:12.705Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 2 个问题, 0 个严重, 0 个已修复
+[2026-05-03T16:03:12.705Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T16:03:12.710Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T16:03:12.710Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T16:33:12.710Z (30分钟后)
+[2026-05-03T16:08:12.034Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:08:12.322Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:08:12.321Z ===
+[2026-05-03T16:08:12.322Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:08)
+[2026-05-03T16:08:12.339Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:08:12.339Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:13:12.339Z (5分钟后)
+[2026-05-03T16:13:12.353Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:13:12.624Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:13:12.623Z ===
+[2026-05-03T16:13:12.624Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:13)
+[2026-05-03T16:13:12.645Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:13:12.645Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:18:12.645Z (5分钟后)
+[2026-05-03T16:18:12.652Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:18:12.930Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:18:12.929Z ===
+[2026-05-03T16:18:12.930Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:18)
+[2026-05-03T16:18:12.946Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:18:12.946Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:23:12.945Z (5分钟后)
+[2026-05-03T16:23:12.970Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:23:13.225Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:23:13.224Z ===
+[2026-05-03T16:23:13.225Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:23)
+[2026-05-03T16:23:13.241Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:23:13.241Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:28:13.241Z (5分钟后)
+[2026-05-03T16:28:13.266Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:28:13.556Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:28:13.555Z ===
+[2026-05-03T16:28:13.556Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:28)
+[2026-05-03T16:28:13.579Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:28:13.580Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:33:13.579Z (5分钟后)
+[2026-05-03T16:33:12.732Z] [INFO] [self-diagnostics] 开始执行...
+[2026-05-03T16:33:12.806Z] [DEBUG] [self-diagnostics] ✅ 进程健康: 0 个问题
+[2026-05-03T16:33:12.810Z] [DEBUG] [self-diagnostics] ✅ 系统资源: 0 个问题
+[2026-05-03T16:33:12.838Z] [DEBUG] [self-diagnostics] ✅ Gateway 健康: 0 个问题
+[2026-05-03T16:33:12.838Z] [DEBUG] [self-diagnostics] ✅ Cron 任务: 0 个问题
+[2026-05-03T16:33:12.842Z] [DEBUG] [self-diagnostics] ✅ 日志错误: 0 个问题
+[2026-05-03T16:33:12.844Z] [DEBUG] [self-diagnostics] ⚠️ 网络连接: 1 个问题
+[2026-05-03T16:33:12.847Z] [DEBUG] [self-diagnostics] ⚠️ 记忆系统: 1 个问题
+[2026-05-03T16:33:12.848Z] [DEBUG] [self-diagnostics] 📊 诊断完成: 2 个问题, 0 个严重, 0 个已修复
+[2026-05-03T16:33:12.848Z] [DEBUG] [self-diagnostics] ✅ 系统健康
+[2026-05-03T16:33:12.851Z] [INFO] [self-diagnostics] 完成，耗时 0.1s
+[2026-05-03T16:33:12.851Z] [INFO] [self-diagnostics] 下次运行: 2026-05-03T17:03:12.851Z (30分钟后)
+[2026-05-03T16:33:13.579Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:33:13.851Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:33:13.851Z ===
+[2026-05-03T16:33:13.852Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:33)
+[2026-05-03T16:33:13.869Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:33:13.869Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:38:13.869Z (5分钟后)
+[2026-05-03T16:38:13.895Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:38:14.183Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:38:14.182Z ===
+[2026-05-03T16:38:14.183Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:38)
+[2026-05-03T16:38:14.206Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:38:14.206Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:43:14.206Z (5分钟后)
+[2026-05-03T16:43:14.233Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:43:14.624Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:43:14.624Z ===
+[2026-05-03T16:43:14.624Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:43)
+[2026-05-03T16:43:14.659Z] [INFO] [jingcai-realtime] 完成，耗时 0.4s
+[2026-05-03T16:43:14.659Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:48:14.659Z (5分钟后)
+[2026-05-03T16:48:14.686Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:48:14.961Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:48:14.960Z ===
+[2026-05-03T16:48:14.961Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:48)
+[2026-05-03T16:48:14.982Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:48:14.982Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:53:14.982Z (5分钟后)
+[2026-05-03T16:53:14.991Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:53:15.255Z] [DEBUG] [jingcai-realtime] === 临场赔率监控 - 2026-05-03T16:53:15.255Z ===
+[2026-05-03T16:53:15.256Z] [DEBUG] [jingcai-realtime] 不在21:00-21:30窗口，跳过 (当前0:53)
+[2026-05-03T16:53:15.272Z] [INFO] [jingcai-realtime] 完成，耗时 0.3s
+[2026-05-03T16:53:15.272Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T16:58:15.272Z (5分钟后)
+[2026-05-03T16:58:15.278Z] [INFO] [jingcai-realtime] 开始执行...
+[2026-05-03T16:58:15.290Z] [ERROR] [jingcai-realtime] 失败: 脚本不存在: /home/jinghao/.openclaw/skills/self-evolving-agent/scripts/jingcai-realtime.sh
+[2026-05-03T16:58:15.291Z] [INFO] [jingcai-realtime] 下次运行: 2026-05-03T17:03:15.290Z (5分钟后)
+[2026-05-03T17:00:03.506Z] [INFO] === Daemon 状态 ===
+[2026-05-03T17:00:03.506Z] [INFO]   self-diagnostics: 状态=success, 运行次数=230, 上次=2026-05-03T16:33:12.851Z, 下次=2026-05-03T17:03:12.851Z
+[2026-05-03T17:00:03.506Z] [INFO]   performance-monitor: 状态=success, 运行次数=56, 上次=2026-05-03T11:38:30.730Z, 下次=2026-05-03T17:38:30.730Z
+[2026-05-03T17:00:03.506Z] [INFO]   error-analyzer: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:55.228Z, 下次=2026-05-03T19:03:55.228Z
+[2026-05-03T17:00:03.506Z] [INFO]   optimization-engine: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:41.210Z, 下次=2026-05-03T19:03:41.210Z
+[2026-05-03T17:00:03.506Z] [INFO]   feedback-loop: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:45.959Z, 下次=2026-05-03T19:03:45.959Z
+[2026-05-03T17:00:03.506Z] [INFO]   memory-integrator: 状态=success, 运行次数=15, 上次=2026-05-02T19:03:32.994Z, 下次=2026-05-03T19:03:32.994Z
+[2026-05-03T17:00:03.506Z] [INFO]   jingcai-monitor: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.884Z, 下次=2026-05-03T19:03:36.884Z
+[2026-05-03T17:00:03.506Z] [INFO]   jingcai-realtime: 状态=failed, 运行次数=3638, 上次=2026-05-03T16:58:15.290Z, 下次=2026-05-03T17:03:15.290Z
+[2026-05-03T17:00:03.506Z] [INFO]   jingcai-analyzer: 状态=success, 运行次数=14, 上次=2026-05-02T19:03:36.961Z, 下次=2026-05-03T19:03:36.961Z
+[2026-05-03T17:00:03.506Z] [INFO]   jingcai-results-fetcher: 状态=failed, 运行次数=28, 上次=2026-05-03T08:37:41.713Z, 下次=2026-05-03T20:37:41.713Z
+[2026-05-03T17:00:03.506Z] [INFO]   jingcai-learner: 状态=failed, 运行次数=2, 上次=2026-04-26T20:38:12.369Z, 下次=2026-05-03T20:38:12.369Z
+[2026-05-03T17:00:03.506Z] [INFO]   memory-compact: 状态=success, 运行次数=5, 上次=2026-05-01T19:44:36.628Z, 下次=2026-05-04T19:44:36.628Z
+[2026-05-03T17:00:03.506Z] [INFO]   skill-learner: 状态=success, 运行次数=3, 上次=2026-04-26T18:54:32.419Z, 下次=2026-05-03T18:54:32.419Z
+[2026-05-03T17:00:03.506Z] [INFO]   memory-reflect: 状态=success, 运行次数=2, 上次=2026-05-02T18:00:00.493Z, 下次=2026-05-16T18:00:00.000Z
+[2026-05-03T17:00:03.506Z] [INFO] ==================

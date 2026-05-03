@@ -151,7 +151,7 @@ EOF
             2>&1 | tail -20)
         echo "$INFER_RESULT" >> "$LOGFILE" || true
         
-        # 提取策略建议写入 JSON，供 jingcai-analyzer 下次启动时引用
+        # 提取策略建议写入 JSON
         STRATEGY_UPDATE_FILE="$SELF_IMPROVING_DIR/optimizations/strategy-updates.json"
         echo "$INFER_RESULT" | python3 -c "
 import sys, json, re
