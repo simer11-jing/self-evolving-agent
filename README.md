@@ -18,7 +18,6 @@
 - 🛡️ **安全沙箱** - 执行前安全验证
 - 📜 **版本控制** - 跟踪和回滚变更
 - 🤝 **跨 Agent 记忆** - 通过 Hindsight Memory 与团队共享经验
-- 🧠 **OpenClaw memory-core 推理（Kairos fallback）** - 优化决策前先查历史经验
 
 ---
 
@@ -44,7 +43,7 @@
 ### 2. 错误分析
 
 自动分析并记录错误：
-- 分析 OpenClaw 错误日志
+- 分析系统错误日志
 - 检查 Cron 任务失败情况
 - 识别错误模式
 - 提供修复建议
@@ -59,8 +58,6 @@
 | 探索模式 | A/B 测试多种策略 |
 | 自动选择 | 自动选择最佳策略 |
 
-**OpenClaw memory-core 推理（Kairos fallback）集成**：生成优化建议前，自动查询团队历史经验，避免重复踩坑。
-
 ### 4. 技能学习
 
 根据用户需求自动安装技能。
@@ -71,7 +68,7 @@
 - 收集过去 N 天的记忆文件
 - 统计决策数量、错误数量、改进数量
 - 生成反思报告，写入私有 MEMORY.md
-- **同时写入** `~/.openclaw/agents/shared/observations` 层供团队共享
+- 同时写入共享记忆层供团队查询
 
 ```bash
 ./scripts/memory-reflect.sh 7    # 周度反思
@@ -146,12 +143,12 @@ git clone https://github.com/simer11-jing/self-evolving-agent.git ~/.openclaw/sk
 ~/.openclaw/agents/shared/
 ```
 
-### OpenClaw memory-core 推理（Kairos fallback）引擎
+### 记忆推理引擎
 
 `optimization-engine.sh` 在生成优化策略前，自动查询团队历史经验：
 
 ```
-检测到问题 → 查询 OpenClaw/Hindsight 长期记忆 → 生成优化建议 → 执行
+检测到问题 → 查询长期记忆 → 生成优化建议 → 执行
 ```
 
 ---
@@ -164,7 +161,7 @@ self-evolving-agent/
 │   ├── self-improving-controller.sh    # 主控制器
 │   ├── performance-monitor.sh          # 性能监控
 │   ├── error-analyzer.sh               # 错误分析
-│   ├── optimization-engine.sh          # 优化引擎 + OpenClaw memory-core 集成
+│   ├── optimization-engine.sh          # 优化引擎
 │   ├── skill-learner.sh                # 技能学习
 │   ├── feedback-loop.sh                # 反馈循环
 │   ├── memory-reflect.sh               # 记忆反思 + 共享层写入
@@ -173,33 +170,19 @@ self-evolving-agent/
 │   ├── sandbox-validator.sh            # 安全沙箱
 │   ├── benchmark-report.sh             # 基准报告
 │   └── code-patcher.sh                 # 代码补丁
-└── docs/
-    └── BENCHMARKS.md                   # 基准测试文档
+├── tests/
+│   └── smoke.sh                        # 冒烟测试
+├── docs/
+│   └── BENCHMARKS.md                   # 基准测试文档
+├── .github/workflows/
+│   └── ci.yml                          # CI/CD
+├── package.json
+├── requirements.txt
+├── Makefile
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
 ```
-
----
-
-## 🆕 v2.2.0 新功能
-
-| 功能 | 说明 |
-|------|------|
-| **竞彩定时推送** | 已迁移至 `jingcai-analyst` 技能 |
-| **赛果自动抓取** | sporttery.cn API 每12小时自动抓取 |
-| **Daemon 崩溃通知** | 检测异常退出并发送飞书告警 |
-| **日志 gzip 压缩** | 自动轮转，减少磁盘占用 |
-| **memory-compact 调度** | 每3天自动整理记忆 |
-| **投注模式识别** | 连胜/高赔/主客场偏差/联赛胜率差异 |
-
-## 🆕 v2.1.0 新功能
-
-| 功能 | 说明 |
-|------|------|
-| **跨 Agent 记忆** | 反思结论写入 hindsight-memory 共享层 |
-| **OpenClaw memory-core 推理（Kairos fallback）集成** | 优化前查询历史经验，推理驱动决策 |
-| **基准测试** | 自动化系统验证 |
-| **安全沙箱** | 执行前安全检查 |
-| **版本控制** | Git 快照 + 回滚 |
-| **探索模式** | A/B 测试多策略 |
 
 ---
 
@@ -220,8 +203,8 @@ self-evolving-agent/
          │                    │                    │
          ▼                    ▼                    ▼
 ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   基准测试   │      │   安全沙箱   │      │   Memory    │
-│  Benchmark  │      │   Sandbox   │      │  推理验证    │
+│   基准测试   │      │   安全沙箱   │      │  记忆推理   │
+│  Benchmark  │      │   Sandbox   │      │  验证       │
 └─────────────┘      └─────────────┘      └─────────────┘
          │                    │                    │
          └────────────────────┼────────────────────┘
@@ -231,7 +214,6 @@ self-evolving-agent/
                     │   生成报告       │
                     │   更新记忆       │
                     │   → shared/     │ ← 团队共享
-                    │   微信通知       │
                     └─────────────────┘
 ```
 
@@ -249,7 +231,6 @@ self-evolving-agent/
 ## 📖 相关项目
 
 - [Hindsight Memory](https://github.com/simer11-jing/hindsight-memory) - 记忆系统（含跨 Agent 共享层）
-- OpenClaw memory-core / Hindsight - 本地长期记忆推理（Kairos 仅保留 fallback）
 - [OpenClaw](https://github.com/openclaw/openclaw) - AI 代理平台
 
 ---
@@ -258,18 +239,10 @@ self-evolving-agent/
 
 欢迎提交 Issue 和 Pull Request！
 
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 ---
 
-## 📄 许可证
+## License
 
 MIT License
-
----
-
-_由小爪（OpenClaw Agent）创建并维护_ 🐾
-
----
-
-## 迁移说明（2026-04-28）
-
-已将运行期推理主路径从 Kairos 迁移到 `scripts/openclaw-memory-infer.py`（OpenClaw/Hindsight 本地长期记忆）。`~/.openclaw/skills/kairos/kairos-learner.py` 仅保留为兼容 fallback。
