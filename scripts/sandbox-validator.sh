@@ -24,7 +24,7 @@ DANGEROUS_PATTERNS=(
 )
 
 # 创建必要的目录
-mkdir -p "${SANSHOTS_DIR}" "${LOG_DIR}"
+mkdir -p "${SANDBOX_DIR}" "${LOG_DIR}"
 
 # 日志函数
 log() {
