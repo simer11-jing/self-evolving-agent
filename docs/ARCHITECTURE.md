@@ -1,48 +1,76 @@
-# Architecture Overview
+# Architecture
 
-Self-Evolving Agent is an automation layer for improving an AI assistant over time.
+## Overview
 
-## Core Loop
+Self-Evolving Agent is a lightweight self-improvement system for AI agents. It focuses on:
 
-1. Monitor runtime health and system resources
-2. Analyze failures and recurring error patterns
-3. Generate optimization suggestions
-4. Validate changes in a sandboxed path where possible
-5. Record lessons into memory layers
-6. Repeat on a schedule
+- **Resource Monitoring**: CPU, memory, disk, and error log tracking
+- **Error Analysis**: Pattern detection and reporting
+- **Memory Integration**: Working with external memory systems
+- **Safety First**: Sandbox validation before execution
 
-## Main Components
+## System Architecture
 
-- `self-improving-controller.sh` — top-level orchestrator
-- `performance-monitor.sh` — resource monitoring
-- `error-analyzer.sh` — log and error pattern analysis
-- `optimization-engine.sh` — strategy execution and optimization reporting
-- `memory-reflect.sh` — periodic reflection and memory updates
-- `memory-integrator.sh` — memory normalization / compaction
-- `sandbox-validator.sh` — safety validation before applying risky actions
-- `benchmark-runner.sh` — lightweight regression and baseline checks
+```
++-----------------+       +-----------------+
+|   User Input    |       |  Resource Monitor |
++-----------------+       +---------+-------+
+        |                           |
+        v                           v
++-----------------+       +---------+-------+
+|  Main Controller|------>|  Error Analyzer  |
++-----------------+       +---------+-------+
+        |                           |
+        v                           v
++-----------------+       +---------+-------+
+|  Sandbox Validator          |  Backup System   |
++-----------------+       +---------+-------+
+        |                           |
+        v                           v
++-----------------+       +-----------------+
+|  Optimization   |       |  Memory System   |
++-----------------+       +-----------------+
+```
+
+## Key Components
+
+### 1. Main Controller (`self-improving-controller.sh`)
+- Orchestrates all monitoring and optimization tasks
+- Manages execution flow with safety checks
+- Handles backup and rollback
+
+### 2. Resource Monitor (`memory-monitor.js`)
+- Cross-platform Python-based monitoring via `psutil-wrapper.py`
+- Node.js interface for unified execution
+- CSV output for structured data collection
+
+### 3. Sandbox Validator (`sandbox-validator.sh`)
+- AST static analysis for Python scripts
+- Dangerous command detection for shell scripts
+- Prevents execution of unsafe code
+
+### 4. Backup System
+- Automatic backup before any execution
+- Timestamped backup directories
+- Easy rollback capability
 
 ## Data Flow
 
-```text
-Signals / Logs / Metrics
-    -> Monitor / Analyzer
-    -> Optimization Engine
-    -> Reflection / Memory Integrator
-    -> Reports / Shared Memory / Follow-up actions
-```
+1. **Monitor Phase**: Resource and error data is collected
+2. **Validate Phase**: Code safety is verified
+3. **Backup Phase**: Current state is preserved
+4. **Execute Phase**: Optimization is performed
+5. **Report Phase**: Results are logged and archived
 
-## Design Goals
+## Security Model
 
-- Low operational overhead
-- Scriptable and cron-friendly
-- Observable and easy to debug
-- Safe defaults before destructive actions
-- Compatible with external memory systems
+- **Defense in Depth**: Multiple validation layers
+- **Principle of Least Privilege**: Minimal permissions required
+- **Fail-Safe Defaults**: Blocked by default, explicitly allowed
+- **Audit Trail**: All actions logged with timestamps
 
-## Future Direction
+## Extension Points
 
-- Gradual migration of critical shell flows to Python
-- Stronger contract tests for scripts
-- CI validation for behavior, not only syntax
-- Optional UI for reports and diagnostics
+- Add new monitors by extending `lib/monitor.js`
+- Add new analyzers by extending `lib/error-analyzer.mjs`
+- Configure thresholds in `config/thresholds.json`
